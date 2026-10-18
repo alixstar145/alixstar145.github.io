@@ -1,56 +1,98 @@
-<!DOCTYPE html><html lang="fa" dir="rtl">
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>علی ایکس استار</title>
 <style>
+* { box-sizing: border-box; }
+
 body {
-  background: #10251b;
-  color: white;
+  margin: 0;
+  padding: 25px 15px;
   font-family: Tahoma, sans-serif;
   text-align: center;
-  padding: 20px;
+  color: white;
+  background:
+    linear-gradient(#001d19aa, #001d19bb),
+    url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1400&q=85")
+    center/cover fixed;
 }
-h1 { color: #4ade80; }
+
+h1 {
+  color: #4ade80;
+  font-size: clamp(28px, 6vw, 44px);
+  text-shadow: 3px 3px #052b1c;
+}
+
+.intro { font-size: 18px; }
+
 .card {
-  background: #1e3a2b;
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 15px;
-  max-width: 450px;
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 22px 15px;
+  border: 2px solid #10e9a0;
+  border-radius: 22px;
+  background: #001c18eF;
+  box-shadow: 0 0 18px #00e89a22;
 }
+
+h2 {
+  color: #75ffc1;
+  font-size: 23px;
+}
+
 a {
   display: inline-block;
-  background: #4ade80;
-  color: #10251b;
-  padding: 12px;
-  margin: 5px;
-  border-radius: 8px;
+  margin: 7px;
+  padding: 14px 20px;
+  min-width: 150px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #42f5ae, #00bd83);
+  color: #06251b;
   text-decoration: none;
+  font-weight: bold;
+  transition: transform .2s;
+}
+
+a:hover { transform: scale(1.04); }
+
+footer {
+  margin-top: 30px;
+  color: #b7ffe0;
 }
 </style>
 </head>
 <body>
-<h1>🎮 علی ایکس استار</h1>
-<p>به دنیای ماینکرفت خوش آمدی!</p>
+
+<h1>🟩 علی ایکس استار 🟩</h1>
+<p class="intro">به دنیای ماینکرفت خوش آمدی!</p>
+
 <div class="card">
-<h2>📺 ویدئوهای آپارات من</h2>
-<a href="https://www.aparat.com/v/znroeg7" target="_blank">aparat</a>
-<a href="https://www.aparat.com/v/rka9a77" target="_blank">aparat</a>
-<a href="https://www.aparat.com/v/osx8e40" target="_blank">aparat</a>
+  <h2>🎬 ویدئوهای آپارات من</h2>
+  <a href="https://www.aparat.com/v/znroeg7" target="_blank" rel="noopener">ویدئو ۱</a>
+  <a href="https://www.aparat.com/v/rka9a77" target="_blank" rel="noopener">ویدئو ۲</a>
+  <a href="https://www.aparat.com/v/osx8e40" target="_blank" rel="noopener">ویدئو ۳</a>
 </div>
+
 <div class="card">
-  <h2>📺 کانال‌های من</h2>
-  <a href="https://www.aparat.com" target="_blank" rel="noopener noreferrer">🎬 آپارات من</a>
-  <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">▶️ یوتیوب من</a>
+  <h2>🔗 کانال‌های من</h2>
+  <a href="https://www.aparat.com" target="_blank" rel="noopener">🎬 آپارات من</a>
+  <a href="https://www.youtube.com" target="_blank" rel="noopener">▶️ یوتیوب من</a>
 </div>
+
 <div class="card">
-<h2>🧱 مودهای ماینکرفت</h2>
-<a href="https://www.curseforge.com/minecraft" target="_blank">مشاهده مودها</a>
+  <h2>🧱 مودهای ماینکرفت</h2>
+  <a href="https://www.curseforge.com/minecraft" target="_blank" rel="noopener">مشاهده مودها</a>
 </div>
+
 <div class="card">
-<h2>✨ شیدرها</h2>
-<a href="https://modrinth.com/shaders" target="_blank">مشاهده شیدرها</a>
+  <h2>✨ شیدرهای ماینکرفت</h2>
+  <a href="https://modrinth.com/shaders" target="_blank" rel="noopener">مشاهده شیدرها</a>
 </div>
+
+<footer>ساخته‌شده توسط علی ایکس استار 🎮</footer>
+
 </body>
-  </html>
+</html>
