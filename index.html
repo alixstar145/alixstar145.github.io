@@ -20,12 +20,11 @@ body {
   text-align: center;
   color: white;
   background:
-    linear-gradient(135deg, rgba(0, 20, 18, .78), rgba(10, 25, 55, .65)),
+    linear-gradient(135deg, rgba(0,20,18,.78), rgba(10,25,55,.65)),
     url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1400&q=85")
     center / cover fixed;
 }
 
-/* عنوان سایت */
 h1 {
   color: #8fffe0;
   font-size: clamp(28px, 6vw, 44px);
@@ -39,24 +38,22 @@ h1 {
   line-height: 1.9;
 }
 
-/* کادرهای شیشه‌ای */
 .card {
   position: relative;
   max-width: 720px;
   margin: 25px auto;
   padding: 24px 15px;
-  border: 1px solid rgba(255, 255, 255, .30);
+  border: 1px solid rgba(255,255,255,.30);
   border-radius: 25px;
-  background: rgba(255, 255, 255, .09);
-  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,.09);
   -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   box-shadow:
-    0 12px 35px rgba(0, 0, 0, .22),
-    inset 0 1px 1px rgba(255, 255, 255, .23);
+    0 12px 35px rgba(0,0,0,.22),
+    inset 0 1px 1px rgba(255,255,255,.23);
   overflow: hidden;
 }
 
-/* انعکاس نور روی شیشه */
 .card::before {
   content: "";
   position: absolute;
@@ -65,10 +62,7 @@ h1 {
   width: 84%;
   height: 1px;
   background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, .75),
-    transparent
+    90deg, transparent, rgba(255,255,255,.75), transparent
   );
 }
 
@@ -76,55 +70,152 @@ h2 {
   color: #9fffd3;
   font-size: 22px;
   line-height: 1.8;
-  text-shadow: 0 0 12px rgba(80, 255, 190, .2);
+  text-shadow: 0 0 12px rgba(80,255,190,.2);
   margin-top: 0;
 }
 
-/* دکمه‌های شیشه‌ای حبابی */
-a {
+.card a {
   display: inline-block;
   position: relative;
   margin: 7px;
   padding: 14px 20px;
   min-width: 150px;
   border-radius: 19px;
-  border: 1px solid rgba(255, 255, 255, .48);
+  border: 1px solid rgba(255,255,255,.48);
   background: linear-gradient(
-    135deg,
-    rgba(74, 222, 128, .55),
-    rgba(0, 189, 131, .30)
+    135deg, rgba(74,222,128,.55), rgba(0,189,131,.30)
   );
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   color: white;
   text-decoration: none;
   font-weight: bold;
   line-height: 1.6;
   box-shadow:
-    0 6px 18px rgba(0, 0, 0, .18),
-    inset 0 1px 2px rgba(255, 255, 255, .40);
-  transition: transform .2s, background .2s, box-shadow .2s;
+    0 6px 18px rgba(0,0,0,.18),
+    inset 0 1px 2px rgba(255,255,255,.40);
+  transition: transform .2s, background .2s;
 }
 
-/* افکت حرکت دکمه */
-a:hover {
+.card a:hover {
   transform: translateY(-3px) scale(1.03);
   background: linear-gradient(
-    135deg,
-    rgba(74, 222, 128, .75),
-    rgba(0, 189, 131, .55)
+    135deg, rgba(74,222,128,.75), rgba(0,189,131,.55)
   );
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, .25),
-    0 0 15px rgba(74, 222, 128, .20),
-    inset 0 1px 2px rgba(255, 255, 255, .50);
 }
 
-a:active {
+.card a:active {
   transform: scale(.97);
 }
 
-/* پایین سایت */
+/* بازی شکار الماس */
+#diamond-game {
+  position: relative;
+  max-width: 720px;
+  margin: 35px auto;
+  padding: 24px 15px;
+  color: white;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 25px;
+  background: rgba(255,255,255,.09);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 12px 35px rgba(0,0,0,.25);
+}
+
+#diamond-game h2 {
+  color: #86efac;
+}
+
+#diamond-game p {
+  line-height: 1.9;
+}
+
+#diamond-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.diamond-stat {
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 14px;
+  background: rgba(0,0,0,.22);
+}
+
+#diamond-arena {
+  height: 270px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #2dd4bf;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 30% 25%, #245a48, transparent 45%),
+    linear-gradient(145deg, #071b18, #143d32);
+  touch-action: manipulation;
+}
+
+#diamond-target {
+  position: absolute;
+  left: 42%;
+  top: 38%;
+  display: none;
+  width: 58px;
+  height: 58px;
+  padding: 4px;
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 15px;
+  background: rgba(255,255,255,.12);
+  font-size: 36px;
+  cursor: pointer;
+  touch-action: manipulation;
+  animation: diamond-glow 1s infinite alternate;
+}
+
+@keyframes diamond-glow {
+  from { filter: drop-shadow(0 0 3px #67e8f9); }
+  to { filter: drop-shadow(0 0 13px #22d3ee); }
+}
+
+#diamond-message {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 15px;
+  color: #d1fae5;
+  font-size: 17px;
+  pointer-events: none;
+}
+
+#diamond-start {
+  margin-top: 18px;
+  padding: 13px 28px;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 14px;
+  color: #052e16;
+  background: linear-gradient(135deg, #86efac, #2dd4bf);
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 18px rgba(45,212,191,.2);
+}
+
+#diamond-start:active {
+  transform: scale(.97);
+}
+
+#diamond-result {
+  color: #fde68a;
+  font-weight: bold;
+  min-height: 25px;
+}
+
 footer {
   margin: 32px 0 15px;
   color: #c7ffe4;
@@ -133,7 +224,6 @@ footer {
   text-shadow: 0 2px 8px #000;
 }
 
-/* نمایش بهتر در گوشی */
 @media (max-width: 480px) {
   body {
     padding: 18px 12px;
@@ -146,7 +236,7 @@ footer {
     border-radius: 22px;
   }
 
-  a {
+  .card a {
     min-width: 125px;
     padding: 12px 14px;
     margin: 5px;
@@ -156,8 +246,15 @@ footer {
   h2 {
     font-size: 20px;
   }
-}
 
+  #diamond-game {
+    padding: 20px 10px;
+  }
+
+  #diamond-arena {
+    height: 250px;
+  }
+}
 </style>
 </head>
 
@@ -168,209 +265,129 @@ footer {
 
 <div class="card">
   <h2>🎬 ویدئوهای آپارات من</h2>
-
-  <a href="https://www.aparat.com/v/znroeg7"
-     target="_blank" rel="noopener noreferrer">🎥 ویدئو ۱</a>
-
-  <a href="https://www.aparat.com/v/rka9a77"
-     target="_blank" rel="noopener noreferrer">🎥 ویدئو ۲</a>
-
-  <a href="https://www.aparat.com/v/osx8e40"
-     target="_blank" rel="noopener noreferrer">🎥 ویدئو ۳</a>
+  <a href="https://www.aparat.com/v/znroeg7" target="_blank" rel="noopener noreferrer">🎥 ویدئو ۱</a>
+  <a href="https://www.aparat.com/v/rka9a77" target="_blank" rel="noopener noreferrer">🎥 ویدئو ۲</a>
+  <a href="https://www.aparat.com/v/osx8e40" target="_blank" rel="noopener noreferrer">🎥 ویدئو ۳</a>
 </div>
 
 <div class="card">
   <h2>▶️ ویدئوهای یوتیوب من</h2>
-
-  <a href="https://youtube.com/shorts/lcGwyPt278g?si=b0x9y2HOqF10YXWE"
-     target="_blank" rel="noopener noreferrer">▶️ ویدئو ۱</a>
-
-  <a href="https://youtube.com/shorts/zOS_lJYAx44?si=TQ778wFgJawliGdl"
-     target="_blank" rel="noopener noreferrer">▶️ ویدئو ۲</a>
+  <a href="https://youtube.com/shorts/lcGwyPt278g?si=b0x9y2HOqF10YXWE" target="_blank" rel="noopener noreferrer">▶️ ویدئو ۱</a>
+  <a href="https://youtube.com/shorts/zOS_lJYAx44?si=TQ778wFgJawliGdl" target="_blank" rel="noopener noreferrer">▶️ ویدئو ۲</a>
 </div>
 
 <div class="card">
   <h2>🔗 کانال‌های من</h2>
-
-  <a href="https://www.aparat.com/ALI_X_STARaparat"
-     target="_blank" rel="noopener noreferrer">🎬 آپارات من</a>
-
-  <a href="https://rubika.ir/ALIXSTARsoper"
-     target="_blank" rel="noopener noreferrer">🟣 روبیکای من</a>
-
-  <a href="https://www.youtube.com/@ALIXSTARYoutube"
-     target="_blank" rel="noopener noreferrer">▶️ یوتیوب من</a>
+  <a href="https://www.aparat.com/ALI_X_STARaparat" target="_blank" rel="noopener noreferrer">🎬 آپارات من</a>
+  <a href="https://rubika.ir/ALIXSTARsoper" target="_blank" rel="noopener noreferrer">🟣 روبیکای من</a>
+  <a href="https://www.youtube.com/@ALIXSTARYoutube" target="_blank" rel="noopener noreferrer">▶️ یوتیوب من</a>
 </div>
 
 <div class="card">
   <h2>🧱 مودهای ماینکرفت</h2>
-
-  <a href="https://www.curseforge.com/minecraft"
-     target="_blank" rel="noopener noreferrer">🧩 مشاهده مودها</a>
+  <a href="https://www.curseforge.com/minecraft" target="_blank" rel="noopener noreferrer">🧩 مشاهده مودها</a>
 </div>
 
 <div class="card">
   <h2>✨ شیدرهای ماینکرفت</h2>
-
-  <a href="https://modrinth.com/shaders"
-     target="_blank" rel="noopener noreferrer">🌈 مشاهده شیدرها</a>
+  <a href="https://modrinth.com/shaders" target="_blank" rel="noopener noreferrer">🌈 مشاهده شیدرها</a>
 </div>
+
+<!-- بازی -->
+<section id="diamond-game">
+  <h2>💎 شکار الماس ماینکرفت</h2>
+  <p>در ۲۰ ثانیه تا می‌توانی الماس جمع کن!</p>
+
+  <div id="diamond-stats">
+    <div class="diamond-stat">💎 امتیاز: <b id="diamond-score">0</b></div>
+    <div class="diamond-stat">⏱️ زمان: <b id="diamond-time">20</b></div>
+    <div class="diamond-stat">🏆 رکورد این نوبت: <b id="diamond-best">0</b></div>
+  </div>
+
+  <div id="diamond-arena">
+    <button id="diamond-target" type="button" aria-label="گرفتن الماس">💎</button>
+    <div id="diamond-message">برای شروع، دکمهٔ پایین را بزن!</div>
+  </div>
+
+  <button id="diamond-start" type="button">🎮 شروع بازی</button>
+  <p id="diamond-result" aria-live="polite"></p>
+</section>
 
 <footer>
   ساخته‌شده با 💚 توسط علی ایکس استار 🎮
 </footer>
 
-<!-- بازی شکار الماس -->
-<section id="diamond-game" dir="rtl">
-  <h2>💎 شکار الماس ماینکرفت</h2>
-  <p>در ۲۰ ثانیه تا می‌توانی الماس جمع کن!</p>
-
-  <div class="game-stats">
-    <span>💎 امتیاز: <b id="diamond-score">0</b></span>
-    <span>⏱️ زمان: <b id="diamond-time">20</b></span>
-  </div>
-
-  <div id="diamond-arena">
-    <button id="diamond-target" aria-label="گرفتن الماس">💎</button>
-    <div id="diamond-message">برای شروع بازی بزن!</div>
-  </div>
-
-  <button id="diamond-start">🎮 شروع بازی</button>
-  <p id="diamond-result"></p>
-</section>
-
-<style>
-#diamond-game {
-  margin: 35px auto;
-  padding: 22px 15px;
-  max-width: 520px;
-  text-align: center;
-  color: white;
-  font-family: Tahoma, sans-serif;
-  background: rgba(8, 35, 29, .78);
-  border: 1px solid rgba(74, 222, 128, .65);
-  border-radius: 22px;
-  box-shadow: 0 0 25px rgba(74, 222, 128, .15);
-  backdrop-filter: blur(12px);
-}
-#diamond-game h2 {
-  color: #86efac;
-}
-#diamond-game .game-stats {
-  display: flex;
-  justify-content: space-around;
-  gap: 10px;
-  margin: 18px 0;
-}
-#diamond-arena {
-  height: 260px;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid #2dd4bf;
-  border-radius: 16px;
-  background:
-    radial-gradient(circle at 30% 25%, #245a48, transparent 45%),
-    linear-gradient(145deg, #071b18, #143d32);
-}
-#diamond-target {
-  position: absolute;
-  left: 42%;
-  top: 38%;
-  border: 0;
-  border-radius: 14px;
-  padding: 8px;
-  font-size: 38px;
-  background: rgba(255,255,255,.12);
-  cursor: pointer;
-  touch-action: manipulation;
-  display: none;
-  animation: diamond-glow 1s infinite alternate;
-}
-@keyframes diamond-glow {
-  from { filter: drop-shadow(0 0 3px #67e8f9); }
-  to { filter: drop-shadow(0 0 13px #22d3ee); }
-}
-#diamond-message {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  color: #d1fae5;
-  pointer-events: none;
-}
-#diamond-start {
-  margin-top: 18px;
-  padding: 12px 28px;
-  border: 0;
-  border-radius: 12px;
-  color: #052e16;
-  background: linear-gradient(135deg, #86efac, #2dd4bf);
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-}
-#diamond-result {
-  color: #fde68a;
-  font-weight: bold;
-}
-</style>
-
 <script>
 (function () {
-  const game = document.getElementById("diamond-game");
   const target = document.getElementById("diamond-target");
   const arena = document.getElementById("diamond-arena");
   const start = document.getElementById("diamond-start");
   const scoreText = document.getElementById("diamond-score");
   const timeText = document.getElementById("diamond-time");
+  const bestText = document.getElementById("diamond-best");
   const message = document.getElementById("diamond-message");
   const result = document.getElementById("diamond-result");
 
   let score = 0;
   let time = 20;
+  let best = 0;
   let timer = null;
   let playing = false;
 
   function moveDiamond() {
     const maxX = Math.max(0, arena.clientWidth - target.offsetWidth);
     const maxY = Math.max(0, arena.clientHeight - target.offsetHeight);
-    target.style.left = Math.random() * maxX + "px";
-    target.style.top = Math.random() * maxY + "px";
+
+    target.style.left = Math.floor(Math.random() * (maxX + 1)) + "px";
+    target.style.top = Math.floor(Math.random() * (maxY + 1)) + "px";
   }
 
   function endGame() {
     playing = false;
     clearInterval(timer);
+    timer = null;
     target.style.display = "none";
-    message.textContent = "⏰ بازی تمام شد!";
+    message.textContent = "⏰ زمان تمام شد!";
     start.textContent = "🔄 دوباره بازی کن";
-    result.textContent = "🏆 امتیاز نهایی تو: " + score;
+    result.textContent = "🏆 امتیاز نهایی: " + score + " الماس!";
   }
 
   start.addEventListener("click", function () {
     clearInterval(timer);
+
     score = 0;
     time = 20;
     playing = true;
+
     scoreText.textContent = score;
     timeText.textContent = time;
     result.textContent = "";
     message.textContent = "";
     target.style.display = "block";
-    start.textContent = "🎯 در حال بازی...";
+    start.textContent = "💎 در حال بازی...";
     moveDiamond();
 
     timer = setInterval(function () {
       time--;
       timeText.textContent = time;
-      if (time <= 0) endGame();
+
+      if (time <= 0) {
+        endGame();
+      }
     }, 1000);
   });
 
   target.addEventListener("click", function () {
     if (!playing) return;
+
     score++;
     scoreText.textContent = score;
+
+    if (score > best) {
+      best = score;
+      bestText.textContent = best;
+    }
+
     moveDiamond();
   });
 })();
