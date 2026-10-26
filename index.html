@@ -4,102 +4,221 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>علی ایکس استار</title>
+<meta name="theme-color" content="#10251b">
+<title>علی ایکس استار | دنیای ماینکرفت</title>
+
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   padding: 25px 15px;
-  font-family: Tahoma, sans-serif;
+  min-height: 100vh;
+  font-family: Tahoma, Arial, sans-serif;
   text-align: center;
   color: white;
   background:
-    linear-gradient(#001d19aa, #001d19bb),
+    linear-gradient(135deg, rgba(0, 20, 18, .78), rgba(10, 25, 55, .65)),
     url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1400&q=85")
-    center/cover fixed;
+    center / cover fixed;
 }
 
+/* عنوان سایت */
 h1 {
-  color: #4ade80;
+  color: #8fffe0;
   font-size: clamp(28px, 6vw, 44px);
-  text-shadow: 3px 3px #052b1c;
+  text-shadow: 0 0 18px #4ade8070, 3px 3px #052b1c;
+  margin-top: 20px;
 }
 
-.intro { font-size: 18px; }
+.intro {
+  font-size: 17px;
+  color: #e4fff4;
+  line-height: 1.9;
+}
 
+/* کادرهای شیشه‌ای */
 .card {
+  position: relative;
   max-width: 720px;
-  margin: 24px auto;
-  padding: 22px 15px;
-  border: 2px solid #10e9a0;
-  border-radius: 22px;
-  background: #001c18eF;
-  box-shadow: 0 0 18px #00e89a22;
+  margin: 25px auto;
+  padding: 24px 15px;
+  border: 1px solid rgba(255, 255, 255, .30);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, .09);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, .22),
+    inset 0 1px 1px rgba(255, 255, 255, .23);
+  overflow: hidden;
+}
+
+/* انعکاس نور روی شیشه */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8%;
+  width: 84%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, .75),
+    transparent
+  );
 }
 
 h2 {
-  color: #75ffc1;
-  font-size: 23px;
+  color: #9fffd3;
+  font-size: 22px;
+  line-height: 1.8;
+  text-shadow: 0 0 12px rgba(80, 255, 190, .2);
+  margin-top: 0;
 }
 
+/* دکمه‌های شیشه‌ای حبابی */
 a {
   display: inline-block;
+  position: relative;
   margin: 7px;
   padding: 14px 20px;
   min-width: 150px;
-  border-radius: 13px;
-  background: linear-gradient(135deg, #42f5ae, #00bd83);
-  color: #06251b;
+  border-radius: 19px;
+  border: 1px solid rgba(255, 255, 255, .48);
+  background: linear-gradient(
+    135deg,
+    rgba(74, 222, 128, .55),
+    rgba(0, 189, 131, .30)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: transform .2s;
+  line-height: 1.6;
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, .18),
+    inset 0 1px 2px rgba(255, 255, 255, .40);
+  transition: transform .2s, background .2s, box-shadow .2s;
 }
 
-a:hover { transform: scale(1.04); }
+/* افکت حرکت دکمه */
+a:hover {
+  transform: translateY(-3px) scale(1.03);
+  background: linear-gradient(
+    135deg,
+    rgba(74, 222, 128, .75),
+    rgba(0, 189, 131, .55)
+  );
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, .25),
+    0 0 15px rgba(74, 222, 128, .20),
+    inset 0 1px 2px rgba(255, 255, 255, .50);
+}
 
+a:active {
+  transform: scale(.97);
+}
+
+/* پایین سایت */
 footer {
-  margin-top: 30px;
-  color: #b7ffe0;
+  margin: 32px 0 15px;
+  color: #c7ffe4;
+  font-size: 14px;
+  line-height: 2;
+  text-shadow: 0 2px 8px #000;
 }
+
+/* نمایش بهتر در گوشی */
+@media (max-width: 480px) {
+  body {
+    padding: 18px 12px;
+    background-attachment: scroll;
+  }
+
+  .card {
+    padding: 20px 10px;
+    margin: 20px auto;
+    border-radius: 22px;
+  }
+
+  a {
+    min-width: 125px;
+    padding: 12px 14px;
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
 </style>
 </head>
+
 <body>
 
 <h1>🟩 علی ایکس استار 🟩</h1>
-<p class="intro">به دنیای ماینکرفت خوش آمدی!</p>
+<p class="intro">به دنیای ماینکرفت خوش آمدی! 🎮</p>
 
 <div class="card">
   <h2>🎬 ویدئوهای آپارات من</h2>
-  <a href="https://www.aparat.com/v/znroeg7" target="_blank" rel="noopener">ویدئو ۱</a>
-  <a href="https://www.aparat.com/v/rka9a77" target="_blank" rel="noopener">ویدئو ۲</a>
-  <a href="https://www.aparat.com/v/osx8e40" target="_blank" rel="noopener">ویدئو ۳</a>
 
+  <a href="https://www.aparat.com/v/znroeg7"
+     target="_blank" rel="noopener noreferrer">🎥 ویدئو ۱</a>
+
+  <a href="https://www.aparat.com/v/rka9a77"
+     target="_blank" rel="noopener noreferrer">🎥 ویدئو ۲</a>
+
+  <a href="https://www.aparat.com/v/osx8e40"
+     target="_blank" rel="noopener noreferrer">🎥 ویدئو ۳</a>
 </div>
+
 <div class="card">
-<h2>▶️ ویدئوهای یوتیوب من</h2>
-<a href="https://youtube.com/shorts/lcGwyPt278g?si=b0x9y2HOqF10YXWE" target="_blank">ویدئو ۱</a>
-<a href="https://youtube.com/shorts/zOS_lJYAx44?si=TQ778wFgJawliGdl" target="_blank">ویدئو ۲</a>
+  <h2>▶️ ویدئوهای یوتیوب من</h2>
 
+  <a href="https://youtube.com/shorts/lcGwyPt278g?si=b0x9y2HOqF10YXWE"
+     target="_blank" rel="noopener noreferrer">▶️ ویدئو ۱</a>
+
+  <a href="https://youtube.com/shorts/zOS_lJYAx44?si=TQ778wFgJawliGdl"
+     target="_blank" rel="noopener noreferrer">▶️ ویدئو ۲</a>
 </div>
+
 <div class="card">
   <h2>🔗 کانال‌های من</h2>
-  <a href="https://www.aparat.com/ALI_X_STARaparat" target="_blank" rel="noopener">🎬 آپارات من</a>
-  <a href="https://rubika.ir/ALIXSTARsoper" target="_blank" rel="noopener">▶️ روبیکای من</a>
-  <a href="https://www.youtube.com/@ALIXSTARYoutube" target="_blank" rel="noopener">🎬 یوتیوب من</a>
+
+  <a href="https://www.aparat.com/ALI_X_STARaparat"
+     target="_blank" rel="noopener noreferrer">🎬 آپارات من</a>
+
+  <a href="https://rubika.ir/ALIXSTARsoper"
+     target="_blank" rel="noopener noreferrer">🟣 روبیکای من</a>
+
+  <a href="https://www.youtube.com/@ALIXSTARYoutube"
+     target="_blank" rel="noopener noreferrer">▶️ یوتیوب من</a>
 </div>
 
 <div class="card">
   <h2>🧱 مودهای ماینکرفت</h2>
-  <a href="https://www.curseforge.com/minecraft" target="_blank" rel="noopener">مشاهده مودها</a>
+
+  <a href="https://www.curseforge.com/minecraft"
+     target="_blank" rel="noopener noreferrer">🧩 مشاهده مودها</a>
 </div>
 
 <div class="card">
   <h2>✨ شیدرهای ماینکرفت</h2>
-  <a href="https://modrinth.com/shaders" target="_blank" rel="noopener">مشاهده شیدرها</a>
+
+  <a href="https://modrinth.com/shaders"
+     target="_blank" rel="noopener noreferrer">🌈 مشاهده شیدرها</a>
 </div>
 
-<footer>ساخته‌شده توسط علی ایکس استار 🎮</footer>
+<footer>
+  ساخته‌شده با 💚 توسط علی ایکس استار 🎮
+</footer>
 
 </body>
 </html>
