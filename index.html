@@ -220,5 +220,161 @@ footer {
   ساخته‌شده با 💚 توسط علی ایکس استار 🎮
 </footer>
 
+<!-- بازی شکار الماس -->
+<section id="diamond-game" dir="rtl">
+  <h2>💎 شکار الماس ماینکرفت</h2>
+  <p>در ۲۰ ثانیه تا می‌توانی الماس جمع کن!</p>
+
+  <div class="game-stats">
+    <span>💎 امتیاز: <b id="diamond-score">0</b></span>
+    <span>⏱️ زمان: <b id="diamond-time">20</b></span>
+  </div>
+
+  <div id="diamond-arena">
+    <button id="diamond-target" aria-label="گرفتن الماس">💎</button>
+    <div id="diamond-message">برای شروع بازی بزن!</div>
+  </div>
+
+  <button id="diamond-start">🎮 شروع بازی</button>
+  <p id="diamond-result"></p>
+</section>
+
+<style>
+#diamond-game {
+  margin: 35px auto;
+  padding: 22px 15px;
+  max-width: 520px;
+  text-align: center;
+  color: white;
+  font-family: Tahoma, sans-serif;
+  background: rgba(8, 35, 29, .78);
+  border: 1px solid rgba(74, 222, 128, .65);
+  border-radius: 22px;
+  box-shadow: 0 0 25px rgba(74, 222, 128, .15);
+  backdrop-filter: blur(12px);
+}
+#diamond-game h2 {
+  color: #86efac;
+}
+#diamond-game .game-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 18px 0;
+}
+#diamond-arena {
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #2dd4bf;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 30% 25%, #245a48, transparent 45%),
+    linear-gradient(145deg, #071b18, #143d32);
+}
+#diamond-target {
+  position: absolute;
+  left: 42%;
+  top: 38%;
+  border: 0;
+  border-radius: 14px;
+  padding: 8px;
+  font-size: 38px;
+  background: rgba(255,255,255,.12);
+  cursor: pointer;
+  touch-action: manipulation;
+  display: none;
+  animation: diamond-glow 1s infinite alternate;
+}
+@keyframes diamond-glow {
+  from { filter: drop-shadow(0 0 3px #67e8f9); }
+  to { filter: drop-shadow(0 0 13px #22d3ee); }
+}
+#diamond-message {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #d1fae5;
+  pointer-events: none;
+}
+#diamond-start {
+  margin-top: 18px;
+  padding: 12px 28px;
+  border: 0;
+  border-radius: 12px;
+  color: #052e16;
+  background: linear-gradient(135deg, #86efac, #2dd4bf);
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+#diamond-result {
+  color: #fde68a;
+  font-weight: bold;
+}
+</style>
+
+<script>
+(function () {
+  const game = document.getElementById("diamond-game");
+  const target = document.getElementById("diamond-target");
+  const arena = document.getElementById("diamond-arena");
+  const start = document.getElementById("diamond-start");
+  const scoreText = document.getElementById("diamond-score");
+  const timeText = document.getElementById("diamond-time");
+  const message = document.getElementById("diamond-message");
+  const result = document.getElementById("diamond-result");
+
+  let score = 0;
+  let time = 20;
+  let timer = null;
+  let playing = false;
+
+  function moveDiamond() {
+    const maxX = Math.max(0, arena.clientWidth - target.offsetWidth);
+    const maxY = Math.max(0, arena.clientHeight - target.offsetHeight);
+    target.style.left = Math.random() * maxX + "px";
+    target.style.top = Math.random() * maxY + "px";
+  }
+
+  function endGame() {
+    playing = false;
+    clearInterval(timer);
+    target.style.display = "none";
+    message.textContent = "⏰ بازی تمام شد!";
+    start.textContent = "🔄 دوباره بازی کن";
+    result.textContent = "🏆 امتیاز نهایی تو: " + score;
+  }
+
+  start.addEventListener("click", function () {
+    clearInterval(timer);
+    score = 0;
+    time = 20;
+    playing = true;
+    scoreText.textContent = score;
+    timeText.textContent = time;
+    result.textContent = "";
+    message.textContent = "";
+    target.style.display = "block";
+    start.textContent = "🎯 در حال بازی...";
+    moveDiamond();
+
+    timer = setInterval(function () {
+      time--;
+      timeText.textContent = time;
+      if (time <= 0) endGame();
+    }, 1000);
+  });
+
+  target.addEventListener("click", function () {
+    if (!playing) return;
+    score++;
+    scoreText.textContent = score;
+    moveDiamond();
+  });
+})();
+</script>
+
 </body>
 </html>
