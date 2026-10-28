@@ -12,13 +12,13 @@
 
 body {
   margin: 0;
-  padding: 25px 15px;
+  padding: 20px 12px;
   min-height: 100vh;
   font-family: Tahoma, Arial, sans-serif;
   text-align: center;
-  color: white;
+  color: #fff;
   background:
-    linear-gradient(135deg, rgba(0,20,18,.78), rgba(10,25,55,.65)),
+    linear-gradient(135deg, rgba(0,20,18,.82), rgba(10,25,55,.72)),
     url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1400&q=85")
     center / cover fixed;
 }
@@ -27,185 +27,192 @@ h1 {
   color: #8fffe0;
   font-size: clamp(28px, 6vw, 44px);
   text-shadow: 0 0 18px #4ade8070, 3px 3px #052b1c;
-  margin-top: 20px;
 }
 
-.intro {
-  font-size: 17px;
-  color: #e4fff4;
-  line-height: 1.9;
-}
+.intro { color: #e4fff4; line-height: 1.9; }
 
-.card, #diamond-game {
+.card, #mine-game {
   position: relative;
   max-width: 720px;
-  margin: 25px auto;
-  padding: 24px 15px;
-  border: 1px solid rgba(255,255,255,.30);
-  border-radius: 25px;
+  margin: 24px auto;
+  padding: 22px 14px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 24px;
   background: rgba(255,255,255,.09);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
-  box-shadow: 0 12px 35px rgba(0,0,0,.22),
-              inset 0 1px 1px rgba(255,255,255,.23);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 35px rgba(0,0,0,.22);
 }
 
-.card h2, #diamond-game h2 {
+.card h2 {
   color: #9fffd3;
-  font-size: 22px;
+  font-size: 21px;
   line-height: 1.8;
-  margin-top: 0;
 }
 
 .card a {
   display: inline-block;
-  margin: 7px;
-  padding: 13px 18px;
-  min-width: 145px;
-  border-radius: 19px;
-  border: 1px solid rgba(255,255,255,.48);
-  background: linear-gradient(135deg,
-    rgba(74,222,128,.55), rgba(0,189,131,.30));
+  margin: 6px;
+  padding: 12px 15px;
+  min-width: 130px;
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 16px;
   color: white;
+  background: linear-gradient(135deg, #25865eaa, #087d75aa);
   text-decoration: none;
   font-weight: bold;
-  line-height: 1.6;
-  box-shadow: 0 6px 18px rgba(0,0,0,.18);
-  transition: transform .2s;
+  line-height: 1.7;
 }
 
-.card a:hover { transform: translateY(-3px); }
-.card a:active { transform: scale(.97); }
-
-/* بازی شکار الماس */
-#diamond-game {
-  color: white;
-  max-width: 720px;
-  background: rgba(8,35,29,.72);
-  border-color: rgba(74,222,128,.6);
-}
-
-#diamond-game h2 { color: #86efac; }
-
-#diamond-game p { line-height: 1.9; }
-
-#diamond-stats {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 18px 0;
-}
-
-.diamond-stat {
-  padding: 10px 13px;
-  border: 1px solid rgba(255,255,255,.25);
-  border-radius: 14px;
-  background: rgba(0,0,0,.22);
-}
-
-#diamond-arena {
-  height: 270px;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid #2dd4bf;
-  border-radius: 18px;
-  background:
-    radial-gradient(circle at 30% 25%, #245a48, transparent 45%),
-    linear-gradient(145deg, #071b18, #143d32);
-}
-
-#diamond-target {
-  position: absolute;
-  left: 42%;
-  top: 38%;
-  display: none;
-  width: 58px;
-  height: 58px;
-  padding: 4px;
-  border: 1px solid rgba(255,255,255,.45);
-  border-radius: 15px;
-  background: rgba(255,255,255,.12);
-  font-size: 36px;
-  cursor: pointer;
-  touch-action: manipulation;
-  animation: diamond-glow 1s infinite alternate;
-}
-
-@keyframes diamond-glow {
-  from { filter: drop-shadow(0 0 3px #67e8f9); }
-  to { filter: drop-shadow(0 0 13px #22d3ee); }
-}
-
-#diamond-message {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  padding: 15px;
-  color: #d1fae5;
-  font-size: 17px;
-  pointer-events: none;
-}
-
-#diamond-start {
-  margin-top: 18px;
-  padding: 13px 28px;
-  border: 1px solid rgba(255,255,255,.55);
-  border-radius: 14px;
-  color: #052e16;
-  background: linear-gradient(135deg, #86efac, #2dd4bf);
-  font-family: inherit;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-#diamond-result {
-  color: #fde68a;
-  font-weight: bold;
-  min-height: 25px;
-}
-
-#diamond-record {
-  margin-top: 14px;
-  padding: 12px;
-  border: 1px solid rgba(250,204,21,.5);
-  border-radius: 14px;
-  background: rgba(250,204,21,.10);
-  color: #fde68a;
-  font-weight: bold;
-}
+.card a:hover { background: #25865e; }
 
 footer {
-  margin: 32px 0 15px;
+  margin: 28px 0 15px;
   color: #c7ffe4;
-  font-size: 14px;
   line-height: 2;
-  text-shadow: 0 2px 8px #000;
+}
+
+/* بازی معدن */
+#mine-game {
+  max-width: 600px;
+  padding: 20px 12px;
+  border-color: #4ade80;
+  background: linear-gradient(160deg, #102b24ee, #081b1aee);
+  box-shadow: 0 0 28px #22c55e22;
+}
+
+#mine-game h2 {
+  margin: 0 0 8px;
+  color: #86efac;
+  font-size: 25px;
+}
+
+.game-description {
+  color: #d1fae5;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+#game-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.stat {
+  padding: 11px 5px;
+  border: 1px solid #ffffff20;
+  border-radius: 12px;
+  background: #ffffff0b;
+  font-size: 13px;
+}
+
+.stat strong {
+  display: block;
+  margin-top: 7px;
+  color: #fde68a;
+  font-size: 17px;
+}
+
+#health-bar {
+  color: #fb7185;
+  letter-spacing: 3px;
+  font-size: 21px;
+}
+
+#mine-canvas {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  margin: 12px auto;
+  border: 3px solid #5b8c67;
+  border-radius: 5px;
+  background: #18251e;
+  image-rendering: pixelated;
+  touch-action: manipulation;
+}
+
+#game-message {
+  min-height: 45px;
+  padding: 10px;
+  color: #d1fae5;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.game-button {
+  padding: 12px 17px;
+  border: 1px solid #ffffff40;
+  border-radius: 12px;
+  color: #fff;
+  background: #245b43;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.game-button:active { transform: scale(.95); }
+
+#start-game {
+  width: 100%;
+  max-width: 320px;
+  color: #052e16;
+  background: linear-gradient(135deg, #86efac, #2dd4bf);
+}
+
+#controls {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  justify-content: center;
+  gap: 7px;
+  direction: ltr;
+  margin: 16px auto 10px;
+}
+
+#controls .game-button {
+  width: 64px;
+  height: 52px;
+  padding: 5px;
+  font-size: 21px;
+  background: #1c4938;
+}
+
+#controls .empty { visibility: hidden; }
+
+#mine-button {
+  display: block;
+  width: 205px;
+  max-width: 100%;
+  margin: 10px auto;
+  background: linear-gradient(135deg, #8b5e34, #68401f);
+}
+
+#record-box {
+  margin-top: 15px;
+  padding: 13px;
+  border: 1px solid #facc1566;
+  border-radius: 13px;
+  background: #facc1510;
+  color: #fde68a;
+  line-height: 1.9;
+}
+
+#record-box strong { font-size: 19px; }
+
+.small-note {
+  color: #b9d7c9;
+  font-size: 12px;
+  line-height: 1.9;
 }
 
 @media (max-width: 480px) {
-  body {
-    padding: 18px 12px;
-    background-attachment: scroll;
-  }
-
-  .card, #diamond-game {
-    padding: 20px 10px;
-    margin: 20px auto;
-    border-radius: 22px;
-  }
-
-  .card a {
-    min-width: 125px;
-    padding: 12px 14px;
-    margin: 5px;
-    font-size: 14px;
-  }
-
-  .card h2, #diamond-game h2 { font-size: 20px; }
-  #diamond-arena { height: 250px; }
+  body { background-attachment: scroll; }
+  .card, #mine-game { padding: 18px 10px; }
+  .card a { min-width: 115px; font-size: 13px; }
 }
 </style>
 </head>
@@ -245,27 +252,54 @@ footer {
   <a href="https://modrinth.com/shaders" target="_blank" rel="noopener noreferrer">🌈 مشاهده شیدرها</a>
 </div>
 
-<!-- بازی شکار الماس -->
-<section id="diamond-game">
-  <h2>💎 شکار الماس ماینکرفت</h2>
-  <p>در ۲۰ ثانیه تا می‌توانی الماس جمع کن!</p>
+<!-- بازی ماجراجویی معدن -->
+<section id="mine-game">
+  <h2>⛏️ ماجراجویی معدن الماس</h2>
+  <p class="game-description">
+    بلوک‌ها را بشکن، الماس و طلا جمع کن و دروازه را پیدا کن!<br>
+    برای رفتن به مرحلهٔ بعد، ۵ الماس لازم داری.
+  </p>
 
-  <div id="diamond-stats">
-    <div class="diamond-stat">💎 امتیاز: <b id="diamond-score">0</b></div>
-    <div class="diamond-stat">⏱️ زمان: <b id="diamond-time">20</b></div>
+  <div id="game-stats">
+    <div class="stat">💎 الماس<strong id="diamonds">0 / 5</strong></div>
+    <div class="stat">🪙 امتیاز<strong id="score">0</strong></div>
+    <div class="stat">🗺️ مرحله<strong id="level">1</strong></div>
+    <div class="stat">❤️ سلامتی<strong id="health-bar">❤️❤️❤️</strong></div>
   </div>
 
-  <div id="diamond-arena">
-    <button id="diamond-target" type="button" aria-label="گرفتن الماس">💎</button>
-    <div id="diamond-message">برای شروع، دکمهٔ پایین را بزن!</div>
+  <canvas id="mine-canvas" width="320" height="320"
+          aria-label="صفحهٔ بازی معدن ماینکرفت"></canvas>
+
+  <div id="game-message" aria-live="polite">
+    دکمهٔ شروع را بزن و وارد معدن شو!
   </div>
 
-  <button id="diamond-start" type="button">🎮 شروع بازی</button>
+  <button class="game-button" id="start-game" type="button">
+    🎮 شروع ماجراجویی
+  </button>
 
-  <p id="diamond-result" aria-live="polite"></p>
+  <div id="controls" aria-label="کنترل حرکت بازیکن">
+    <button class="game-button empty" type="button" tabindex="-1"> </button>
+    <button class="game-button" type="button" data-move="up" aria-label="بالا">⬆️</button>
+    <button class="game-button empty" type="button" tabindex="-1"> </button>
 
-  <p id="diamond-record">
-    🏆 بهترین رکورد: <b id="diamond-record-score">0</b> الماس
+    <button class="game-button" type="button" data-move="left" aria-label="چپ">⬅️</button>
+    <button class="game-button" type="button" data-move="down" aria-label="پایین">⬇️</button>
+    <button class="game-button" type="button" data-move="right" aria-label="راست">➡️</button>
+  </div>
+
+  <button class="game-button" id="mine-button" type="button">
+    ⛏️ شکستن بلوک روبه‌رو
+  </button>
+
+  <div id="record-box">
+    🏆 بهترین رکورد تو<br>
+    <strong id="best-score">0</strong> امتیاز
+  </div>
+
+  <p class="small-note">
+    کنترل با دکمه‌ها یا کلیدهای جهت‌دار و WASD امکان‌پذیر است.
+    برای شکستن بلوک روبه‌رو، دکمهٔ کلنگ یا Space را بزن.
   </p>
 </section>
 
@@ -275,96 +309,390 @@ footer {
 
 <script>
 (function () {
-  const target = document.getElementById("diamond-target");
-  const arena = document.getElementById("diamond-arena");
-  const start = document.getElementById("diamond-start");
-  const scoreText = document.getElementById("diamond-score");
-  const timeText = document.getElementById("diamond-time");
-  const message = document.getElementById("diamond-message");
-  const result = document.getElementById("diamond-result");
-  const recordText = document.getElementById("diamond-record-score");
+  "use strict";
 
+  const canvas = document.getElementById("mine-canvas");
+  const ctx = canvas.getContext("2d");
+  const diamondsText = document.getElementById("diamonds");
+  const scoreText = document.getElementById("score");
+  const levelText = document.getElementById("level");
+  const healthText = document.getElementById("health-bar");
+  const message = document.getElementById("game-message");
+  const startButton = document.getElementById("start-game");
+  const mineButton = document.getElementById("mine-button");
+  const bestText = document.getElementById("best-score");
+
+  const SIZE = 10;
+  const TILE = 32;
+  const REQUIRED_DIAMONDS = 5;
+
+  // 0 = مسیر خالی، 1 = سنگ، 2 = الماس، 3 = طلا
+  let map = [];
+  let player = { x: 0, y: 0, facing: "right" };
+  let diamonds = 0;
   let score = 0;
-  let time = 20;
-  let timer = null;
+  let level = 1;
+  let health = 3;
   let playing = false;
+  let best = readBest();
 
-  // رکورد در مرورگر همین دستگاه ذخیره می‌شود
-  function loadRecord() {
+  bestText.textContent = best;
+
+  function readBest() {
     try {
-      return Number(localStorage.getItem("diamondRecord") || 0);
+      return Number(localStorage.getItem("mineBestScore") || 0);
     } catch (e) {
       return 0;
     }
   }
 
-  let record = loadRecord();
-  recordText.textContent = record;
-
-  function saveRecord() {
-    if (score > record) {
-      record = score;
-      recordText.textContent = record;
+  function saveBest() {
+    if (score > best) {
+      best = score;
+      bestText.textContent = best;
       try {
-        localStorage.setItem("diamondRecord", String(record));
+        localStorage.setItem("mineBestScore", String(best));
       } catch (e) {
-        // بازی حتی بدون امکان ذخیره هم ادامه می‌یابد
+        // بازی بدون ذخیرهٔ محلی هم کار می‌کند.
       }
     }
   }
 
-  function moveDiamond() {
-    const maxX = Math.max(0, arena.clientWidth - target.offsetWidth);
-    const maxY = Math.max(0, arena.clientHeight - target.offsetHeight);
-
-    target.style.left = Math.floor(Math.random() * (maxX + 1)) + "px";
-    target.style.top = Math.floor(Math.random() * (maxY + 1)) + "px";
+  function updateStats() {
+    diamondsText.textContent = diamonds + " / " + REQUIRED_DIAMONDS;
+    scoreText.textContent = score;
+    levelText.textContent = level;
+    healthText.textContent = "❤️".repeat(health) + "🖤".repeat(3 - health);
   }
 
-  function endGame() {
-    playing = false;
-    clearInterval(timer);
-    timer = null;
-    target.style.display = "none";
-    message.textContent = "⏰ زمان تمام شد!";
-    start.textContent = "🔄 دوباره بازی کن";
-    result.textContent = "🏆 امتیاز این بازی: " + score + " الماس!";
-    saveRecord();
-  }
+  function newLevel() {
+    map = Array.from({ length: SIZE }, () => Array(SIZE).fill(0));
 
-  start.addEventListener("click", function () {
-    clearInterval(timer);
+    // حاشیهٔ سنگی دور معدن
+    for (let i = 0; i < SIZE; i++) {
+      map[0][i] = 1;
+      map[SIZE - 1][i] = 1;
+      map[i][0] = 1;
+      map[i][SIZE - 1] = 1;
+    }
 
-    score = 0;
-    time = 20;
+    // ورودی و دروازه همیشه آزاد هستند.
+    map[1][1] = 0;
+    map[SIZE - 2][SIZE - 2] = 0;
+
+    // ساخت بلوک‌های سنگی
+    for (let y = 1; y < SIZE - 1; y++) {
+      for (let x = 1; x < SIZE - 1; x++) {
+        if ((x === 1 && y === 1) ||
+            (x === SIZE - 2 && y === SIZE - 2)) continue;
+
+        if (Math.random() < 0.25) map[y][x] = 1;
+      }
+    }
+
+    // قرار دادن ۸ رگهٔ الماس و ۷ بلوک طلا
+    function placeOre(type, count) {
+      let placed = 0;
+      let attempts = 0;
+
+      while (placed < count && attempts < 500) {
+        attempts++;
+        const x = 1 + Math.floor(Math.random() * (SIZE - 2));
+        const y = 1 + Math.floor(Math.random() * (SIZE - 2));
+
+        if ((x === 1 && y === 1) ||
+            (x === SIZE - 2 && y === SIZE - 2)) continue;
+
+        if (map[y][x] === 1) {
+          map[y][x] = type;
+          placed++;
+        }
+      }
+    }
+
+    placeOre(2, 8);
+    placeOre(3, 7);
+
+    player = { x: 1, y: 1, facing: "right" };
+    diamonds = 0;
+    health = 3;
     playing = true;
 
-    scoreText.textContent = score;
-    timeText.textContent = time;
-    result.textContent = "";
-    message.textContent = "";
-    target.style.display = "block";
-    start.textContent = "💎 در حال بازی...";
-    moveDiamond();
+    updateStats();
+    draw();
+    message.textContent =
+      "معدن آماده است! ۵ الماس پیدا کن و به دروازهٔ 🌀 برس.";
+    startButton.textContent = "🔄 شروع دوباره";
+  }
 
-    timer = setInterval(function () {
-      time--;
-      timeText.textContent = time;
+  function drawBlock(x, y, type) {
+    const px = x * TILE;
+    const py = y * TILE;
 
-      if (time <= 0) {
-        endGame();
+    if (type === 0) {
+      ctx.fillStyle = "#253c31";
+      ctx.fillRect(px, py, TILE, TILE);
+      ctx.fillStyle = "#294638";
+      ctx.fillRect(px + 2, py + 2, TILE - 4, TILE - 4);
+      return;
+    }
+
+    if (type === 1) {
+      ctx.fillStyle = "#626d69";
+      ctx.fillRect(px, py, TILE, TILE);
+      ctx.fillStyle = "#84908b";
+      ctx.fillRect(px + 3, py + 3, 12, 7);
+      ctx.fillStyle = "#424d49";
+      ctx.fillRect(px + 17, py + 14, 11, 13);
+      ctx.fillStyle = "#a0aaa4";
+      ctx.fillRect(px + 19, py + 3, 5, 4);
+    }
+
+    if (type === 2) {
+      ctx.fillStyle = "#4b5d62";
+      ctx.fillRect(px, py, TILE, TILE);
+      ctx.fillStyle = "#67e8f9";
+      ctx.fillRect(px + 5, py + 5, 8, 8);
+      ctx.fillRect(px + 19, py + 11, 9, 8);
+      ctx.fillRect(px + 10, py + 22, 7, 6);
+      ctx.fillStyle = "#cffafe";
+      ctx.fillRect(px + 7, py + 5, 3, 3);
+    }
+
+    if (type === 3) {
+      ctx.fillStyle = "#635744";
+      ctx.fillRect(px, py, TILE, TILE);
+      ctx.fillStyle = "#facc15";
+      ctx.fillRect(px + 5, py + 6, 8, 7);
+      ctx.fillRect(px + 19, py + 17, 8, 8);
+      ctx.fillStyle = "#fef08a";
+      ctx.fillRect(px + 7, py + 7, 3, 3);
+    }
+
+    ctx.strokeStyle = "#17261e";
+    ctx.lineWidth = 1;
+    ctx.strokeRect(px + .5, py + .5, TILE - 1, TILE - 1);
+  }
+
+  function drawPlayer() {
+    const x = player.x * TILE;
+    const y = player.y * TILE;
+
+    // سایه
+    ctx.fillStyle = "#00000055";
+    ctx.fillRect(x + 5, y + 25, 23, 5);
+
+    // پاها
+    ctx.fillStyle = "#334155";
+    ctx.fillRect(x + 7, y + 21, 7, 9);
+    ctx.fillRect(x + 18, y + 21, 7, 9);
+
+    // بدن
+    ctx.fillStyle = "#16a34a";
+    ctx.fillRect(x + 6, y + 12, 20, 12);
+
+    // سر
+    ctx.fillStyle = "#d9a579";
+    ctx.fillRect(x + 7, y + 3, 18, 12);
+
+    // مو
+    ctx.fillStyle = "#543b2b";
+    ctx.fillRect(x + 6, y + 2, 20, 5);
+
+    // چشم‌ها
+    ctx.fillStyle = "#111827";
+    if (player.facing === "left") {
+      ctx.fillRect(x + 8, y + 8, 3, 3);
+    } else {
+      ctx.fillRect(x + 20, y + 8, 3, 3);
+    }
+
+    ctx.fillRect(x + 15, y + 8, 3, 3);
+    ctx.strokeStyle = "#ecfdf5";
+    ctx.strokeRect(x + 5.5, y + 1.5, 21, 29);
+  }
+
+  function drawPortal() {
+    const x = (SIZE - 2) * TILE;
+    const y = (SIZE - 2) * TILE;
+
+    ctx.fillStyle = diamonds >= REQUIRED_DIAMONDS ? "#6d28d9" : "#374151";
+    ctx.fillRect(x + 4, y + 3, 24, 27);
+
+    ctx.fillStyle = diamonds >= REQUIRED_DIAMONDS ? "#c4b5fd" : "#6b7280";
+    ctx.fillRect(x + 9, y + 7, 14, 19);
+
+    ctx.fillStyle = "#17261e";
+    ctx.fillRect(x + 12, y + 10, 8, 13);
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let y = 0; y < SIZE; y++) {
+      for (let x = 0; x < SIZE; x++) {
+        drawBlock(x, y, map[y][x]);
       }
-    }, 1000);
-  });
+    }
 
-  target.addEventListener("click", function () {
+    drawPortal();
+    drawPlayer();
+
+    // خطوط شبکهٔ پیکسلی
+    ctx.strokeStyle = "#ffffff0c";
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= SIZE; i++) {
+      ctx.beginPath();
+      ctx.moveTo(i * TILE, 0);
+      ctx.lineTo(i * TILE, canvas.height);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(0, i * TILE);
+      ctx.lineTo(canvas.width, i * TILE);
+      ctx.stroke();
+    }
+  }
+
+  function move(direction) {
     if (!playing) return;
 
-    score++;
-    scoreText.textContent = score;
-    saveRecord();
-    moveDiamond();
+    player.facing = direction;
+
+    const delta = {
+      up: [0, -1],
+      down: [0, 1],
+      left: [-1, 0],
+      right: [1, 0]
+    }[direction];
+
+    const nx = player.x + delta[0];
+    const ny = player.y + delta[1];
+
+    if (nx < 1 || nx >= SIZE - 1 ||
+        ny < 1 || ny >= SIZE - 1) {
+      draw();
+      return;
+    }
+
+    // فقط روی مسیر خالی می‌توان راه رفت.
+    if (map[ny][nx] !== 0) {
+      message.textContent = "⛏️ راه بسته است؛ با کلنگ بلوک روبه‌رو را بشکن.";
+      draw();
+      return;
+    }
+
+    player.x = nx;
+    player.y = ny;
+
+    if (player.x === SIZE - 2 && player.y === SIZE - 2) {
+      if (diamonds >= REQUIRED_DIAMONDS) {
+        score += 20 * level;
+        saveBest();
+        level++;
+
+        message.textContent = "🎉 مرحله را کامل کردی! مرحلهٔ بعد شروع شد.";
+        updateStats();
+        newLevel();
+        return;
+      } else {
+        message.textContent =
+          "🌀 برای باز کردن دروازه، هنوز " +
+          (REQUIRED_DIAMONDS - diamonds) + " الماس دیگر لازم داری.";
+      }
+    } else {
+      message.textContent = "به کاوش ادامه بده و بلوک‌ها را بشکن!";
+    }
+
+    updateStats();
+    draw();
+  }
+
+  function mine() {
+    if (!playing) return;
+
+    const delta = {
+      up: [0, -1],
+      down: [0, 1],
+      left: [-1, 0],
+      right: [1, 0]
+    }[player.facing];
+
+    const x = player.x + delta[0];
+    const y = player.y + delta[1];
+
+    if (x < 1 || x >= SIZE - 1 || y < 1 || y >= SIZE - 1) {
+      message.textContent = "اینجا نمی‌توانی بلوک بشکنی.";
+      return;
+    }
+
+    const type = map[y][x];
+
+    if (type === 0) {
+      message.textContent = "این خانه خالی است؛ جهت دیگری را امتحان کن.";
+      return;
+    }
+
+    if (type === 2) {
+      diamonds++;
+      score += 10;
+      message.textContent = "💎 الماس پیدا کردی! +۱۰ امتیاز";
+    } else if (type === 3) {
+      score += 5;
+      message.textContent = "🪙 طلا پیدا کردی! +۵ امتیاز";
+    } else {
+      score++;
+      message.textContent = "🪨 بلوک سنگی شکسته شد! +۱ امتیاز";
+    }
+
+    map[y][x] = 0;
+    saveBest();
+    updateStats();
+    draw();
+
+    if (diamonds >= REQUIRED_DIAMONDS) {
+      message.textContent += " حالا به دروازهٔ بنفش برو! 🌀";
+    }
+  }
+
+  startButton.addEventListener("click", function () {
+    score = 0;
+    level = 1;
+    newLevel();
   });
+
+  mineButton.addEventListener("click", mine);
+
+  document.querySelectorAll("[data-move]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      move(button.dataset.move);
+    });
+  });
+
+  document.addEventListener("keydown", function (event) {
+    const keys = {
+      ArrowUp: "up",
+      w: "up", W: "up",
+      ArrowDown: "down",
+      s: "down", S: "down",
+      ArrowLeft: "left",
+      a: "left", A: "left",
+      ArrowRight: "right",
+      d: "right", D: "right"
+    };
+
+    if (keys[event.key]) {
+      event.preventDefault();
+      move(keys[event.key]);
+    } else if (event.code === "Space") {
+      event.preventDefault();
+      mine();
+    }
+  });
+
+  // نمایش اولیهٔ معدن
+  newLevel();
+  message.textContent = "برای بازی، حرکت کن؛ بلوک‌ها را بشکن و الماس جمع کن.";
 })();
 </script>
 
