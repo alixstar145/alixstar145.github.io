@@ -8,9 +8,7 @@
 <title>علی ایکس استار | دنیای ماینکرفت</title>
 
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -38,7 +36,7 @@ h1 {
   line-height: 1.9;
 }
 
-.card {
+.card, #diamond-game {
   position: relative;
   max-width: 720px;
   margin: 25px auto;
@@ -48,100 +46,59 @@ h1 {
   background: rgba(255,255,255,.09);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
-  box-shadow:
-    0 12px 35px rgba(0,0,0,.22),
-    inset 0 1px 1px rgba(255,255,255,.23);
-  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0,0,0,.22),
+              inset 0 1px 1px rgba(255,255,255,.23);
 }
 
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 8%;
-  width: 84%;
-  height: 1px;
-  background: linear-gradient(
-    90deg, transparent, rgba(255,255,255,.75), transparent
-  );
-}
-
-h2 {
+.card h2, #diamond-game h2 {
   color: #9fffd3;
   font-size: 22px;
   line-height: 1.8;
-  text-shadow: 0 0 12px rgba(80,255,190,.2);
   margin-top: 0;
 }
 
 .card a {
   display: inline-block;
-  position: relative;
   margin: 7px;
-  padding: 14px 20px;
-  min-width: 150px;
+  padding: 13px 18px;
+  min-width: 145px;
   border-radius: 19px;
   border: 1px solid rgba(255,255,255,.48);
-  background: linear-gradient(
-    135deg, rgba(74,222,128,.55), rgba(0,189,131,.30)
-  );
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+  background: linear-gradient(135deg,
+    rgba(74,222,128,.55), rgba(0,189,131,.30));
   color: white;
   text-decoration: none;
   font-weight: bold;
   line-height: 1.6;
-  box-shadow:
-    0 6px 18px rgba(0,0,0,.18),
-    inset 0 1px 2px rgba(255,255,255,.40);
-  transition: transform .2s, background .2s;
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  transition: transform .2s;
 }
 
-.card a:hover {
-  transform: translateY(-3px) scale(1.03);
-  background: linear-gradient(
-    135deg, rgba(74,222,128,.75), rgba(0,189,131,.55)
-  );
-}
-
-.card a:active {
-  transform: scale(.97);
-}
+.card a:hover { transform: translateY(-3px); }
+.card a:active { transform: scale(.97); }
 
 /* بازی شکار الماس */
 #diamond-game {
-  position: relative;
-  max-width: 720px;
-  margin: 35px auto;
-  padding: 24px 15px;
   color: white;
-  text-align: center;
-  border: 1px solid rgba(255,255,255,.35);
-  border-radius: 25px;
-  background: rgba(255,255,255,.09);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
-  box-shadow: 0 12px 35px rgba(0,0,0,.25);
+  max-width: 720px;
+  background: rgba(8,35,29,.72);
+  border-color: rgba(74,222,128,.6);
 }
 
-#diamond-game h2 {
-  color: #86efac;
-}
+#diamond-game h2 { color: #86efac; }
 
-#diamond-game p {
-  line-height: 1.9;
-}
+#diamond-game p { line-height: 1.9; }
 
 #diamond-stats {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   margin: 18px 0;
 }
 
 .diamond-stat {
-  padding: 10px 16px;
+  padding: 10px 13px;
   border: 1px solid rgba(255,255,255,.25);
   border-radius: 14px;
   background: rgba(0,0,0,.22);
@@ -156,7 +113,6 @@ h2 {
   background:
     radial-gradient(circle at 30% 25%, #245a48, transparent 45%),
     linear-gradient(145deg, #071b18, #143d32);
-  touch-action: manipulation;
 }
 
 #diamond-target {
@@ -203,17 +159,22 @@ h2 {
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 5px 18px rgba(45,212,191,.2);
-}
-
-#diamond-start:active {
-  transform: scale(.97);
 }
 
 #diamond-result {
   color: #fde68a;
   font-weight: bold;
   min-height: 25px;
+}
+
+#diamond-record {
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid rgba(250,204,21,.5);
+  border-radius: 14px;
+  background: rgba(250,204,21,.10);
+  color: #fde68a;
+  font-weight: bold;
 }
 
 footer {
@@ -230,7 +191,7 @@ footer {
     background-attachment: scroll;
   }
 
-  .card {
+  .card, #diamond-game {
     padding: 20px 10px;
     margin: 20px auto;
     border-radius: 22px;
@@ -243,17 +204,8 @@ footer {
     font-size: 14px;
   }
 
-  h2 {
-    font-size: 20px;
-  }
-
-  #diamond-game {
-    padding: 20px 10px;
-  }
-
-  #diamond-arena {
-    height: 250px;
-  }
+  .card h2, #diamond-game h2 { font-size: 20px; }
+  #diamond-arena { height: 250px; }
 }
 </style>
 </head>
@@ -293,7 +245,7 @@ footer {
   <a href="https://modrinth.com/shaders" target="_blank" rel="noopener noreferrer">🌈 مشاهده شیدرها</a>
 </div>
 
-<!-- بازی -->
+<!-- بازی شکار الماس -->
 <section id="diamond-game">
   <h2>💎 شکار الماس ماینکرفت</h2>
   <p>در ۲۰ ثانیه تا می‌توانی الماس جمع کن!</p>
@@ -301,7 +253,6 @@ footer {
   <div id="diamond-stats">
     <div class="diamond-stat">💎 امتیاز: <b id="diamond-score">0</b></div>
     <div class="diamond-stat">⏱️ زمان: <b id="diamond-time">20</b></div>
-    <div class="diamond-stat">🏆 رکورد این نوبت: <b id="diamond-best">0</b></div>
   </div>
 
   <div id="diamond-arena">
@@ -310,7 +261,12 @@ footer {
   </div>
 
   <button id="diamond-start" type="button">🎮 شروع بازی</button>
+
   <p id="diamond-result" aria-live="polite"></p>
+
+  <p id="diamond-record">
+    🏆 بهترین رکورد: <b id="diamond-record-score">0</b> الماس
+  </p>
 </section>
 
 <footer>
@@ -324,15 +280,38 @@ footer {
   const start = document.getElementById("diamond-start");
   const scoreText = document.getElementById("diamond-score");
   const timeText = document.getElementById("diamond-time");
-  const bestText = document.getElementById("diamond-best");
   const message = document.getElementById("diamond-message");
   const result = document.getElementById("diamond-result");
+  const recordText = document.getElementById("diamond-record-score");
 
   let score = 0;
   let time = 20;
-  let best = 0;
   let timer = null;
   let playing = false;
+
+  // رکورد در مرورگر همین دستگاه ذخیره می‌شود
+  function loadRecord() {
+    try {
+      return Number(localStorage.getItem("diamondRecord") || 0);
+    } catch (e) {
+      return 0;
+    }
+  }
+
+  let record = loadRecord();
+  recordText.textContent = record;
+
+  function saveRecord() {
+    if (score > record) {
+      record = score;
+      recordText.textContent = record;
+      try {
+        localStorage.setItem("diamondRecord", String(record));
+      } catch (e) {
+        // بازی حتی بدون امکان ذخیره هم ادامه می‌یابد
+      }
+    }
+  }
 
   function moveDiamond() {
     const maxX = Math.max(0, arena.clientWidth - target.offsetWidth);
@@ -349,7 +328,8 @@ footer {
     target.style.display = "none";
     message.textContent = "⏰ زمان تمام شد!";
     start.textContent = "🔄 دوباره بازی کن";
-    result.textContent = "🏆 امتیاز نهایی: " + score + " الماس!";
+    result.textContent = "🏆 امتیاز این بازی: " + score + " الماس!";
+    saveRecord();
   }
 
   start.addEventListener("click", function () {
@@ -382,12 +362,7 @@ footer {
 
     score++;
     scoreText.textContent = score;
-
-    if (score > best) {
-      best = score;
-      bestText.textContent = best;
-    }
-
+    saveRecord();
     moveDiamond();
   });
 })();
