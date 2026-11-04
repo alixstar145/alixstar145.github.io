@@ -46,7 +46,6 @@ body::before {
 }
 
 a { color:inherit;text-decoration:none; }
-
 button { font-family:inherit;cursor:pointer; }
 
 .container {
@@ -58,7 +57,7 @@ header {
   position:sticky;
   top:0;
   z-index:100;
-  background:#07120deF;
+  background:#07120def;
   border-bottom:1px solid #4ade8030;
   backdrop-filter:blur(18px);
 }
@@ -82,7 +81,7 @@ header {
 
 .nav-links {
   display:flex;
-  gap:23px;
+  gap:20px;
   align-items:center;
 }
 
@@ -138,7 +137,6 @@ header {
   background-clip:text;
   -webkit-background-clip:text;
   color:transparent;
-  filter:drop-shadow(0 0 20px #4ade8030);
 }
 
 .hero h2 {
@@ -205,9 +203,7 @@ header {
   50% { transform:translateY(-22px) rotate(12deg); }
 }
 
-.section {
-  padding:75px 0;
-}
+.section { padding:75px 0; }
 
 .section-title {
   text-align:center;
@@ -242,17 +238,6 @@ header {
   overflow:hidden;
 }
 
-.card::before {
-  content:"";
-  position:absolute;
-  width:100px;
-  height:100px;
-  background:#4ade8010;
-  border-radius:50%;
-  top:-50px;
-  left:-35px;
-}
-
 .card:hover {
   transform:translateY(-7px);
   border-color:#4ade8080;
@@ -281,9 +266,6 @@ header {
   font-size:12px;
 }
 
-.purple { color:var(--purple); }
-.green { color:var(--green); }
-
 .stats {
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -310,6 +292,8 @@ header {
   font-size:12px;
 }
 
+/* DIAMOND GAME */
+
 .game-box {
   background:linear-gradient(130deg,#102d1b,#1b1630);
   border:1px solid #4ade8040;
@@ -326,10 +310,7 @@ header {
   cursor:pointer;
   user-select:none;
   transition:.1s;
-  filter:drop-shadow(0 0 20px #4ade8060);
 }
-
-.diamond:active { transform:scale(.8); }
 
 .score {
   font-size:27px;
@@ -358,26 +339,210 @@ header {
   font-size:12px;
 }
 
-.socials {
+/* VIDEO LIBRARY */
+
+.video-tabs {
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+}
+
+.video-tab {
+  padding:12px 25px;
+  border-radius:12px;
+  border:1px solid #4ade8050;
+  background:#10251b;
+  color:white;
+  font-weight:700;
+}
+
+.video-tab.active {
+  background:var(--green);
+  color:#07120d;
+}
+
+.video-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.video-card {
+  background:linear-gradient(145deg,#142e20,#0b1911);
+  border:1px solid #4ade8030;
+  border-radius:17px;
+  overflow:hidden;
+}
+
+.video-card iframe {
+  width:100%;
+  aspect-ratio:16/9;
+  border:0;
+  display:block;
+}
+
+.video-info { padding:15px; }
+
+.video-info h3 {
+  font-size:15px;
+  margin-bottom:12px;
+  color:var(--green);
+}
+
+.video-delete {
+  background:#7f1d1d;
+  color:white;
+  border:0;
+  padding:8px 14px;
+  border-radius:8px;
+  margin-top:10px;
+}
+
+.video-form {
+  max-width:650px;
+  margin:30px auto;
+  padding:22px;
+  background:#10251b;
+  border:1px solid #4ade8040;
+  border-radius:17px;
+}
+
+.video-form input {
+  width:100%;
+  padding:13px;
+  margin:9px 0;
+  background:#07120d;
+  color:white;
+  border:1px solid #4ade8050;
+  border-radius:9px;
+  font-family:inherit;
+}
+
+.video-form button { width:100%;margin-top:10px; }
+
+.video-empty {
+  text-align:center;
+  color:#9ab5a3;
+  padding:30px;
+  grid-column:1/-1;
+}
+
+/* MINI GAMES */
+
+.mini-games {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+.mini-game {
+  background:linear-gradient(145deg,#142e20,#0b1911);
+  border:1px solid #4ade8040;
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+  overflow:hidden;
+}
+
+.mini-game h3 {
+  color:var(--green);
+  margin-bottom:12px;
+}
+
+.mini-game p {
+  color:var(--muted);
+  font-size:12px;
+  line-height:2;
+}
+
+.game-canvas {
+  width:100%;
+  max-width:320px;
+  background:#050b08;
+  border:2px solid #4ade8060;
+  border-radius:10px;
+  display:block;
+  margin:15px auto;
+  touch-action:none;
+}
+
+.game-controls {
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
-  gap:13px;
+  gap:8px;
+  margin-top:12px;
 }
 
-.social {
-  padding:17px 25px;
-  background:#ffffff08;
-  border:1px solid #ffffff20;
-  border-radius:15px;
-  transition:.2s;
+.game-controls button,
+.game-button {
+  background:#4ade80;
+  color:#07120d;
+  border:0;
+  border-radius:9px;
+  padding:10px 15px;
+  font-weight:800;
+  font-family:inherit;
+}
+
+.game-button.secondary {
+  background:#263d30;
+  color:white;
+}
+
+.game-score {
+  color:var(--green);
+  font-weight:900;
+  margin:10px;
+  font-size:16px;
+}
+
+.tetris-controls {
+  display:grid;
+  grid-template-columns:repeat(3,48px);
+  justify-content:center;
+  gap:7px;
+  margin-top:12px;
+}
+
+.tetris-controls button { padding:12px 5px; }
+
+.tic-grid {
+  display:grid;
+  grid-template-columns:repeat(3,75px);
+  justify-content:center;
+  gap:7px;
+  margin:18px auto;
+}
+
+.tic-cell {
+  height:75px;
+  border:1px solid #4ade8060;
+  border-radius:10px;
+  background:#07120d;
+  color:#4ade80;
+  font-size:30px;
+  font-weight:900;
+}
+
+.guess-input {
+  width:120px;
+  padding:12px;
+  background:#07120d;
+  color:white;
+  border:1px solid #4ade8050;
+  border-radius:9px;
+  text-align:center;
+  font-family:inherit;
+}
+
+.mini-message {
+  color:#4ade80;
+  margin:12px 0;
   font-size:13px;
-}
-
-.social:hover {
-  background:#4ade8015;
-  border-color:var(--green);
-  transform:translateY(-4px);
+  min-height:25px;
 }
 
 footer {
@@ -421,16 +586,12 @@ footer strong { color:var(--green); }
   }
 
   .nav-links.show { display:flex; }
-
   .hero { min-height:500px; }
-
   .section { padding:55px 0; }
-
   .stats { grid-template-columns:1fr; }
-
   .logo { font-size:19px; }
+  .video-form { padding:17px; }
 }
-
 </style>
 </head>
 
@@ -450,13 +611,16 @@ footer strong { color:var(--green); }
       <a href="#channels" onclick="closeMenu()">کانال‌ها</a>
       <a href="#mods" onclick="closeMenu()">مود و شیدر</a>
       <a href="#videos" onclick="closeMenu()">ویدئوها</a>
-      <a href="#game" onclick="closeMenu()">بازی</a>
+      <a href="#game" onclick="closeMenu()">شکار الماس</a>
+      <a href="#minigames" onclick="closeMenu()">مینی‌گیم‌ها</a>
     </nav>
 
   </div>
 </header>
 
 <main>
+
+<!-- HOME -->
 
 <section class="hero" id="home">
 
@@ -480,10 +644,13 @@ footer strong { color:var(--green); }
     <div class="hero-buttons">
       <a href="#mods" class="btn btn-green">💎 دانلود مودها</a>
       <a href="#videos" class="btn btn-dark">▶ مشاهده ویدئوها</a>
+      <a href="#minigames" class="btn btn-dark">🎮 بازی‌ها</a>
     </div>
 
   </div>
 </section>
+
+<!-- CHANNELS -->
 
 <section class="section" id="channels">
 
@@ -521,6 +688,8 @@ footer strong { color:var(--green); }
     </div>
   </div>
 </section>
+
+<!-- MODS -->
 
 <section class="section" id="mods">
 
@@ -581,42 +750,63 @@ footer strong { color:var(--green); }
   </div>
 </section>
 
+<!-- VIDEOS -->
+
 <section class="section" id="videos">
 
   <div class="container">
 
     <div class="section-title">
-      <h2>🎬 <span>ویدئوهای</span> ما</h2>
-      <p>وارد کانال شو و ویدئوهای جدید را ببین.</p>
+      <h2>🎬 کتابخانه <span>ویدئوهای ALI X STAR</span></h2>
+      <p>ویدئوهای یوتیوب و آپارات را اینجا تماشا کن.</p>
     </div>
 
-    <div class="cards">
+    <div class="video-tabs">
 
-      <div class="card">
-        <div class="card-icon">🎥</div>
-        <h3>ویدئوهای یوتیوب</h3>
-        <p>ماجراجویی‌ها و چالش‌های ماینکرفت.</p>
-        <a class="btn btn-green"
-           href="https://www.youtube.com/results?search_query=Ali+X+Star+Minecraft"
-           target="_blank" rel="noopener">
-           تماشای ویدئوها
-        </a>
-      </div>
+      <button class="video-tab active"
+              onclick="showVideos('youtube',this)">
+        🔴 ویدئوهای یوتیوب
+      </button>
 
-      <div class="card">
-        <div class="card-icon">🍿</div>
-        <h3>ویدئوهای آپارات</h3>
-        <p>ویدئوهای گیمینگ و سرگرمی.</p>
-        <a class="btn btn-dark"
-           href="https://www.aparat.com/result/Minecraft"
-           target="_blank" rel="noopener">
-           تماشای ویدئوها
-        </a>
-      </div>
+      <button class="video-tab"
+              onclick="showVideos('aparat',this)">
+        🔵 ویدئوهای آپارات
+      </button>
 
     </div>
+
+    <div class="video-form">
+
+      <h3>➕ افزودن ویدئوی جدید</h3>
+
+      <input id="videoTitle"
+             type="text"
+             placeholder="عنوان ویدئو را بنویس">
+
+      <input id="videoUrl"
+             type="url"
+             placeholder="لینک ویدئو را وارد کن">
+
+      <button class="btn btn-green" onclick="addVideo()">
+        ➕ افزودن ویدئو
+      </button>
+
+      <p style="color:#9ab5a3;font-size:11px;margin-top:12px;line-height:2">
+        ابتدا یوتیوب یا آپارات را انتخاب کن.
+        سپس عنوان و لینک ویدئو را وارد کن.
+      </p>
+
+    </div>
+
+    <div style="text-align:center;color:#9ab5a3;font-size:12px;margin-bottom:15px"
+         id="videoCount"></div>
+
+    <div class="video-grid" id="videoGrid"></div>
+
   </div>
 </section>
+
+<!-- DIAMOND GAME -->
 
 <section class="section" id="game">
 
@@ -642,13 +832,11 @@ footer strong { color:var(--green); }
 
       <div class="game-actions">
 
-        <button class="btn btn-green"
-                onclick="collectDiamond()">
+        <button class="btn btn-green" onclick="collectDiamond()">
           💎 گرفتن الماس
         </button>
 
-        <button class="btn btn-dark"
-                onclick="resetGame()">
+        <button class="btn btn-dark" onclick="resetGame()">
           🔄 شروع دوباره
         </button>
 
@@ -661,6 +849,179 @@ footer strong { color:var(--green); }
     </div>
   </div>
 </section>
+
+<!-- MINI GAMES -->
+
+<section class="section" id="minigames">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>🎮 دنیای <span>مینی‌گیم‌ها</span></h2>
+      <p>بازی کن، رکورد بزن و سرگرم شو!</p>
+    </div>
+
+    <div class="mini-games">
+
+      <!-- TETRIS -->
+
+      <div class="mini-game">
+
+        <h3>🧱 TETRIS</h3>
+        <p>بلوک‌ها را کنار هم بچین و خط‌ها را کامل کن!</p>
+
+        <div class="game-score">
+          امتیاز: <span id="tetrisScore">0</span>
+        </div>
+
+        <canvas id="tetrisCanvas"
+                class="game-canvas"
+                width="240" height="400"></canvas>
+
+        <div class="game-controls">
+          <button class="game-button" onclick="startTetris()">شروع / دوباره</button>
+          <button class="game-button secondary" onclick="pauseTetris()">توقف</button>
+        </div>
+
+        <div class="tetris-controls">
+          <button class="game-button" onclick="tetrisMove(-1)">◀</button>
+          <button class="game-button" onclick="tetrisRotate()">↻</button>
+          <button class="game-button" onclick="tetrisMove(1)">▶</button>
+          <button class="game-button" style="grid-column:2"
+                  onclick="tetrisDrop()">⬇</button>
+        </div>
+
+        <div class="mini-message" id="tetrisMessage">
+          برای شروع بازی کلیک کن!
+        </div>
+
+      </div>
+
+      <!-- SNAKE -->
+
+      <div class="mini-game">
+
+        <h3>🐍 SNAKE</h3>
+        <p>غذا بخور و مار را بزرگ‌تر کن!</p>
+
+        <div class="game-score">
+          امتیاز: <span id="snakeScore">0</span>
+        </div>
+
+        <canvas id="snakeCanvas"
+                class="game-canvas"
+                width="300" height="300"></canvas>
+
+        <div class="game-controls">
+          <button class="game-button" onclick="startSnake()">شروع / دوباره</button>
+        </div>
+
+        <div class="game-controls">
+          <button class="game-button" onclick="snakeDirection(0,-1)">⬆</button>
+        </div>
+
+        <div class="game-controls">
+          <button class="game-button" onclick="snakeDirection(-1,0)">⬅</button>
+          <button class="game-button" onclick="snakeDirection(0,1)">⬇</button>
+          <button class="game-button" onclick="snakeDirection(1,0)">➡</button>
+        </div>
+
+        <div class="mini-message" id="snakeMessage">
+          آماده‌ای؟
+        </div>
+
+      </div>
+
+      <!-- PONG -->
+
+      <div class="mini-game">
+
+        <h3>🏓 PONG</h3>
+        <p>توپ را با راکت نگه دار و امتیاز بگیر!</p>
+
+        <div class="game-score">
+          امتیاز: <span id="pongScore">0</span>
+        </div>
+
+        <canvas id="pongCanvas"
+                class="game-canvas"
+                width="320" height="220"></canvas>
+
+        <div class="game-controls">
+          <button class="game-button" onclick="startPong()">شروع / دوباره</button>
+          <button class="game-button secondary" onclick="pongMove(-1)">⬆ بالا</button>
+          <button class="game-button secondary" onclick="pongMove(1)">⬇ پایین</button>
+        </div>
+
+        <div class="mini-message" id="pongMessage">
+          با رقیب کامپیوتری بازی کن!
+        </div>
+
+      </div>
+
+      <!-- TIC TAC TOE -->
+
+      <div class="mini-game">
+
+        <h3>❌ دوز</h3>
+        <p>سه علامت یکسان را در یک خط قرار بده!</p>
+
+        <div class="game-score" id="ticStatus">نوبت X</div>
+
+        <div class="tic-grid">
+
+          <button class="tic-cell" onclick="ticPlay(0)"></button>
+          <button class="tic-cell" onclick="ticPlay(1)"></button>
+          <button class="tic-cell" onclick="ticPlay(2)"></button>
+          <button class="tic-cell" onclick="ticPlay(3)"></button>
+          <button class="tic-cell" onclick="ticPlay(4)"></button>
+          <button class="tic-cell" onclick="ticPlay(5)"></button>
+          <button class="tic-cell" onclick="ticPlay(6)"></button>
+          <button class="tic-cell" onclick="ticPlay(7)"></button>
+          <button class="tic-cell" onclick="ticPlay(8)"></button>
+
+        </div>
+
+        <button class="game-button" onclick="resetTic()">
+          🔄 شروع دوباره
+        </button>
+
+      </div>
+
+      <!-- GUESS NUMBER -->
+
+      <div class="mini-game">
+
+        <h3>🧠 حدس عدد</h3>
+        <p>یک عدد بین ۱ تا ۱۰۰ حدس بزن!</p>
+
+        <div class="game-score">
+          تعداد تلاش: <span id="guessAttempts">0</span>
+        </div>
+
+        <input class="guess-input"
+               type="number"
+               id="guessInput"
+               min="1"
+               max="100"
+               placeholder="عدد">
+
+        <div class="game-controls">
+          <button class="game-button" onclick="checkGuess()">بررسی عدد</button>
+          <button class="game-button secondary" onclick="resetGuess()">دوباره</button>
+        </div>
+
+        <div class="mini-message" id="guessMessage">
+          عدد مخفی را پیدا کن!
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
 
 <section class="section">
 
@@ -713,19 +1074,20 @@ footer strong { color:var(--green); }
   <strong>ALI X STAR ✦</strong>
 
   <div>تمام حقوق این وب‌سایت متعلق به صاحب آن است.</div>
-
   <div>ساخته شده با ❤️ برای علاقه‌مندان به ماینکرفت</div>
-
   <div>© 2026 ALI X STAR</div>
 
 </footer>
 
-<button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+<button class="top-btn"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})"
         aria-label="بازگشت به بالا">↑</button>
 
 <script>
 
-// منوی موبایل
+// =================================
+// MOBILE MENU
+// =================================
 
 function toggleMenu() {
   document.getElementById('navLinks').classList.toggle('show');
@@ -735,7 +1097,9 @@ function closeMenu() {
   document.getElementById('navLinks').classList.remove('show');
 }
 
-// سیستم بازی الماس
+// =================================
+// DIAMOND GAME
+// =================================
 
 let score = 0;
 
@@ -786,6 +1150,997 @@ function resetGame() {
     'بازی از نو شروع شد!';
 
 }
+
+// =================================
+// VIDEO SYSTEM
+// =================================
+
+let currentPlatform = "youtube";
+let videos = [];
+
+try {
+
+  const savedVideos = JSON.parse(
+    localStorage.getItem("alixstar_videos") || "[]"
+  );
+
+  if(Array.isArray(savedVideos)) {
+    videos = savedVideos.filter(video =>
+      video &&
+      typeof video.title === "string" &&
+      typeof video.embed === "string" &&
+      ["youtube","aparat"].includes(video.platform)
+    );
+  }
+
+} catch(error) {
+  videos = [];
+}
+
+function saveVideos() {
+
+  try {
+
+    localStorage.setItem(
+      "alixstar_videos",
+      JSON.stringify(videos)
+    );
+
+  } catch(error) {
+
+    alert("فضای ذخیره‌سازی مرورگر کافی نیست!");
+
+  }
+
+}
+
+function showVideos(platform,button) {
+
+  currentPlatform = platform;
+
+  document.querySelectorAll(".video-tab").forEach(tab => {
+    tab.classList.remove("active");
+  });
+
+  button.classList.add("active");
+
+  renderVideos();
+
+}
+
+function getEmbedUrl(link,platform) {
+
+  try {
+
+    const url = new URL(link);
+
+    if(platform === "youtube") {
+
+      let id = "";
+
+      if(url.hostname === "youtu.be") {
+
+        id = url.pathname.slice(1).split("/")[0];
+
+      } else if(
+        url.hostname === "youtube.com" ||
+        url.hostname.endsWith(".youtube.com") ||
+        url.hostname === "youtube-nocookie.com" ||
+        url.hostname.endsWith(".youtube-nocookie.com")
+      ) {
+
+        if(url.pathname === "/watch") {
+          id = url.searchParams.get("v") || "";
+        } else if(
+          url.pathname.startsWith("/shorts/") ||
+          url.pathname.startsWith("/live/") ||
+          url.pathname.startsWith("/embed/")
+        ) {
+          id = url.pathname.split("/")[2] || "";
+        }
+
+      }
+
+      if(!/^[a-zA-Z0-9_-]{11}$/.test(id)) {
+        return null;
+      }
+
+      return "https://www.youtube-nocookie.com/embed/" + id;
+
+    }
+
+    if(platform === "aparat") {
+
+      if(
+        url.hostname !== "aparat.com" &&
+        !url.hostname.endsWith(".aparat.com")
+      ) return null;
+
+      if(url.pathname.includes("/video/video/embed/")) {
+        return url.href;
+      }
+
+      const match = url.pathname.match(
+        /^\/v\/([a-zA-Z0-9_-]+)/
+      );
+
+      if(!match) return null;
+
+      return "https://www.aparat.com/video/video/embed/videohash/"
+        + match[1] + "/vt/frame";
+
+    }
+
+  } catch(error) {
+    return null;
+  }
+
+  return null;
+
+}
+
+function addVideo() {
+
+  const titleInput = document.getElementById("videoTitle");
+  const urlInput = document.getElementById("videoUrl");
+
+  const title = titleInput.value.trim();
+  const link = urlInput.value.trim();
+
+  if(!title || !link) {
+    alert("عنوان و لینک ویدئو را وارد کن!");
+    return;
+  }
+
+  const embed = getEmbedUrl(link,currentPlatform);
+
+  if(!embed) {
+    alert("لینک معتبر نیست. لینک یوتیوب یا آپارات را بررسی کن.");
+    return;
+  }
+
+  videos.push({
+    title:title,
+    platform:currentPlatform,
+    embed:embed
+  });
+
+  saveVideos();
+
+  titleInput.value = "";
+  urlInput.value = "";
+
+  renderVideos();
+
+  alert("ویدئو با موفقیت اضافه شد!");
+
+}
+
+function renderVideos() {
+
+  const grid = document.getElementById("videoGrid");
+  const count = document.getElementById("videoCount");
+
+  grid.innerHTML = "";
+
+  const filtered = videos.filter(video =>
+    video.platform === currentPlatform
+  );
+
+  count.textContent = "تعداد ویدئوها: " + filtered.length;
+
+  if(filtered.length === 0) {
+
+    const empty = document.createElement("div");
+    empty.className = "video-empty";
+    empty.textContent = "🎬 هنوز ویدئویی اضافه نشده است.";
+
+    grid.appendChild(empty);
+
+    return;
+
+  }
+
+  filtered.forEach((video,index) => {
+
+    const card = document.createElement("div");
+    card.className = "video-card";
+
+    const frame = document.createElement("iframe");
+
+    frame.src = video.embed;
+    frame.title = video.title;
+    frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    frame.allowFullscreen = true;
+    frame.loading = "lazy";
+
+    const info = document.createElement("div");
+    info.className = "video-info";
+
+    const heading = document.createElement("h3");
+
+    heading.textContent =
+      "ویدئو " + (index+1) + " - " + video.title;
+
+    const remove = document.createElement("button");
+
+    remove.className = "video-delete";
+    remove.textContent = "🗑️ حذف ویدئو";
+
+    remove.onclick = function() {
+
+      if(confirm("آیا از حذف این ویدئو مطمئنی؟")) {
+
+        const videoIndex = videos.indexOf(video);
+
+        if(videoIndex !== -1) {
+          videos.splice(videoIndex,1);
+          saveVideos();
+          renderVideos();
+        }
+
+      }
+
+    };
+
+    info.appendChild(heading);
+    info.appendChild(remove);
+
+    card.appendChild(frame);
+    card.appendChild(info);
+
+    grid.appendChild(card);
+
+  });
+
+}
+
+renderVideos();
+
+// =================================
+// TETRIS
+// =================================
+
+const tc = document.getElementById("tetrisCanvas");
+const tx = tc.getContext("2d");
+
+const COLS = 12;
+const ROWS = 20;
+const SIZE = 20;
+
+const shapes = [
+  [[1,1,1,1]],
+  [[1,1],[1,1]],
+  [[0,1,0],[1,1,1]],
+  [[1,0,0],[1,1,1]],
+  [[0,0,1],[1,1,1]],
+  [[1,1,0],[0,1,1]],
+  [[0,1,1],[1,1,0]]
+];
+
+let board = [];
+let piece = null;
+let tetrisScore = 0;
+let tetrisTimer = null;
+let tetrisRunning = false;
+
+function randomPiece() {
+
+  const shape = shapes[Math.floor(Math.random()*shapes.length)];
+
+  return {
+    shape:shape.map(row => [...row]),
+    x:4,
+    y:0
+  };
+
+}
+
+function drawTetris() {
+
+  tx.fillStyle = "#050b08";
+  tx.fillRect(0,0,240,400);
+
+  for(let y=0;y<ROWS;y++) {
+    for(let x=0;x<COLS;x++) {
+
+      if(board[y][x]) {
+        tx.fillStyle = "#4ade80";
+        tx.fillRect(x*SIZE,y*SIZE,SIZE-1,SIZE-1);
+      }
+
+    }
+  }
+
+  if(piece) {
+
+    piece.shape.forEach((row,y) => {
+
+      row.forEach((value,x) => {
+
+        if(value) {
+
+          tx.fillStyle = "#a78bfa";
+
+          tx.fillRect(
+            (piece.x+x)*SIZE,
+            (piece.y+y)*SIZE,
+            SIZE-1,
+            SIZE-1
+          );
+
+        }
+
+      });
+
+    });
+
+  }
+
+}
+
+function collision(px,py,shape) {
+
+  for(let y=0;y<shape.length;y++) {
+    for(let x=0;x<shape[y].length;x++) {
+
+      if(!shape[y][x]) continue;
+
+      const nx = px+x;
+      const ny = py+y;
+
+      if(
+        nx<0 || nx>=COLS ||
+        ny>=ROWS ||
+        (ny>=0 && board[ny][nx])
+      ) return true;
+
+    }
+  }
+
+  return false;
+
+}
+
+function mergePiece() {
+
+  piece.shape.forEach((row,y) => {
+
+    row.forEach((value,x) => {
+
+      if(value && piece.y+y>=0) {
+        board[piece.y+y][piece.x+x] = 1;
+      }
+
+    });
+
+  });
+
+  let lines = 0;
+
+  for(let y=ROWS-1;y>=0;y--) {
+
+    if(board[y].every(cell => cell)) {
+
+      board.splice(y,1);
+      board.unshift(Array(COLS).fill(0));
+
+      lines++;
+      y++;
+
+    }
+
+  }
+
+  tetrisScore += [0,100,300,500,800][lines] || 0;
+
+  document.getElementById("tetrisScore").textContent =
+    tetrisScore;
+
+  piece = randomPiece();
+
+  if(collision(piece.x,piece.y,piece.shape)) {
+
+    clearInterval(tetrisTimer);
+    tetrisRunning = false;
+
+    document.getElementById("tetrisMessage").textContent =
+      "بازی تمام شد! امتیاز: " + tetrisScore;
+
+  }
+
+}
+
+function tetrisMove(direction) {
+
+  if(!tetrisRunning) return;
+
+  if(!collision(piece.x+direction,piece.y,piece.shape)) {
+    piece.x += direction;
+    drawTetris();
+  }
+
+}
+
+function tetrisRotate() {
+
+  if(!tetrisRunning) return;
+
+  const rotated = piece.shape[0].map((_,i) =>
+    piece.shape.map(row => row[i]).reverse()
+  );
+
+  if(!collision(piece.x,piece.y,rotated)) {
+    piece.shape = rotated;
+    drawTetris();
+  }
+
+}
+
+function tetrisStep() {
+
+  if(!tetrisRunning) return;
+
+  if(!collision(piece.x,piece.y+1,piece.shape)) {
+    piece.y++;
+  } else {
+    mergePiece();
+  }
+
+  drawTetris();
+
+}
+
+function tetrisDrop() {
+
+  if(!tetrisRunning) return;
+
+  while(!collision(piece.x,piece.y+1,piece.shape)) {
+    piece.y++;
+  }
+
+  mergePiece();
+  drawTetris();
+
+}
+
+function startTetris() {
+
+  clearInterval(tetrisTimer);
+
+  board = Array.from(
+    {length:ROWS},
+    () => Array(COLS).fill(0)
+  );
+
+  tetrisScore = 0;
+  piece = randomPiece();
+  tetrisRunning = true;
+
+  document.getElementById("tetrisScore").textContent = 0;
+
+  document.getElementById("tetrisMessage").textContent =
+    "بازی شروع شد!";
+
+  drawTetris();
+
+  tetrisTimer = setInterval(tetrisStep,550);
+
+}
+
+function pauseTetris() {
+
+  if(!tetrisRunning) return;
+
+  clearInterval(tetrisTimer);
+  tetrisRunning = false;
+
+  document.getElementById("tetrisMessage").textContent =
+    "بازی متوقف شد! برای شروع دوباره دکمه شروع را بزن.";
+
+}
+
+// =================================
+// SNAKE
+// =================================
+
+const sc = document.getElementById("snakeCanvas");
+const sx = sc.getContext("2d");
+
+const CELL = 15;
+
+let snake = [];
+let food = {};
+let snakeScore = 0;
+let snakeTimer = null;
+let snakeDir = {x:1,y:0};
+let nextSnakeDir = {x:1,y:0};
+let snakeRunning = false;
+
+function makeFood() {
+
+  do {
+
+    food = {
+      x:Math.floor(Math.random()*20),
+      y:Math.floor(Math.random()*20)
+    };
+
+  } while(snake.some(part =>
+    part.x===food.x && part.y===food.y
+  ));
+
+}
+
+function drawSnake() {
+
+  sx.fillStyle = "#050b08";
+  sx.fillRect(0,0,300,300);
+
+  sx.fillStyle = "#4ade80";
+
+  snake.forEach(part => {
+
+    sx.fillRect(
+      part.x*CELL+1,
+      part.y*CELL+1,
+      CELL-2,
+      CELL-2
+    );
+
+  });
+
+  sx.fillStyle = "#ef4444";
+
+  sx.fillRect(
+    food.x*CELL+2,
+    food.y*CELL+2,
+    CELL-4,
+    CELL-4
+  );
+
+}
+
+function snakeDirection(x,y) {
+
+  if(x===-snakeDir.x && y===-snakeDir.y) return;
+
+  nextSnakeDir = {x,y};
+
+}
+
+function snakeStep() {
+
+  snakeDir = nextSnakeDir;
+
+  const head = {
+    x:snake[0].x+snakeDir.x,
+    y:snake[0].y+snakeDir.y
+  };
+
+  const eating = head.x===food.x && head.y===food.y;
+
+  const body = eating ? snake : snake.slice(0,-1);
+
+  if(
+    head.x<0 || head.x>=20 ||
+    head.y<0 || head.y>=20 ||
+    body.some(part => part.x===head.x && part.y===head.y)
+  ) {
+
+    clearInterval(snakeTimer);
+    snakeRunning = false;
+
+    document.getElementById("snakeMessage").textContent =
+      "بازی تمام شد! امتیاز: " + snakeScore;
+
+    return;
+
+  }
+
+  snake.unshift(head);
+
+  if(eating) {
+
+    snakeScore++;
+
+    document.getElementById("snakeScore").textContent =
+      snakeScore;
+
+    makeFood();
+
+  } else {
+
+    snake.pop();
+
+  }
+
+  drawSnake();
+
+}
+
+function startSnake() {
+
+  clearInterval(snakeTimer);
+
+  snake = [
+    {x:10,y:10},
+    {x:9,y:10},
+    {x:8,y:10}
+  ];
+
+  snakeScore = 0;
+
+  snakeDir = {x:1,y:0};
+  nextSnakeDir = {x:1,y:0};
+
+  snakeRunning = true;
+
+  document.getElementById("snakeScore").textContent = 0;
+
+  document.getElementById("snakeMessage").textContent =
+    "بازی شروع شد!";
+
+  makeFood();
+  drawSnake();
+
+  snakeTimer = setInterval(snakeStep,130);
+
+}
+
+// =================================
+// PONG
+// =================================
+
+const pc = document.getElementById("pongCanvas");
+const px = pc.getContext("2d");
+
+let pong = {
+  ballX:160,
+  ballY:110,
+  vx:3,
+  vy:2,
+  player:85,
+  enemy:85,
+  score:0
+};
+
+let pongTimer = null;
+let pongRunning = false;
+
+function drawPong() {
+
+  px.fillStyle = "#050b08";
+  px.fillRect(0,0,320,220);
+
+  px.setLineDash([5,5]);
+  px.strokeStyle = "#4ade8050";
+  px.beginPath();
+  px.moveTo(160,0);
+  px.lineTo(160,220);
+  px.stroke();
+  px.setLineDash([]);
+
+  px.fillStyle = "#4ade80";
+
+  px.fillRect(10,pong.player,7,50);
+  px.fillRect(303,pong.enemy,7,50);
+
+  px.beginPath();
+  px.arc(pong.ballX,pong.ballY,7,0,Math.PI*2);
+  px.fill();
+
+}
+
+function pongMove(direction) {
+
+  pong.player += direction*18;
+
+  pong.player = Math.max(0,Math.min(170,pong.player));
+
+  drawPong();
+
+}
+
+function pongStep() {
+
+  pong.ballX += pong.vx;
+  pong.ballY += pong.vy;
+
+  if(pong.ballY<7 || pong.ballY>213) {
+    pong.vy *= -1;
+  }
+
+  const enemyCenter = pong.enemy+25;
+
+  if(enemyCenter<pong.ballY-8) pong.enemy+=2.5;
+  if(enemyCenter>pong.ballY+8) pong.enemy-=2.5;
+
+  pong.enemy = Math.max(0,Math.min(170,pong.enemy));
+
+  if(
+    pong.ballX<22 &&
+    pong.ballX>10 &&
+    pong.ballY>pong.player &&
+    pong.ballY<pong.player+50 &&
+    pong.vx<0
+  ) {
+
+    pong.vx = Math.abs(pong.vx)+0.2;
+    pong.score++;
+
+    document.getElementById("pongScore").textContent =
+      pong.score;
+
+  }
+
+  if(
+    pong.ballX>298 &&
+    pong.ballX<310 &&
+    pong.ballY>pong.enemy &&
+    pong.ballY<pong.enemy+50 &&
+    pong.vx>0
+  ) {
+
+    pong.vx = -Math.abs(pong.vx)-0.2;
+
+  }
+
+  if(pong.ballX<0 || pong.ballX>320) {
+
+    clearInterval(pongTimer);
+    pongRunning = false;
+
+    document.getElementById("pongMessage").textContent =
+      "بازی تمام شد! امتیاز: " + pong.score;
+
+    return;
+
+  }
+
+  drawPong();
+
+}
+
+function startPong() {
+
+  clearInterval(pongTimer);
+
+  pong = {
+    ballX:160,
+    ballY:110,
+    vx:3,
+    vy:2,
+    player:85,
+    enemy:85,
+    score:0
+  };
+
+  pongRunning = true;
+
+  document.getElementById("pongScore").textContent = 0;
+
+  document.getElementById("pongMessage").textContent =
+    "مراقب توپ باش!";
+
+  drawPong();
+
+  pongTimer = setInterval(pongStep,20);
+
+}
+
+// =================================
+// TIC TAC TOE
+// =================================
+
+let ticBoard = Array(9).fill("");
+let ticTurn = "X";
+let ticFinished = false;
+
+function ticPlay(index) {
+
+  if(ticFinished || ticBoard[index]) return;
+
+  ticBoard[index] = ticTurn;
+
+  const cells = document.querySelectorAll(".tic-cell");
+
+  cells[index].textContent = ticTurn;
+
+  const wins = [
+    [0,1,2],[3,4,5],[6,7,8],
+    [0,3,6],[1,4,7],[2,5,8],
+    [0,4,8],[2,4,6]
+  ];
+
+  const winner = wins.some(line =>
+    line.every(i => ticBoard[i]===ticTurn)
+  );
+
+  if(winner) {
+
+    document.getElementById("ticStatus").textContent =
+      "🏆 برنده: " + ticTurn;
+
+    ticFinished = true;
+    return;
+
+  }
+
+  if(ticBoard.every(cell => cell)) {
+
+    document.getElementById("ticStatus").textContent =
+      "🤝 مساوی شد!";
+
+    ticFinished = true;
+    return;
+
+  }
+
+  ticTurn = ticTurn==="X" ? "O" : "X";
+
+  document.getElementById("ticStatus").textContent =
+    "نوبت " + ticTurn;
+
+}
+
+function resetTic() {
+
+  ticBoard = Array(9).fill("");
+  ticTurn = "X";
+  ticFinished = false;
+
+  document.querySelectorAll(".tic-cell").forEach(cell => {
+    cell.textContent = "";
+  });
+
+  document.getElementById("ticStatus").textContent =
+    "نوبت X";
+
+}
+
+// =================================
+// GUESS NUMBER
+// =================================
+
+let secretNumber = Math.floor(Math.random()*100)+1;
+let guessCount = 0;
+let guessFinished = false;
+
+function checkGuess() {
+
+  if(guessFinished) {
+
+    alert("برای بازی دوباره، دکمه دوباره را بزن!");
+
+    return;
+
+  }
+
+  const input = document.getElementById("guessInput");
+  const value = Number(input.value);
+
+  if(!Number.isInteger(value) || value<1 || value>100) {
+
+    document.getElementById("guessMessage").textContent =
+      "یک عدد صحیح بین ۱ تا ۱۰۰ وارد کن!";
+
+    return;
+
+  }
+
+  guessCount++;
+
+  document.getElementById("guessAttempts").textContent =
+    guessCount;
+
+  if(value===secretNumber) {
+
+    document.getElementById("guessMessage").textContent =
+      "🏆 آفرین! عدد را در " + guessCount + " تلاش پیدا کردی!";
+
+    guessFinished = true;
+
+  }
+
+  else if(value<secretNumber) {
+
+    document.getElementById("guessMessage").textContent =
+      "عدد بزرگ‌تری حدس بزن! ⬆";
+
+  }
+
+  else {
+
+    document.getElementById("guessMessage").textContent =
+      "عدد کوچک‌تری حدس بزن! ⬇";
+
+  }
+
+  input.value = "";
+
+}
+
+function resetGuess() {
+
+  secretNumber = Math.floor(Math.random()*100)+1;
+  guessCount = 0;
+  guessFinished = false;
+
+  document.getElementById("guessAttempts").textContent = 0;
+
+  document.getElementById("guessMessage").textContent =
+    "عدد جدید انتخاب شد!";
+
+  document.getElementById("guessInput").value = "";
+
+}
+
+// =================================
+// KEYBOARD CONTROLS
+// =================================
+
+document.addEventListener("keydown",function(e) {
+
+  if(e.target.matches("input,textarea")) return;
+
+  if(e.key==="ArrowLeft") {
+
+    e.preventDefault();
+
+    tetrisMove(-1);
+
+  }
+
+  if(e.key==="ArrowRight") {
+
+    e.preventDefault();
+
+    tetrisMove(1);
+
+  }
+
+  if(e.key==="ArrowDown") {
+
+    e.preventDefault();
+
+    tetrisStep();
+
+  }
+
+  if(e.key==="ArrowUp") {
+
+    e.preventDefault();
+
+    tetrisRotate();
+
+  }
+
+  if(e.code==="Space" &&
+     document.activeElement===document.body) {
+
+    e.preventDefault();
+
+    tetrisDrop();
+
+  }
+
+});
+
+// =================================
+// INITIAL DRAW
+// =================================
+
+board = Array.from(
+  {length:ROWS},
+  () => Array(COLS).fill(0)
+);
+
+drawTetris();
+
+drawSnake();
+
+drawPong();
 
 </script>
 
