@@ -75,6 +75,22 @@ footer{text-align:center;padding:35px 15px;border-top:1px solid #48ff9b25;color:
 .top-btn{position:fixed;bottom:18px;left:18px;width:44px;height:44px;border:0;border-radius:13px;background:var(--green);color:#06130b;font-size:22px;z-index:50;box-shadow:0 5px 20px #48ff9b35}
 @media(max-width:780px){.menu-btn{display:block}.nav-links{display:none;position:absolute;top:76px;right:0;width:100%;padding:18px;background:#081321;flex-direction:column;border-bottom:1px solid var(--line)}.nav-links.show{display:flex}.hero{min-height:510px}.section{padding:55px 0}.account-layout{grid-template-columns:1fr}.logo{font-size:20px}.stats{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* امکانات جدید */
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:0 auto 25px;max-width:760px}
+.toolbar input{flex:1;min-width:210px;padding:13px 15px;background:#07111c;border:1px solid #48ff9b55;border-radius:12px;color:var(--text);outline:none}
+.toolbar button,.favorite-btn{border:1px solid #48ff9b55;background:#102438;color:var(--text);border-radius:11px;padding:10px 15px;font-weight:800}
+.favorite-btn{margin-top:12px;width:100%;font-size:12px}.favorite-btn.saved{background:var(--green);color:#06130b}
+.daily-box{max-width:700px;margin:22px auto 0;padding:20px;border:1px solid #b18cff55;border-radius:18px;background:linear-gradient(130deg,#281d45,#102438);text-align:center}
+.daily-box h3{color:#d2baff;margin-bottom:8px}.daily-box p{color:var(--muted);font-size:12px;line-height:2}.daily-box button{margin-top:12px}
+body.light-mode{--bg:#edf5f1;--text:#10251b;--muted:#526b5d;background:#edf5f1;color:var(--text)}
+body.light-mode header{background:#f4fff0ed}body.light-mode .logo span{color:#173426}
+body.light-mode .nav-links a{color:#456354}
+body.light-mode .card,body.light-mode .mini-game,body.light-mode .video-card,body.light-mode .account-panel{background:linear-gradient(145deg,#fff,#eaf5ef);border-color:#279b6140}
+body.light-mode .account-panel input,body.light-mode .guess-input,body.light-mode .toolbar input{background:#fff;color:#10251b}
+body.light-mode .btn-dark,body.light-mode .video-tab,body.light-mode .toolbar button{color:#10251b;background:#e0eee6;border-color:#7aa88c}
+body.light-mode .stat{background:#fff;border-color:#c7ded0}body.light-mode .tic-cell{background:#fff;color:#167c4b}
+
 </style>
 </head>
 <body>
@@ -103,12 +119,26 @@ footer{text-align:center;padding:35px 15px;border-top:1px solid #48ff9b25;color:
 
 <section class="section" id="mods"><div class="container">
 <div class="section-title"><h2>🧱 مود و <span>شیدر ماینکرفت</span></h2><p>منابع پیدا کردن محتوای تازه برای ماینکرفت.</p></div>
-<div class="cards">
-<div class="card"><div class="card-icon">⚔️</div><h3>مودهای ماینکرفت</h3><p>مودهای متنوع برای تغییر تجربه بازی.</p><a class="btn btn-green" href="https://modrinth.com/mods" target="_blank" rel="noopener">مشاهده مودها</a></div>
-<div class="card"><div class="card-icon">🌈</div><h3>شیدر ماینکرفت</h3><p>افکت‌های نوری و جلوه‌های گرافیکی.</p><a class="btn btn-dark" href="https://modrinth.com/shaders" target="_blank" rel="noopener">مشاهده شیدرها</a></div>
-<div class="card"><div class="card-icon">📦</div><h3>تکسچر پک</h3><p>تغییر ظاهر بلوک‌ها و آیتم‌های بازی.</p><a class="btn btn-green" href="https://modrinth.com/resourcepacks" target="_blank" rel="noopener">مشاهده تکسچرها</a></div>
-<div class="card"><div class="card-icon">🗺️</div><h3>نقشه‌های ماینکرفت</h3><p>نقشه‌ها و دنیاهای تازه برای بازی.</p><a class="btn btn-dark" href="https://www.curseforge.com/minecraft/search" target="_blank" rel="noopener">جست‌وجوی نقشه</a></div>
-</div></div></section>
+<div class="toolbar">
+<input id="siteSearch" type="search" placeholder="🔎 جست‌وجو در مودها، شیدرها و کارت‌ها..." oninput="filterCards()">
+<button type="button" onclick="showFavorites()">⭐ موردعلاقه‌ها</button>
+<button type="button" onclick="showAllCards()">نمایش همه</button>
+<button type="button" onclick="toggleTheme()" id="themeButton">🌙 تغییر تم</button>
+</div>
+<div class="cards" id="resourceCards">
+<div class="card"><div class="card-icon">⚔️</div><h3>مودهای ماینکرفت</h3><p>مودهای متنوع برای تغییر تجربه بازی.</p><button class="favorite-btn" data-favorite="مودهای ماینکرفت" onclick="toggleFavorite(this)">☆ افزودن به موردعلاقه‌ها</button><a class="btn btn-green" href="https://modrinth.com/mods" target="_blank" rel="noopener">مشاهده مودها</a></div>
+<div class="card"><div class="card-icon">🌈</div><h3>شیدر ماینکرفت</h3><p>افکت‌های نوری و جلوه‌های گرافیکی.</p><button class="favorite-btn" data-favorite="شیدر ماینکرفت" onclick="toggleFavorite(this)">☆ افزودن به موردعلاقه‌ها</button><a class="btn btn-dark" href="https://modrinth.com/shaders" target="_blank" rel="noopener">مشاهده شیدرها</a></div>
+<div class="card"><div class="card-icon">📦</div><h3>تکسچر پک</h3><p>تغییر ظاهر بلوک‌ها و آیتم‌های بازی.</p><button class="favorite-btn" data-favorite="تکسچر پک" onclick="toggleFavorite(this)">☆ افزودن به موردعلاقه‌ها</button><a class="btn btn-green" href="https://modrinth.com/resourcepacks" target="_blank" rel="noopener">مشاهده تکسچرها</a></div>
+<div class="card"><div class="card-icon">🗺️</div><h3>نقشه‌های ماینکرفت</h3><p>نقشه‌ها و دنیاهای تازه برای بازی.</p><button class="favorite-btn" data-favorite="نقشه‌های ماینکرفت" onclick="toggleFavorite(this)">☆ افزودن به موردعلاقه‌ها</button><a class="btn btn-dark" href="https://www.curseforge.com/minecraft/search" target="_blank" rel="noopener">جست‌وجوی نقشه</a></div>
+</div>
+<div class="daily-box">
+<h3>🎁 جایزه روزانه ALI X STAR</h3>
+<p>هر روز یک بار جایزه بگیر و امتیازت را در همین مرورگر جمع کن.</p>
+<div class="score">امتیاز جایزه: <span id="dailyPoints">0</span> 💎</div>
+<button class="btn btn-purple" id="dailyButton" onclick="claimDailyReward()">دریافت جایزه امروز</button>
+<div class="mini-message" id="dailyMessage" aria-live="polite"></div>
+</div>
+</div></section>
 
 <section class="section" id="videos"><div class="container">
 <div class="section-title"><h2>🎬 کتابخانه <span>ویدئوهای ALI X STAR</span></h2><p>ویدئوها فقط برای تماشا هستند؛ بازدیدکنندگان امکان افزودن یا حذف ندارند.</p></div>
@@ -124,6 +154,11 @@ footer{text-align:center;padding:35px 15px;border-top:1px solid #48ff9b25;color:
 <form onsubmit="loginUser(event)"><h3>🔐 ورود</h3><input id="loginName" placeholder="نام کاربری" required><input id="loginPass" type="password" placeholder="رمز نمایشی" required><button class="btn btn-dark" type="submit">ورود به پروفایل</button></form>
 </div>
 <div class="profile-view" id="profileView"><div class="avatar">👑</div><h3 id="profileName">کاربر</h3><p>به دنیای ALI X STAR خوش آمدی!</p><button class="btn btn-dark" onclick="logoutUser()">خروج از حساب</button></div>
+<div class="stats">
+<div class="stat"><strong id="siteVisitCount">0</strong><span>بازدید این مرورگر</span></div>
+<div class="stat"><strong id="favoriteCount">0</strong><span>موردعلاقه‌ها</span></div>
+<div class="stat"><strong id="dailyStreak">0</strong><span>روزهای دریافت جایزه</span></div>
+</div>
 <p class="account-note">⚠️ این فقط یک سیستم نمایشی و محلی است؛ حساب‌ها فقط در همین مرورگر ذخیره می‌شوند و بین دستگاه‌ها یا کاربران همگام نیستند. برای امنیت، از رمز واقعی یا رمزی که جای دیگری استفاده می‌کنی استفاده نکن. GitHub Pages به‌تنهایی امکان حساب کاربری امن و مشترک فراهم نمی‌کند.</p>
 <div class="mini-message" id="authMessage" aria-live="polite"></div>
 </div></div></section>
@@ -318,6 +353,68 @@ function checkGuess(){if(guessFinished){document.getElementById('guessMessage').
 }
 function resetGuess(){secretNumber=Math.floor(Math.random()*100)+1;guessCount=0;guessFinished=false;document.getElementById('guessAttempts').textContent='0';document.getElementById('guessMessage').textContent='عدد جدید انتخاب شد!';document.getElementById('guessInput').value=''}
 
+
+// جست‌وجو و موردعلاقه‌ها
+function getFavorites(){try{return JSON.parse(localStorage.getItem('alixstar_favorites')||'[]')}catch(e){return []}}
+function updateFavoriteButtons(){
+ const favorites=getFavorites();
+ document.querySelectorAll('[data-favorite]').forEach(btn=>{
+  const saved=favorites.includes(btn.dataset.favorite);
+  btn.classList.toggle('saved',saved);
+  btn.textContent=saved?'★ ذخیره شده':'☆ افزودن به موردعلاقه‌ها';
+ });
+ const count=document.getElementById('favoriteCount');if(count)count.textContent=favorites.length;
+}
+function toggleFavorite(btn){
+ let favorites=getFavorites(),name=btn.dataset.favorite;
+ favorites=favorites.includes(name)?favorites.filter(x=>x!==name):[...favorites,name];
+ localStorage.setItem('alixstar_favorites',JSON.stringify(favorites));updateFavoriteButtons();
+}
+function filterCards(){
+ const q=document.getElementById('siteSearch').value.trim().toLowerCase();
+ document.querySelectorAll('#resourceCards .card').forEach(card=>card.style.display=card.innerText.toLowerCase().includes(q)?'':'none');
+}
+function showFavorites(){
+ document.getElementById('siteSearch').value='';
+ document.querySelectorAll('#resourceCards .card').forEach(card=>{
+  const b=card.querySelector('[data-favorite]');
+  card.style.display=b&&getFavorites().includes(b.dataset.favorite)?'':'none';
+ });
+}
+function showAllCards(){document.getElementById('siteSearch').value='';document.querySelectorAll('#resourceCards .card').forEach(c=>c.style.display='')}
+function toggleTheme(){
+ document.body.classList.toggle('light-mode');
+ const light=document.body.classList.contains('light-mode');
+ localStorage.setItem('alixstar_theme',light?'light':'dark');
+ document.getElementById('themeButton').textContent=light?'☀️ تم روشن':'🌙 تغییر تم';
+}
+if(localStorage.getItem('alixstar_theme')==='light'){
+ document.body.classList.add('light-mode');document.getElementById('themeButton').textContent='☀️ تم روشن';
+}
+updateFavoriteButtons();
+
+// جایزه روزانه
+function dateStamp(){const d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()}
+function refreshDailyReward(){
+ document.getElementById('dailyPoints').textContent=localStorage.getItem('alixstar_daily_points')||'0';
+ const claimed=localStorage.getItem('alixstar_daily_date')===dateStamp();
+ const button=document.getElementById('dailyButton');button.disabled=claimed;
+ button.textContent=claimed?'جایزه امروز دریافت شده':'دریافت جایزه امروز';button.style.opacity=claimed?'.55':'1';
+ document.getElementById('dailyMessage').textContent=claimed?'امروز جایزه‌ات را گرفته‌ای؛ فردا دوباره سر بزن!':'هر روز یک جایزه تازه منتظر توست.';
+ document.getElementById('dailyStreak').textContent=localStorage.getItem('alixstar_daily_days')||'0';
+}
+function claimDailyReward(){
+ if(localStorage.getItem('alixstar_daily_date')===dateStamp()){refreshDailyReward();return}
+ localStorage.setItem('alixstar_daily_points',Number(localStorage.getItem('alixstar_daily_points')||0)+10);
+ localStorage.setItem('alixstar_daily_days',Number(localStorage.getItem('alixstar_daily_days')||0)+1);
+ localStorage.setItem('alixstar_daily_date',dateStamp());refreshDailyReward();
+ document.getElementById('dailyMessage').textContent='🎉 عالیه! ۱۰ امتیاز گرفتی.';
+}
+refreshDailyReward();
+const visitCount=Number(localStorage.getItem('alixstar_visit_count')||0)+1;
+localStorage.setItem('alixstar_visit_count',visitCount);
+document.getElementById('siteVisitCount').textContent=visitCount;
+
 // کنترل صفحه‌کلید
 document.addEventListener('keydown',e=>{
  if(e.target.matches('input,textarea'))return;
@@ -330,4 +427,4 @@ document.addEventListener('keydown',e=>{
 board=Array.from({length:ROWS},()=>Array(COLS).fill(0));drawTetris();drawSnake();drawPong();
 </script>
 </body>
-  </html>
+                                                  </html>
