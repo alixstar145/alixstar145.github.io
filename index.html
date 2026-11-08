@@ -4,965 +4,532 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#07130e">
+<meta name="theme-color" content="#07110c">
 <title>ALI X STAR | Minecraft Universe</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg:#07130e;
-  --panel:#10251b;
-  --panel2:#173526;
-  --green:#55ff91;
-  --green2:#19c76b;
-  --purple:#a78bfa;
-  --text:#f1fff5;
-  --muted:#9bb7a5;
-  --border:rgba(112,255,160,.17);
+:root{
+--bg:#07110c;--panel:#10251a;--green:#75ff9b;
+--lime:#c0ff80;--text:#f2fff4;--muted:#a2b9a8;
+--border:#70ff962d;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:'Vazirmatn',sans-serif;
-  overflow-x:hidden;
+margin:0;background:var(--bg);color:var(--text);
+font-family:Vazirmatn,sans-serif;overflow-x:hidden
 }
-button,input,select{font:inherit}
+button,input{font:inherit}
+a{text-decoration:none;color:inherit}
 button{cursor:pointer}
-a{color:inherit;text-decoration:none}
-::selection{background:var(--green);color:#07130e}
-
-/* BACKGROUND */
-.background{
-  position:fixed;inset:0;z-index:-3;
-  background:
-    radial-gradient(ellipse at 20% 20%,#14532d55,transparent 45%),
-    radial-gradient(ellipse at 85% 70%,#164e6350,transparent 40%),
-    #07130e;
+.bg{
+position:fixed;inset:0;z-index:-3;
+background:
+radial-gradient(circle at 15% 15%,#1d743a55,transparent 35%),
+radial-gradient(circle at 85% 75%,#174d3455,transparent 35%),
+#07110c
 }
-.grid-bg{
-  position:fixed;inset:0;z-index:-2;pointer-events:none;
-  background-image:
-    linear-gradient(#55ff9109 1px,transparent 1px),
-    linear-gradient(90deg,#55ff9109 1px,transparent 1px);
-  background-size:45px 45px;
-  mask-image:linear-gradient(to bottom,black,transparent);
+.grid{
+position:fixed;inset:0;z-index:-2;pointer-events:none;
+background-image:
+linear-gradient(#72ff9b0b 1px,transparent 1px),
+linear-gradient(90deg,#72ff9b0b 1px,transparent 1px);
+background-size:45px 45px
 }
-.particles{
-  position:fixed;inset:0;pointer-events:none;z-index:-1;
-  overflow:hidden;
-}
+#particles{position:fixed;inset:0;z-index:-1;pointer-events:none}
 .particle{
-  position:absolute;width:4px;height:4px;
-  background:var(--green);border-radius:50%;
-  opacity:.5;animation:float 9s infinite ease-in-out;
+position:absolute;width:4px;height:4px;
+background:#80ffa1;border-radius:50%;
+animation:float 8s infinite ease-in-out;opacity:.5
 }
 @keyframes float{
-  0%,100%{transform:translateY(0);opacity:.15}
-  50%{transform:translateY(-90px);opacity:.8}
+50%{transform:translateY(-65px);opacity:1}
 }
-
-/* HEADER */
+.wrap{width:min(1150px,calc(100% - 32px));margin:auto}
 header{
-  position:sticky;top:0;z-index:100;
-  background:#07130edb;
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--border);
+position:sticky;top:0;z-index:50;
+background:#07110ce8;backdrop-filter:blur(18px);
+border-bottom:1px solid var(--border)
 }
-.nav{
-  max-width:1250px;margin:auto;padding:13px 20px;
-  display:flex;align-items:center;justify-content:space-between;
-  gap:15px;
+nav{
+height:75px;display:flex;align-items:center;
+justify-content:space-between;gap:15px
 }
-.logo{
-  font-size:22px;font-weight:900;color:var(--green);
-  text-shadow:0 0 20px #55ff9170;
-  white-space:nowrap;
-}
-.nav-links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-.nav-links a{
-  font-size:13px;color:var(--muted);
-  transition:.25s;
-}
-.nav-links a:hover{color:var(--green)}
-.nav-actions{display:flex;gap:8px}
+.logo{font-weight:900;color:var(--green);font-size:21px}
+.links{display:flex;gap:19px}
+.links a{font-size:13px;color:var(--muted);transition:.2s}
+.links a:hover{color:var(--green)}
 .btn{
-  border:1px solid var(--border);
-  color:var(--text);background:#173526;
-  border-radius:12px;padding:10px 15px;
-  transition:.25s;font-weight:700;
+border:1px solid var(--border);background:#14291b;
+color:white;border-radius:13px;padding:11px 16px;
+font-size:13px;font-weight:800;transition:.25s
 }
-.btn:hover{
-  transform:translateY(-3px);
-  border-color:var(--green);
-  box-shadow:0 8px 25px #55ff9125;
+.btn:hover{transform:translateY(-3px);border-color:var(--green);box-shadow:0 8px 25px #0006}
+.primary{
+background:linear-gradient(135deg,#c1ff80,#4de987);
+color:#092010;border:0
 }
-.btn-primary{
-  background:linear-gradient(135deg,#55ff91,#16a85a);
-  color:#052010;border:0;
-}
-.menu-toggle{display:none}
-
-/* HERO */
+.menu{display:none}
+#mobileMenu{display:none}
 .hero{
-  max-width:1250px;margin:auto;
-  min-height:610px;padding:65px 25px 55px;
-  display:grid;grid-template-columns:1.1fr .9fr;
-  align-items:center;gap:30px;
+min-height:590px;display:grid;
+grid-template-columns:1fr 1fr;align-items:center;gap:25px;
+padding:60px 0
 }
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  border:1px solid #55ff9144;
-  color:var(--green);padding:8px 14px;
-  border-radius:30px;font-size:12px;
-  background:#55ff910c;
+.tag{
+display:inline-block;border:1px solid #75ff9b55;
+color:var(--green);padding:9px 15px;
+border-radius:30px;font-size:11px;
+background:#75ff9b10
 }
-.eyebrow span{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green)}
 .hero h1{
-  font-size:clamp(42px,7vw,85px);
-  line-height:1.15;margin:22px 0 8px;
-  font-weight:900;letter-spacing:-3px;
-  background:linear-gradient(90deg,#fff,#55ff91,#a7f3d0);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
+font-size:clamp(50px,8vw,90px);
+line-height:1.1;margin:20px 0;
+font-weight:900;letter-spacing:-3px;
+background:linear-gradient(90deg,#fff,#bfff90,#3ddd80);
+color:transparent;background-clip:text;
+-webkit-background-clip:text
 }
-.hero h2{font-size:23px;margin:10px 0;color:#d7fce3}
-.hero p{color:var(--muted);line-height:2;max-width:570px}
-.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
-.hero-art{
-  min-height:400px;display:grid;place-items:center;
-  perspective:900px;overflow:hidden;position:relative;
+.hero h2{font-size:23px}
+.hero p{color:var(--muted);line-height:2.1;font-size:14px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.scene{
+height:410px;display:grid;place-items:center;
+perspective:900px;position:relative
 }
-.world{
-  position:relative;width:280px;height:280px;
-  transform-style:preserve-3d;
-  transform:rotateX(-25deg) rotateY(-35deg);
-  animation:worldmove 14s infinite linear;
-}
-@keyframes worldmove{
-  from{transform:rotateX(-25deg) rotateY(-35deg)}
-  to{transform:rotateX(-25deg) rotateY(325deg)}
+.orbit{
+position:absolute;width:310px;height:310px;
+border:1px solid #75ff9b40;border-radius:50%;
+transform:rotateX(65deg) rotateZ(-25deg);
+box-shadow:0 0 35px #65ff8b20
 }
 .cube{
-  position:absolute;width:100px;height:100px;
-  transform-style:preserve-3d;
+width:170px;height:170px;position:relative;
+transform-style:preserve-3d;
+animation:rotate 16s linear infinite;
+transform:rotateX(-25deg) rotateY(-30deg)
+}
+@keyframes rotate{
+to{transform:rotateX(-25deg) rotateY(330deg)}
 }
 .face{
-  position:absolute;width:100px;height:100px;
-  border:2px solid #a7ffbb35;
-  box-shadow:inset 0 0 25px #0005;
+position:absolute;width:170px;height:170px;
+border:2px solid #c3ffad66;
+box-shadow:inset 0 0 35px #0007
 }
-.front{transform:translateZ(50px);background:#287a3d}
-.back{transform:rotateY(180deg) translateZ(50px);background:#174b2c}
-.right{transform:rotateY(90deg) translateZ(50px);background:#226338}
-.left{transform:rotateY(-90deg) translateZ(50px);background:#174b2c}
-.top{transform:rotateX(90deg) translateZ(50px);background:#67c75c}
-.bottom{transform:rotateX(-90deg) translateZ(50px);background:#4a3824}
-.cube-one{left:90px;top:90px}
-.cube-two{left:15px;top:20px;transform:scale(.65)}
-.cube-three{left:170px;top:160px;transform:scale(.55)}
-.cube-four{left:165px;top:5px;transform:scale(.4)}
-.glow{
-  position:absolute;width:270px;height:270px;
-  background:#22c55e25;filter:blur(65px);border-radius:50%;
+.front{transform:translateZ(85px);background:linear-gradient(135deg,#66c65a,#286e39)}
+.back{transform:rotateY(180deg) translateZ(85px);background:#225532}
+.right{transform:rotateY(90deg) translateZ(85px);background:#367c43}
+.left{transform:rotateY(-90deg) translateZ(85px);background:#19462b}
+.top{transform:rotateX(90deg) translateZ(85px);background:#80d65d}
+.bottom{transform:rotateX(-90deg) translateZ(85px);background:#59432d}
+.float-block{
+position:absolute;width:55px;height:55px;
+background:linear-gradient(135deg,#7bda60,#286a3c);
+border:1px solid #aaff9a;box-shadow:0 10px 30px #0008;
+animation:bob 4s infinite ease-in-out
 }
-
-/* SECTIONS */
-.section{
-  max-width:1250px;margin:0 auto;padding:75px 22px;
+.float-block.a{top:65px;right:35px}
+.float-block.b{bottom:65px;left:35px;background:#72502e;animation-delay:-2s}
+@keyframes bob{50%{transform:translateY(-20px) rotate(15deg)}}
+.scene-label{
+position:absolute;bottom:5px;
+color:var(--green);font-size:11px;
+border:1px solid var(--border);
+background:#10251a;padding:9px 15px;border-radius:30px
 }
-.section-heading{text-align:center;margin-bottom:35px}
-.section-heading small{color:var(--green);font-weight:800}
-.section-heading h2{font-size:32px;margin:8px 0}
-.section-heading p{color:var(--muted);font-size:14px}
-.cards{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
-}
-.card{
-  background:linear-gradient(145deg,#153524e8,#0c1d15);
-  border:1px solid var(--border);
-  border-radius:20px;padding:23px;
-  transition:.3s;position:relative;overflow:hidden;
-}
-.card:before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(120deg,transparent,#55ff910b,transparent);
-  transform:translateX(100%);transition:.6s;
-}
-.card:hover:before{transform:translateX(-100%)}
-.card:hover{
-  transform:translateY(-7px);
-  border-color:#55ff9170;
-  box-shadow:0 15px 40px #0005;
-}
-.card-icon{font-size:35px}
-.card h3{margin:12px 0 5px}
-.card p{font-size:13px;color:var(--muted);line-height:1.9}
-.card .btn{display:inline-block;margin-top:10px;font-size:13px}
-
-/* STATS */
 .stats{
-  max-width:1100px;margin:10px auto 45px;padding:0 20px;
-  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+display:grid;grid-template-columns:repeat(4,1fr);
+gap:13px;margin-bottom:40px
 }
 .stat{
-  text-align:center;padding:20px 10px;
-  background:#10251b;border:1px solid var(--border);
-  border-radius:16px;
+text-align:center;padding:19px;
+background:linear-gradient(145deg,#153421,#0c1c12);
+border:1px solid var(--border);border-radius:17px
 }
-.stat strong{display:block;font-size:27px;color:var(--green)}
-.stat span{font-size:12px;color:var(--muted)}
-
-/* VIDEO */
-.video-tools{
-  display:flex;justify-content:center;gap:10px;
-  flex-wrap:wrap;margin-bottom:25px;
+.stat strong{display:block;color:var(--green);font-size:27px}
+.stat span{font-size:11px;color:var(--muted)}
+section{padding:65px 0}
+.heading{text-align:center;margin-bottom:32px}
+.heading small{color:var(--green);font-weight:900;letter-spacing:2px}
+.heading h2{font-size:32px;margin:8px}
+.heading p{font-size:13px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{
+padding:22px;border:1px solid var(--border);
+border-radius:21px;
+background:linear-gradient(145deg,#163321,#0b1a11);
+transition:.3s;position:relative;overflow:hidden
 }
-.video-list{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+.card:hover{
+transform:translateY(-7px);
+border-color:#75ff9b99;
+box-shadow:0 18px 40px #0006
 }
-.video-card{
-  background:#10251b;border:1px solid var(--border);
-  border-radius:18px;overflow:hidden;
+.icon{
+width:55px;height:55px;display:grid;place-items:center;
+border-radius:16px;background:#75ff9b18;
+font-size:27px
 }
-.video-card iframe{width:100%;aspect-ratio:16/9;border:0;background:#000}
-.video-card h3{font-size:15px;padding:0 15px}
-.video-card a{display:inline-block;margin:0 15px 15px;color:var(--green);font-size:13px}
-
-/* SEARCH */
-.searchbox{
-  max-width:600px;margin:0 auto 25px;
-  display:flex;gap:8px;
+.card h3{margin:14px 0 5px}
+.card p{font-size:12px;line-height:1.9;color:var(--muted);min-height:45px}
+.card .btn{display:inline-block;margin-top:9px}
+.tabs{display:flex;justify-content:center;gap:10px;margin-bottom:25px}
+.tab{padding:10px 20px;border-radius:30px;background:#12271a;color:white;border:1px solid var(--border)}
+.tab.active{background:var(--green);color:#06170b}
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.video{
+overflow:hidden;background:#102319;
+border:1px solid var(--border);border-radius:18px
 }
-.searchbox input{
-  width:100%;padding:14px 17px;
-  background:#10251b;color:white;
-  border:1px solid var(--border);border-radius:13px;outline:none;
+.video iframe{width:100%;aspect-ratio:16/9;border:0;display:block}
+.video div{padding:13px}
+.video a{color:var(--green);font-size:12px}
+.search{display:flex;gap:10px;max-width:600px;margin:0 auto 25px}
+.search input{
+width:100%;padding:14px;background:#102319;
+border:1px solid var(--border);border-radius:12px;color:white
 }
-.searchbox input:focus{border-color:var(--green)}
-
-/* GAME */
-.game-panel{
-  max-width:700px;margin:auto;text-align:center;
-  background:linear-gradient(145deg,#163c28,#0c1d15);
-  border:1px solid var(--border);border-radius:24px;padding:30px;
+.game{
+max-width:650px;margin:auto;text-align:center;
+padding:30px;background:linear-gradient(145deg,#173a25,#0b1b12);
+border:1px solid var(--border);border-radius:25px
 }
-.diamond{
-  font-size:100px;display:block;
-  filter:drop-shadow(0 0 20px #55ff91);
-  animation:diamond 2s infinite ease-in-out;
+.diamond{font-size:90px;display:block;animation:bob 3s infinite}
+.score{font-size:35px;color:var(--green);font-weight:900}
+.mine{
+width:115px;height:115px;border-radius:25px;
+background:linear-gradient(145deg,#52ad5d,#174b2b);
+border:2px solid #a3ffae;color:white;font-size:45px
 }
-@keyframes diamond{50%{transform:translateY(-12px) rotate(8deg)}}
-.game-score{font-size:28px;color:var(--green);font-weight:900}
-.mine-button{
-  width:130px;height:130px;border-radius:28px;
-  border:2px solid #8affb3;
-  background:linear-gradient(145deg,#286e40,#102d1c);
-  color:white;font-size:55px;margin:15px;
-  box-shadow:0 10px 30px #0007;
-  transition:.1s;
+.mine:active{transform:scale(.9)}
+.form{max-width:450px;margin:auto;display:grid;gap:12px}
+.form input{
+padding:13px;background:#091a10;
+border:1px solid var(--border);border-radius:11px;color:white
 }
-.mine-button:active{transform:scale(.9)}
-
-/* FORMS */
-.form{
-  display:grid;gap:12px;max-width:480px;margin:auto;
+.profile{background:#102319;padding:20px;border-radius:15px}
+.notice{font-size:11px;color:var(--muted);line-height:1.9}
+.reward{
+display:flex;justify-content:space-between;align-items:center;
+gap:12px;padding:20px;border-radius:18px;
+background:#25351c;border:1px solid #e5cf6c55
 }
-.form input,.form select{
-  padding:13px;background:#071b11;
-  color:white;border:1px solid var(--border);
-  border-radius:11px;outline:none;width:100%;
-}
-.form input:focus{border-color:var(--green)}
-.hidden{display:none!important}
-.notice{color:var(--muted);font-size:12px;line-height:1.8}
-.admin-box{
-  border:1px solid #a78bfa66;
-  background:#21183b66;border-radius:20px;
-  padding:22px;margin:20px 0;
-}
-.admin-box h3{color:var(--purple)}
-.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.admin-grid input,.admin-grid textarea{
-  width:100%;padding:12px;border-radius:10px;
-  background:#0b1720;color:white;border:1px solid #ffffff25;
-}
-.admin-grid textarea{min-height:90px;grid-column:1/-1}
 footer{
-  border-top:1px solid var(--border);
-  text-align:center;padding:35px 15px;
-  color:var(--muted);font-size:13px;
+text-align:center;padding:35px 10px;
+border-top:1px solid var(--border);color:var(--muted);font-size:12px
 }
-footer strong{color:var(--green)}
+footer b{color:var(--green)}
 .toast{
-  position:fixed;bottom:20px;left:20px;z-index:300;
-  background:#1b3928;border:1px solid var(--green);
-  color:white;padding:13px 20px;border-radius:12px;
-  opacity:0;transform:translateY(20px);
-  transition:.3s;pointer-events:none;
+position:fixed;bottom:20px;left:20px;z-index:100;
+background:#173b25;border:1px solid var(--green);
+border-radius:12px;padding:12px 18px;
+opacity:0;transform:translateY(15px);transition:.25s
 }
 .toast.show{opacity:1;transform:translateY(0)}
-#mobileMenu{display:none}
-
 @media(max-width:850px){
-  .hero{grid-template-columns:1fr;text-align:center;padding-top:50px}
-  .hero p{margin:auto}
-  .hero-buttons{justify-content:center}
-  .hero-art{min-height:320px}
-  .cards{grid-template-columns:repeat(2,1fr)}
-  .video-list{grid-template-columns:repeat(2,1fr)}
-  .nav-links{display:none}
-  .menu-toggle{display:block}
-  #mobileMenu{
-    display:none;padding:10px 20px 20px;
-    border-top:1px solid var(--border);
-  }
-  #mobileMenu.open{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  #mobileMenu a{padding:10px;color:var(--muted)}
+.links{display:none}.menu{display:inline-block}
+.hero{grid-template-columns:1fr;text-align:center}
+.hero p{margin:auto}.actions{justify-content:center}
+.scene{height:350px}
+.cards,.videos{grid-template-columns:repeat(2,1fr)}
 }
-@media(max-width:550px){
-  .cards,.video-list{grid-template-columns:1fr}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  .hero h1{font-size:48px}
-  .hero h2{font-size:19px}
-  .admin-grid{grid-template-columns:1fr}
-  .admin-grid textarea{grid-column:auto}
-  .nav{padding:12px}
-  .logo{font-size:18px}
+@media(max-width:560px){
+.hero h1{font-size:53px}
+.cards,.videos{grid-template-columns:1fr}
+.stats{grid-template-columns:repeat(2,1fr)}
+section{padding:48px 0}
+.scene{height:310px}
+#mobileMenu.open{
+display:grid;grid-template-columns:repeat(3,1fr);
+gap:7px;padding:12px
+}
+#mobileMenu a{
+background:#14291b;padding:10px;
+border-radius:10px;font-size:11px;text-align:center
+}
+.reward{flex-direction:column;text-align:center}
 }
 </style>
 </head>
-
 <body>
-<div class="background"></div>
-<div class="grid-bg"></div>
-<div class="particles" id="particles"></div>
+<div class="bg"></div><div class="grid"></div>
+<div id="particles"></div>
 <div class="toast" id="toast"></div>
 
 <header>
-  <nav class="nav">
-    <a class="logo" href="#home">⛏ ALI X STAR</a>
-    <div class="nav-links">
-      <a href="#home">خانه</a>
-      <a href="#channels">کانال‌ها</a>
-      <a href="#videos">ویدئوها</a>
-      <a href="#mods">مود و شیدر</a>
-      <a href="#games">مینی‌گیم</a>
-      <a href="#account">حساب کاربری</a>
-    </div>
-    <div class="nav-actions">
-      <button class="btn menu-toggle" onclick="toggleMenu()">☰</button>
-      <button class="btn btn-primary" onclick="scrollToSection('account')">ورود / ثبت‌نام</button>
-    </div>
-  </nav>
-  <div id="mobileMenu">
-    <a href="#home">خانه</a>
-    <a href="#channels">کانال‌ها</a>
-    <a href="#videos">ویدئوها</a>
-    <a href="#mods">مود و شیدر</a>
-    <a href="#games">مینی‌گیم</a>
-    <a href="#account">حساب کاربری</a>
-  </div>
+<div class="wrap">
+<nav>
+<a class="logo" href="#home">⛏ ALI X STAR</a>
+<div class="links">
+<a href="#home">خانه</a>
+<a href="#channels">کانال‌ها</a>
+<a href="#videos">ویدئوها</a>
+<a href="#resources">مود و شیدر</a>
+<a href="#games">بازی‌ها</a>
+</div>
+<div>
+<button class="btn menu" onclick="toggleMenu()">☰</button>
+<a class="btn primary" href="#account">حساب بازیکن</a>
+</div>
+</nav>
+<div id="mobileMenu">
+<a href="#home">خانه</a><a href="#channels">کانال‌ها</a>
+<a href="#videos">ویدئوها</a><a href="#resources">مودها</a>
+<a href="#games">بازی‌ها</a><a href="#account">حساب</a>
+</div>
+</div>
 </header>
 
 <main>
-<section class="hero" id="home">
-  <div>
-    <div class="eyebrow"><span></span> OFFICIAL MINECRAFT UNIVERSE</div>
-    <h1>ALI X STAR</h1>
-    <h2 id="welcomeTitle">به دنیای ماینکرفت خوش آمدی!</h2>
-    <p id="welcomeText">
-      وارد دنیایی پر از ماجراجویی، بازی، ویدئو، شیدر و اتفاقات هیجان‌انگیز شو.
-      اینجا دنیای اختصاصی ALI X STAR است!
-    </p>
-    <div class="hero-buttons">
-      <button class="btn btn-primary" onclick="scrollToSection('games')">🎮 شروع بازی</button>
-      <button class="btn" onclick="scrollToSection('videos')">▶ تماشای ویدئوها</button>
-    </div>
-  </div>
-  <div class="hero-art">
-    <div class="glow"></div>
-    <div class="world">
-      <div class="cube cube-one">
-        <div class="face front"></div><div class="face back"></div>
-        <div class="face right"></div><div class="face left"></div>
-        <div class="face top"></div><div class="face bottom"></div>
-      </div>
-      <div class="cube cube-two">
-        <div class="face front"></div><div class="face back"></div>
-        <div class="face right"></div><div class="face left"></div>
-        <div class="face top"></div><div class="face bottom"></div>
-      </div>
-      <div class="cube cube-three">
-        <div class="face front"></div><div class="face back"></div>
-        <div class="face right"></div><div class="face left"></div>
-        <div class="face top"></div><div class="face bottom"></div>
-      </div>
-      <div class="cube cube-four">
-        <div class="face front"></div><div class="face back"></div>
-        <div class="face right"></div><div class="face left"></div>
-        <div class="face top"></div><div class="face bottom"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="stats">
-  <div class="stat"><strong id="videoCount">5</strong><span>ویدئوی ثبت‌شده</span></div>
-  <div class="stat"><strong>3</strong><span>کانال رسمی</span></div>
-  <div class="stat"><strong>∞</strong><span>ماجراجویی</span></div>
-  <div class="stat"><strong id="playerCount">0</strong><span>حساب‌های این مرورگر</span></div>
+<div class="wrap hero" id="home">
+<div>
+<span class="tag">✦ OFFICIAL MINECRAFT UNIVERSE</span>
+<h1>ALI X STAR</h1>
+<h2>دنیای ماینکرفت، فراتر از تصور تو!</h2>
+<p>به دنیای اختصاصی ALI X STAR خوش آمدی؛ جایی برای ماجراجویی، بازی، ویدئو، مود و شیدر. اینجا هر بلوک یک ماجراست!</p>
+<div class="actions">
+<a class="btn primary" href="#games">🎮 شروع ماجراجویی</a>
+<a class="btn" href="#videos">▶ تماشای ویدئوها</a>
+</div>
+</div>
+<div class="scene">
+<div class="orbit"></div>
+<div class="float-block a"></div>
+<div class="float-block b"></div>
+<div class="cube">
+<div class="face front"></div><div class="face back"></div>
+<div class="face right"></div><div class="face left"></div>
+<div class="face top"></div><div class="face bottom"></div>
+</div>
+<div class="scene-label">BUILD • EXPLORE • SURVIVE</div>
+</div>
 </div>
 
-<section class="section" id="channels">
-  <div class="section-heading">
-    <small>CONNECT WITH US</small>
-    <h2>🌐 کانال‌های رسمی</h2>
-    <p>ما را در شبکه‌های اجتماعی دنبال کن.</p>
-  </div>
-  <div class="cards">
-    <article class="card">
-      <div class="card-icon">🔴</div>
-      <h3>YouTube</h3>
-      <p>ویدئوها و ماجراجویی‌های ALI X STAR در یوتیوب.</p>
-      <a class="btn btn-primary" href="https://www.youtube.com/@ALIXSTARYoutube" target="_blank" rel="noopener">ورود به یوتیوب ↗</a>
-    </article>
-    <article class="card">
-      <div class="card-icon">🔵</div>
-      <h3>Aparat</h3>
-      <p>تماشای ویدئوها در کانال رسمی آپارات.</p>
-      <a class="btn btn-primary" href="https://www.aparat.com/ALI_X_STARaparat" target="_blank" rel="noopener">ورود به آپارات ↗</a>
-    </article>
-    <article class="card">
-      <div class="card-icon">🟣</div>
-      <h3>Rubika</h3>
-      <p>ارتباط با جامعه ALI X STAR در روبیکا.</p>
-      <a class="btn btn-primary" href="https://rubika.ir/ALIXSTARsoper" target="_blank" rel="noopener">ورود به روبیکا ↗</a>
-    </article>
-  </div>
+<div class="wrap stats">
+<div class="stat"><strong id="videoCount">5</strong><span>ویدئو</span></div>
+<div class="stat"><strong>03</strong><span>کانال رسمی</span></div>
+<div class="stat"><strong>∞</strong><span>ماجراجویی</span></div>
+<div class="stat"><strong id="playerCount">0</strong><span>بازیکن این مرورگر</span></div>
+</div>
+
+<section class="wrap" id="channels">
+<div class="heading"><small>CONNECT WITH US</small><h2>🌐 کانال‌های رسمی</h2><p>ما را در شبکه‌های اجتماعی دنبال کن.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">🔴</div><h3>YouTube</h3><p>ویدئوها و شورت‌های کانال رسمی.</p><a class="btn primary" href="https://www.youtube.com/@ALIXSTARYoutube" target="_blank" rel="noopener">ورود به یوتیوب ↗</a></div>
+<div class="card"><div class="icon">🔵</div><h3>Aparat</h3><p>ویدئوهای ALI X STAR در آپارات.</p><a class="btn primary" href="https://www.aparat.com/ALI_X_STARaparat" target="_blank" rel="noopener">ورود به آپارات ↗</a></div>
+<div class="card"><div class="icon">🟣</div><h3>Rubika</h3><p>صفحه رسمی روبیکا.</p><a class="btn primary" href="https://rubika.ir/ALIXSTARsoper" target="_blank" rel="noopener">ورود به روبیکا ↗</a></div>
+</div>
 </section>
 
-<section class="section" id="videos">
-  <div class="section-heading">
-    <small>VIDEO CENTER</small>
-    <h2>📺 کتابخانه ویدئوها</h2>
-    <p>ویدئوهای یوتیوب و آپارات را از همین‌جا تماشا کن.</p>
-  </div>
-  <div class="video-tools">
-    <button class="btn btn-primary" onclick="setVideoPlatform('youtube')">🔴 YouTube</button>
-    <button class="btn" onclick="setVideoPlatform('aparat')">🔵 Aparat</button>
-  </div>
-  <div class="video-list" id="videoList"></div>
+<section class="wrap" id="videos">
+<div class="heading"><small>VIDEO CENTER</small><h2>📺 کتابخانه ویدئوها</h2><p>ویدئوهای یوتیوب و آپارات را همین‌جا تماشا کن.</p></div>
+<div class="tabs">
+<button class="tab active" id="yt" onclick="platform('youtube')">🔴 YouTube</button>
+<button class="tab" id="ap" onclick="platform('aparat')">🔵 Aparat</button>
+</div>
+<div class="videos" id="videoList"></div>
 </section>
 
-<section class="section" id="mods">
-  <div class="section-heading">
-    <small>MINECRAFT RESOURCES</small>
-    <h2>🧱 مود، شیدر و مپ</h2>
-    <p>منابع ماینکرفت را جست‌وجو و پیدا کن.</p>
-  </div>
-  <div class="searchbox">
-    <input id="resourceSearch" placeholder="نام مود یا شیدر را بنویس...">
-    <button class="btn btn-primary" onclick="searchResources()">جست‌وجو</button>
-  </div>
-  <div class="cards">
-    <article class="card">
-      <div class="card-icon">⚙️</div>
-      <h3>Mods</h3>
-      <p>جست‌وجوی مودهای ماینکرفت.</p>
-      <a class="btn" href="https://modrinth.com/mods" target="_blank" rel="noopener">مشاهده مودها ↗</a>
-    </article>
-    <article class="card">
-      <div class="card-icon">🌈</div>
-      <h3>Shaders</h3>
-      <p>پیدا کردن شیدرهای زیبا.</p>
-      <a class="btn" href="https://modrinth.com/shaders" target="_blank" rel="noopener">مشاهده شیدرها ↗</a>
-    </article>
-    <article class="card">
-      <div class="card-icon">🗺️</div>
-      <h3>Maps</h3>
-      <p>نقشه‌ها و دنیاهای جدید.</p>
-      <a class="btn" href="https://www.curseforge.com/minecraft/search?class=maps" target="_blank" rel="noopener">مشاهده مپ‌ها ↗</a>
-    </article>
-    <article class="card">
-      <div class="card-icon">🎨</div>
-      <h3>Resource Packs</h3>
-      <p>بسته‌های بافت و ظاهر بازی.</p>
-      <a class="btn" href="https://modrinth.com/resourcepacks" target="_blank" rel="noopener">مشاهده پک‌ها ↗</a>
-    </article>
-    <article class="card">
-      <div class="card-icon">🧩</div>
-      <h3>Modrinth</h3>
-      <p>پلتفرم جست‌وجوی محتوای ماینکرفت.</p>
-      <a class="btn" href="https://modrinth.com/" target="_blank" rel="noopener">ورود ↗</a>
-    </article>
-    <article class="card">
-      <div class="card-icon">🏰</div>
-      <h3>CurseForge</h3>
-      <p>مودها و نقشه‌های بیشتر.</p>
-      <a class="btn" href="https://www.curseforge.com/minecraft" target="_blank" rel="noopener">ورود ↗</a>
-    </article>
-  </div>
+<section class="wrap" id="resources">
+<div class="heading"><small>MINECRAFT RESOURCES</small><h2>🧱 مود، شیدر و مپ</h2><p>منابع ماینکرفت موردنظرت را پیدا کن.</p></div>
+<div class="search">
+<input id="query" placeholder="نام مود یا شیدر را بنویس...">
+<button class="btn primary" onclick="searchMods()">جست‌وجو</button>
+</div>
+<div class="cards">
+<div class="card"><div class="icon">⚙️</div><h3>Mods</h3><p>مودهای متنوع ماینکرفت.</p><a class="btn" href="https://modrinth.com/mods" target="_blank">مشاهده مودها ↗</a></div>
+<div class="card"><div class="icon">🌈</div><h3>Shaders</h3><p>شیدرهای زیبا و جلوه‌های تصویری.</p><a class="btn" href="https://modrinth.com/shaders" target="_blank">مشاهده شیدرها ↗</a></div>
+<div class="card"><div class="icon">🗺️</div><h3>Maps</h3><p>نقشه‌های جدید و ماجراجویی.</p><a class="btn" href="https://www.curseforge.com/minecraft/search?class=maps" target="_blank">مشاهده مپ‌ها ↗</a></div>
+<div class="card"><div class="icon">🎨</div><h3>Resource Packs</h3><p>تغییر ظاهر بلوک‌ها و بازی.</p><a class="btn" href="https://modrinth.com/resourcepacks" target="_blank">مشاهده پک‌ها ↗</a></div>
+<div class="card"><div class="icon">🧩</div><h3>Modrinth</h3><p>مخزن محتوای ماینکرفت.</p><a class="btn" href="https://modrinth.com/" target="_blank">ورود ↗</a></div>
+<div class="card"><div class="icon">🏰</div><h3>CurseForge</h3><p>محتوای بیشتر برای Minecraft.</p><a class="btn" href="https://www.curseforge.com/minecraft" target="_blank">ورود ↗</a></div>
+</div>
 </section>
 
-<section class="section" id="games">
-  <div class="section-heading">
-    <small>PLAY ZONE</small>
-    <h2>💎 شکار الماس</h2>
-    <p>برای جمع کردن الماس روی دکمه کلیک کن!</p>
-  </div>
-  <div class="game-panel">
-    <span class="diamond">💎</span>
-    <div>امتیاز تو</div>
-    <div class="game-score" id="score">0</div>
-    <button class="mine-button" onclick="mineDiamond()">⛏️</button>
-    <p class="notice">هر بار کلیک، یک الماس به امتیازت اضافه می‌کند.</p>
-    <button class="btn" onclick="resetGame()">شروع دوباره</button>
-  </div>
+<section class="wrap" id="games">
+<div class="heading"><small>MINI GAME ZONE</small><h2>💎 شکار الماس</h2><p>با هر کلیک یک الماس جمع کن!</p></div>
+<div class="game">
+<span class="diamond">💎</span>
+<div>امتیاز تو</div>
+<div class="score" id="score">0</div>
+<button class="mine" onclick="mine()">⛏️</button>
+<p class="notice">روی کلنگ بزن تا الماس جمع کنی.</p>
+<button class="btn" onclick="resetScore()">شروع دوباره</button>
+</div>
 </section>
 
-<section class="section" id="daily">
-  <div class="section-heading">
-    <small>DAILY REWARD</small>
-    <h2>🎁 جایزه روزانه</h2>
-    <p>هر روز یک بار جایزه خودت را دریافت کن.</p>
-  </div>
-  <div class="game-panel">
-    <div class="card-icon">🎁</div>
-    <h3>جایزه روزانه ALI X STAR</h3>
-    <p id="dailyStatus">برای دریافت جایزه روزانه دکمه زیر را بزن.</p>
-    <button class="btn btn-primary" id="dailyButton" onclick="dailyReward()">دریافت جایزه</button>
-  </div>
+<section class="wrap">
+<div class="heading"><small>DAILY BONUS</small><h2>🎁 جایزه روزانه</h2></div>
+<div class="reward">
+<div><b>جایزه روزانه ALI X STAR</b><p class="notice" id="rewardText">هر روز ۱۰ امتیاز رایگان بگیر!</p></div>
+<button class="btn primary" onclick="daily()">دریافت جایزه</button>
+</div>
 </section>
 
-<section class="section" id="account">
-  <div class="section-heading">
-    <small>PLAYER ACCOUNT</small>
-    <h2>👤 حساب کاربری</h2>
-    <p>یک حساب آزمایشی در همین مرورگر بساز.</p>
-  </div>
-  <div class="game-panel">
-    <div id="authForms">
-      <div class="form">
-        <input id="username" placeholder="نام کاربری">
-        <input id="password" type="password" placeholder="رمز عبور">
-        <div style="display:flex;gap:10px">
-          <button class="btn btn-primary" style="flex:1" onclick="register()">ثبت‌نام</button>
-          <button class="btn" style="flex:1" onclick="login()">ورود</button>
-        </div>
-      </div>
-    </div>
-    <div id="userPanel" class="hidden">
-      <h3>خوش آمدی <span id="userName"></span> 🎮</h3>
-      <p>امتیاز الماس تو: <strong id="userScore">0</strong></p>
-      <button class="btn" onclick="logout()">خروج از حساب</button>
-    </div>
-    <p class="notice">این حساب‌ها فقط در مرورگر همین دستگاه ذخیره می‌شوند و سیستم حساب کاربری امن یا آنلاین نیست.</p>
-  </div>
-</section>
-
-<section class="section" id="admin">
-  <div class="section-heading">
-    <small>CONTROL CENTER</small>
-    <h2>🛠️ پنل مدیریت</h2>
-    <p>مدیریت تنظیمات نمایشی سایت در همین مرورگر.</p>
-  </div>
-  <div class="game-panel">
-    <div id="adminLogin">
-      <h3>ورود مدیر</h3>
-      <div class="form">
-        <input id="adminPassword" type="password" placeholder="رمز نمایشی مدیر">
-        <button class="btn btn-primary" onclick="adminLogin()">ورود به پنل</button>
-      </div>
-      <p class="notice">رمز اولیه: ALI2026 — این رمز فقط برای قفل نمایشی است و امنیت واقعی ندارد.</p>
-    </div>
-
-    <div id="adminPanel" class="hidden">
-      <div class="admin-box">
-        <h3>📝 تنظیم صفحه اصلی</h3>
-        <div class="admin-grid">
-          <input id="editTitle" placeholder="عنوان خوشامدگویی">
-          <input id="editDescription" placeholder="متن معرفی سایت">
-        </div>
-        <button class="btn btn-primary" onclick="saveHome()">ذخیره تغییرات</button>
-      </div>
-
-      <div class="admin-box">
-        <h3>📺 افزودن ویدئو</h3>
-        <div class="admin-grid">
-          <input id="newVideoTitle" placeholder="عنوان ویدئو">
-          <select id="newVideoPlatform">
-            <option value="youtube">YouTube</option>
-            <option value="aparat">Aparat</option>
-          </select>
-          <input id="newVideoUrl" placeholder="لینک ویدئو">
-        </div>
-        <button class="btn btn-primary" onclick="addVideo()">افزودن ویدئو</button>
-        <div id="adminVideoList"></div>
-      </div>
-
-      <div class="admin-box">
-        <h3>💾 پشتیبان اطلاعات</h3>
-        <button class="btn" onclick="exportData()">دریافت نسخه پشتیبان</button>
-        <button class="btn" onclick="importData()">بازیابی نسخه پشتیبان</button>
-      </div>
-
-      <button class="btn" onclick="adminLogout()">خروج از پنل مدیریت</button>
-    </div>
-  </div>
+<section class="wrap" id="account">
+<div class="heading"><small>PLAYER ACCOUNT</small><h2>👤 حساب بازیکن</h2><p>پروفایل آزمایشی خودت را بساز.</p></div>
+<div class="game">
+<div id="auth">
+<div class="form">
+<input id="username" placeholder="نام کاربری">
+<input id="password" type="password" placeholder="رمز عبور">
+<button class="btn primary" onclick="register()">ثبت‌نام</button>
+<button class="btn" onclick="login()">ورود</button>
+</div>
+</div>
+<div id="profile" hidden>
+<h3>خوش آمدی <span id="playerName"></span>!</h3>
+<p>امتیاز تو: <b id="profileScore"></b></p>
+<button class="btn" onclick="logout()">خروج</button>
+</div>
+<p class="notice">حساب این نسخه فقط در مرورگر همین دستگاه ذخیره می‌شود و حساب آنلاین واقعی نیست.</p>
+</div>
 </section>
 </main>
 
 <footer>
-  <strong>ALI X STAR</strong>
-  <p>ساخته‌شده برای دوست‌داران Minecraft 💚</p>
-  <p>© 2026 ALI X STAR — All Rights Reserved</p>
-  <a href="#home">بازگشت به بالا ↑</a>
+<div class="wrap">
+<b>ALI X STAR</b>
+<p>یک جهان بلوکی، هزاران ماجراجویی 💚</p>
+<a href="#home">بازگشت به بالا ↑</a>
+<p>© 2026 ALI X STAR</p>
+</div>
 </footer>
 
 <script>
-/* BASIC HELPERS */
-const $ = id => document.getElementById(id);
+const $=id=>document.getElementById(id);
+function toast(t){
+const e=$("toast");e.textContent=t;e.classList.add("show");
+clearTimeout(window.toastTimer);
+window.toastTimer=setTimeout(()=>e.classList.remove("show"),2400);
+}
+function toggleMenu(){$("mobileMenu").classList.toggle("open")}
+document.querySelectorAll("#mobileMenu a").forEach(a=>a.onclick=()=>$("mobileMenu").classList.remove("open"));
 
-function toast(message){
-  const t=$("toast");
-  t.textContent=message;
-  t.classList.add("show");
-  setTimeout(()=>t.classList.remove("show"),2500);
-}
-function scrollToSection(id){
-  $(id).scrollIntoView({behavior:"smooth"});
-}
-function toggleMenu(){
-  $("mobileMenu").classList.toggle("open");
-}
-
-/* PARTICLES */
-for(let i=0;i<35;i++){
-  const p=document.createElement("div");
-  p.className="particle";
-  p.style.left=Math.random()*100+"%";
-  p.style.top=Math.random()*100+"%";
-  p.style.animationDelay=Math.random()*8+"s";
-  p.style.animationDuration=(6+Math.random()*8)+"s";
-  $("particles").appendChild(p);
+for(let i=0;i<40;i++){
+let p=document.createElement("i");p.className="particle";
+p.style.left=Math.random()*100+"%";
+p.style.top=Math.random()*100+"%";
+p.style.animationDelay=Math.random()*8+"s";
+$("particles").append(p);
 }
 
-/* STORAGE */
+const defaults={
+youtube:[
+{title:"ویدئو ۱",id:"lcGwyPt278g"},
+{title:"ویدئو ۲",id:"zOS_lJYAx44"}
+],
+aparat:[
+{title:"ویدئو ۱",id:"znroeg7"},
+{title:"ویدئو ۲",id:"rka9a77"},
+{title:"ویدئو ۳",id:"osx8e40"}
+]};
 function read(key,fallback){
-  try{
-    const v=localStorage.getItem(key);
-    return v===null?fallback:JSON.parse(v);
-  }catch(e){return fallback}
+try{return JSON.parse(localStorage.getItem(key))??fallback}
+catch(e){return fallback}
 }
-function save(key,value){
-  localStorage.setItem(key,JSON.stringify(value));
-}
-
-/* VIDEOS */
-const defaultVideos={
-  youtube:[
-    {title:"ویدئو ۱",id:"lcGwyPt278g"},
-    {title:"ویدئو ۲",id:"zOS_lJYAx44"}
-  ],
-  aparat:[
-    {title:"ویدئو ۱",id:"znroeg7"},
-    {title:"ویدئو ۲",id:"rka9a77"},
-    {title:"ویدئو ۳",id:"osx8e40"}
-  ]
-};
-
-let videos=read("axs_videos",defaultVideos);
-let currentPlatform="youtube";
-
-function extractVideoId(url,platform){
-  url=url.trim();
-  if(platform==="youtube"){
-    try{
-      const u=new URL(url);
-      if(u.hostname.includes("youtu.be"))return u.pathname.slice(1);
-      if(u.pathname.includes("/shorts/"))return u.pathname.split("/shorts/")[1].split("/")[0];
-      if(u.pathname.includes("/embed/"))return u.pathname.split("/embed/")[1].split("/")[0];
-      return u.searchParams.get("v");
-    }catch(e){return null}
-  }
-  const match=url.match(/(?:\/v\/|\/video\/embed\/videohash\/)([a-zA-Z0-9_-]+)/);
-  return match?match[1]:null;
-}
-
-function videoUrl(video,platform){
-  return platform==="youtube"
-    ?"https://www.youtube.com/watch?v="+video.id
-    :"https://www.aparat.com/v/"+video.id;
-}
+let videos=read("axs_videos",defaults),current="youtube";
 
 function renderVideos(){
-  const list=$("videoList");
-  list.innerHTML="";
-  videos[currentPlatform].forEach((v,index)=>{
-    const card=document.createElement("article");
-    card.className="video-card";
-    const frame=document.createElement("iframe");
-    frame.loading="lazy";
-    frame.allowFullscreen=true;
-    frame.title=v.title;
-    frame.referrerPolicy="strict-origin-when-cross-origin";
-    frame.src=currentPlatform==="youtube"
-      ?"https://www.youtube-nocookie.com/embed/"+encodeURIComponent(v.id)
-      :"https://www.aparat.com/video/video/embed/videohash/"+encodeURIComponent(v.id)+"/vt/frame";
-    const h=document.createElement("h3");
-    h.textContent=v.title;
-    const a=document.createElement("a");
-    a.href=videoUrl(v,currentPlatform);
-    a.target="_blank";a.rel="noopener";
-    a.textContent="تماشا در سایت اصلی ↗";
-    card.append(frame,h,a);
-    list.appendChild(card);
-  });
-  $("videoCount").textContent=videos.youtube.length+videos.aparat.length;
-  renderAdminVideos();
+const box=$("videoList");box.innerHTML="";
+$("yt").classList.toggle("active",current==="youtube");
+$("ap").classList.toggle("active",current==="aparat");
+videos[current].forEach(v=>{
+const card=document.createElement("article");card.className="video";
+const frame=document.createElement("iframe");
+frame.loading="lazy";frame.allowFullscreen=true;frame.title=v.title;
+frame.src=current==="youtube"
+?"https://www.youtube-nocookie.com/embed/"+encodeURIComponent(v.id)
+:"https://www.aparat.com/video/video/embed/videohash/"+encodeURIComponent(v.id)+"/vt/frame";
+const info=document.createElement("div");
+const title=document.createElement("b");title.textContent=v.title;
+const link=document.createElement("a");link.target="_blank";link.rel="noopener";
+link.textContent="تماشا در سایت اصلی ↗";
+link.href=current==="youtube"
+?"https://www.youtube.com/watch?v="+v.id
+:"https://www.aparat.com/v/"+v.id;
+info.append(title,document.createElement("br"),link);
+card.append(frame,info);box.append(card);
+});
+$("videoCount").textContent=videos.youtube.length+videos.aparat.length;
 }
-function setVideoPlatform(platform){
-  currentPlatform=platform;
-  renderVideos();
-}
+function platform(p){current=p;renderVideos()}
 renderVideos();
 
-/* RESOURCE SEARCH */
-function searchResources(){
-  const q=$("resourceSearch").value.trim();
-  if(!q){toast("نام مود یا شیدر را وارد کن");return}
-  window.open("https://modrinth.com/search?q="+encodeURIComponent(q)," _blank");
+function searchMods(){
+let q=$("query").value.trim();
+if(!q){toast("نام مود یا شیدر را بنویس");return}
+window.open("https://modrinth.com/search?q="+encodeURIComponent(q),"_blank");
 }
 
-/* GAME */
 let score=Number(localStorage.getItem("axs_score")||0);
 function updateScore(){
-  $("score").textContent=score;
-  $("userScore").textContent=score;
+$("score").textContent=score;
+$("profileScore").textContent=score;
 }
-function mineDiamond(){
-  score++;
-  localStorage.setItem("axs_score",score);
-  updateScore();
-  const user=currentUser();
-  if(user){
-    user.score=score;
-    updateUsers(user);
-  }
+function mine(){
+score++;localStorage.setItem("axs_score",score);updateScore();
+let u=who();if(u){u.score=score;saveUsers(u)}
 }
-function resetGame(){
-  if(!confirm("امتیاز فعلی پاک شود؟"))return;
-  score=0;
-  localStorage.setItem("axs_score","0");
-  updateScore();
+function resetScore(){
+if(!confirm("امتیاز از صفر شروع شود؟"))return;
+score=0;localStorage.setItem("axs_score",0);updateScore();
 }
-updateScore();
-
-/* DAILY REWARD */
-function dailyReward(){
-  const today=new Date().toLocaleDateString("en-CA");
-  if(localStorage.getItem("axs_daily")===today){
-    toast("جایزه امروز را قبلاً گرفته‌ای!");
-    return;
-  }
-  score+=10;
-  localStorage.setItem("axs_score",score);
-  localStorage.setItem("axs_daily",today);
-  updateScore();
-  updateDaily();
-  toast("🎁 ده امتیاز جایزه گرفتی!");
+function daily(){
+let today=new Date().toLocaleDateString("en-CA");
+if(localStorage.getItem("axs_daily")===today){
+toast("جایزه امروز را گرفتی!");return;
+}
+score+=10;localStorage.setItem("axs_score",score);
+localStorage.setItem("axs_daily",today);
+updateScore();updateDaily();toast("۱۰ امتیاز جایزه گرفتی!");
 }
 function updateDaily(){
-  const today=new Date().toLocaleDateString("en-CA");
-  const claimed=localStorage.getItem("axs_daily")===today;
-  $("dailyStatus").textContent=claimed
-    ?"جایزه امروز دریافت شده است. فردا دوباره بیا!"
-    :"جایزه امروز آماده است: ۱۰ امتیاز";
-  $("dailyButton").disabled=claimed;
-  $("dailyButton").textContent=claimed?"دریافت شد ✓":"دریافت جایزه";
+let claimed=localStorage.getItem("axs_daily")===new Date().toLocaleDateString("en-CA");
+$("rewardText").textContent=claimed?"جایزه امروز دریافت شده ✓":"هر روز ۱۰ امتیاز رایگان بگیر!";
 }
-updateDaily();
+updateScore();updateDaily();
 
-/* LOCAL DEMO ACCOUNTS */
-function getUsers(){return read("axs_users",[])}
-function updateUsers(user){
-  const users=getUsers();
-  const i=users.findIndex(x=>x.username===user.username);
-  if(i>=0)users[i]=user;
-  save("axs_users",users);
+function users(){return read("axs_users",[])}
+function saveUsers(u){
+let list=users(),i=list.findIndex(x=>x.name===u.name);
+if(i<0)list.push(u);else list[i]=u;
+localStorage.setItem("axs_users",JSON.stringify(list));
+$("playerCount").textContent=list.length;
 }
-function currentUser(){
-  const name=localStorage.getItem("axs_current_user");
-  if(!name)return null;
-  return getUsers().find(u=>u.username===name)||null;
+function who(){
+let n=localStorage.getItem("axs_user");
+return users().find(u=>u.name===n)||null;
 }
 function register(){
-  const username=$("username").value.trim();
-  const password=$("password").value;
-  if(username.length<3||password.length<4){
-    toast("نام کاربری حداقل ۳ و رمز حداقل ۴ کاراکتر باشد");
-    return;
-  }
-  const users=getUsers();
-  if(users.some(u=>u.username===username)){
-    toast("این نام کاربری قبلاً ثبت شده");
-    return;
-  }
-  users.push({username,password,score:0});
-  save("axs_users",users);
-  localStorage.setItem("axs_current_user",username);
-  showUser();
-  toast("حساب آزمایشی ساخته شد!");
+let name=$("username").value.trim(),pass=$("password").value;
+if(name.length<3||pass.length<4){toast("نام حداقل ۳ و رمز حداقل ۴ حرف باشد");return}
+if(users().some(u=>u.name===name)){toast("این نام قبلاً استفاده شده");return}
+saveUsers({name,pass,score});
+localStorage.setItem("axs_user",name);showProfile();toast("حساب ساخته شد!");
 }
 function login(){
-  const username=$("username").value.trim();
-  const password=$("password").value;
-  const user=getUsers().find(u=>u.username===username&&u.password===password);
-  if(!user){toast("نام کاربری یا رمز اشتباه است");return}
-  localStorage.setItem("axs_current_user",username);
-  score=user.score||0;
-  localStorage.setItem("axs_score",score);
-  updateScore();
-  showUser();
-  toast("خوش آمدی!");
+let name=$("username").value.trim(),pass=$("password").value;
+let u=users().find(x=>x.name===name&&x.pass===pass);
+if(!u){toast("نام کاربری یا رمز اشتباه است");return}
+localStorage.setItem("axs_user",name);
+score=Number(u.score||0);localStorage.setItem("axs_score",score);
+updateScore();showProfile();toast("خوش آمدی!");
+}
+function showProfile(){
+let u=who();if(!u)return;
+$("auth").hidden=true;$("profile").hidden=false;
+$("playerName").textContent=u.name;
+$("playerCount").textContent=users().length;
+updateScore();
 }
 function logout(){
-  localStorage.removeItem("axs_current_user");
-  $("userPanel").classList.add("hidden");
-  $("authForms").classList.remove("hidden");
+localStorage.removeItem("axs_user");
+$("auth").hidden=false;$("profile").hidden=true;
 }
-function showUser(){
-  const user=currentUser();
-  if(!user)return;
-  $("authForms").classList.add("hidden");
-  $("userPanel").classList.remove("hidden");
-  $("userName").textContent=user.username;
-  $("userScore").textContent=score;
-}
-if(currentUser())showUser();
-$("playerCount").textContent=getUsers().length;
-
-/* ADMIN DEMO PANEL */
-function adminLogin(){
-  if($("adminPassword").value!=="ALI2026"){
-    toast("رمز مدیر اشتباه است");
-    return;
-  }
-  $("adminLogin").classList.add("hidden");
-  $("adminPanel").classList.remove("hidden");
-  $("editTitle").value=$("welcomeTitle").textContent;
-  $("editDescription").value=$("welcomeText").textContent;
-  renderAdminVideos();
-}
-function adminLogout(){
-  $("adminLogin").classList.remove("hidden");
-  $("adminPanel").classList.add("hidden");
-  $("adminPassword").value="";
-}
-function saveHome(){
-  $("welcomeTitle").textContent=$("editTitle").value;
-  $("welcomeText").textContent=$("editDescription").value;
-  save("axs_home",{
-    title:$("editTitle").value,
-    description:$("editDescription").value
-  });
-  toast("تغییرات ذخیره شد");
-}
-function loadHome(){
-  const h=read("axs_home",null);
-  if(h){
-    $("welcomeTitle").textContent=h.title;
-    $("welcomeText").textContent=h.description;
-  }
-}
-loadHome();
-
-function addVideo(){
-  const title=$("newVideoTitle").value.trim();
-  const platform=$("newVideoPlatform").value;
-  const url=$("newVideoUrl").value.trim();
-  const id=extractVideoId(url,platform);
-  if(!title||!id){
-    toast("عنوان یا لینک ویدئو معتبر نیست");
-    return;
-  }
-  videos[platform].push({title,id});
-  save("axs_videos",videos);
-  $("newVideoTitle").value="";
-  $("newVideoUrl").value="";
-  renderVideos();
-  toast("ویدئو اضافه شد!");
-}
-function renderAdminVideos(){
-  const box=$("adminVideoList");
-  if(!box)return;
-  box.innerHTML="<h4>ویدئوهای ثبت‌شده</h4>";
-  ["youtube","aparat"].forEach(platform=>{
-    videos[platform].forEach((v,index)=>{
-      const row=document.createElement("div");
-      row.style.cssText="display:flex;justify-content:space-between;gap:10px;padding:8px;border-bottom:1px solid #ffffff20;align-items:center";
-      const name=document.createElement("span");
-      name.textContent=(platform==="youtube"?"YouTube: ":"Aparat: ")+v.title;
-      const del=document.createElement("button");
-      del.className="btn";
-      del.textContent="حذف";
-      del.onclick=()=>{
-        if(!confirm("این ویدئو حذف شود؟"))return;
-        videos[platform].splice(index,1);
-        save("axs_videos",videos);
-        renderVideos();
-      };
-      row.append(name,del);
-      box.appendChild(row);
-    });
-  });
-}
-
-/* BACKUP */
-function exportData(){
-  const data={
-    videos,
-    home:read("axs_home",null),
-    score:localStorage.getItem("axs_score"),
-    daily:localStorage.getItem("axs_daily")
-  };
-  const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement("a");
-  a.href=url;a.download="ALI-X-STAR-backup.json";a.click();
-  URL.revokeObjectURL(url);
-  toast("نسخه پشتیبان آماده شد");
-}
-function importData(){
-  const picker=document.createElement("input");
-  picker.type="file";picker.accept=".json,application/json";
-  picker.onchange=()=>{
-    const file=picker.files[0];
-    if(!file)return;
-    const reader=new FileReader();
-    reader.onload=()=>{
-      try{
-        const data=JSON.parse(reader.result);
-        if(data.videos&&Array.isArray(data.videos.youtube)&&Array.isArray(data.videos.aparat)){
-          videos=data.videos;
-          save("axs_videos",videos);
-        }
-        if(data.home)save("axs_home",data.home);
-        if(data.score!==undefined)localStorage.setItem("axs_score",data.score);
-        loadHome();
-        score=Number(localStorage.getItem("axs_score")||0);
-        updateScore();
-        renderVideos();
-        toast("اطلاعات بازیابی شد");
-      }catch(e){toast("فایل پشتیبان معتبر نیست")}
-    };
-    reader.readAsText(file);
-  };
-  picker.click();
-}
+if(who())showProfile();
+else $("playerCount").textContent=users().length;
 </script>
 </body>
 </html>
