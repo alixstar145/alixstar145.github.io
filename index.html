@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -114,7 +113,8 @@ body.light-mode .stat{background:#fff;border-color:#c7ded0}body.light-mode .tic-
 <div class="section-title"><h2>🌐 <span>کانال‌های</span> ما</h2><p>ویدئوها و ماجراجویی‌های ALI X STAR را دنبال کن.</p></div>
 <div class="cards">
 <div class="card"><div class="card-icon">▶️</div><h3>یوتیوب</h3><p>ویدئوها و ماجراجویی‌های علی ایکس استار.</p><a class="btn btn-green" href="https://www.youtube.com/@ALIXSTARYoutube" target="_blank" rel="noopener">ورود به یوتیوب</a></div>
-<div class="card"><div class="card-icon">📺</div><h3>آپارات</h3><p>ویدئوهای گیمینگ و محتوای ماینکرفت.</p><a class="btn btn-dark" href="https://www.aparat.com/" target="_blank" rel="noopener">ورود به آپارات</a></div>
+<div class="card"><div class="card-icon">📺</div><h3>آپارات</h3><p>ویدئوهای گیمینگ و محتوای ماینکرفت.</p><a class="btn btn-dark" href="https://www.aparat.com/ALI_X_STARaparat" target="_blank" rel="noopener">ورود به آپارات</a></div>
+<div class="card"><div class="card-icon">🟣</div><h3>روبیکا</h3><p>به کانال روبیکای علی ایکس استار بپیوند.</p><a class="btn btn-purple" href="https://rubika.ir/ALIXSTARsoper" target="_blank" rel="noopener">ورود به روبیکا</a></div>
 </div></div></section>
 
 <section class="section" id="mods"><div class="container">
@@ -190,10 +190,13 @@ body.light-mode .stat{background:#fff;border-color:#c7ded0}body.light-mode .tic-
 // ویدئوها را فقط صاحب سایت در همین آرایه ویرایش می‌کند؛ برای بازدیدکننده فرم افزودن/حذف وجود ندارد.
 const VIDEO_LIBRARY = {
   youtube: [
-    // نمونه ساختار: { title: "عنوان ویدئو", id: "شناسه_۱۱_کاراکتری_یوتیوب" }
+    { title: "ویدئو ۱", id: "lcGwyPt278g" },
+    { title: "ویدئو ۲", id: "zOS_lJYAx44" }
   ],
   aparat: [
-    // نمونه ساختار: { title: "عنوان ویدئو", id: "شناسه_ویدئو_آپارات" }
+    { title: "ویدئو ۱", id: "znroeg7" },
+    { title: "ویدئو ۲", id: "rka9a77" },
+    { title: "ویدئو ۳", id: "osx8e40" }
   ]
 };
 
@@ -227,7 +230,7 @@ function renderVideos(){
     frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';frame.allowFullscreen=true;
     const info=document.createElement('div');info.className='video-info';
     const h=document.createElement('h3');h.textContent='▶ '+(video.title||'ویدئو '+(i+1));
-    info.appendChild(h);card.append(frame,info);grid.appendChild(card);
+    info.appendChild(h);card.append(frame,info);grid.append(card);
   });
 }
 renderVideos();
@@ -437,4 +440,4 @@ document.addEventListener('keydown',e=>{
 board=Array.from({length:ROWS},()=>Array(COLS).fill(0));drawTetris();drawSnake();drawPong();
 </script>
 </body>
-</html>
+                                                                                                                                                                                                                                                                                                                                            </html>
