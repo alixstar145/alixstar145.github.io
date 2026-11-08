@@ -29,7 +29,7 @@ section{padding:35px 0 55px;scroll-margin-top:85px}.section-head{display:flex;al
 .channels{grid-template-columns:repeat(3,1fr)}.channel{padding:20px;display:flex;align-items:center;gap:14px}.channel-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:22px;background:#ff303015}.channel:nth-child(2) .channel-icon{background:#36a8ff18}.channel:nth-child(3) .channel-icon{background:#a78bfa18}.channel h3{margin:0;font-size:15px}.channel p{margin:0;color:var(--muted);font-size:11px}
 .video-tabs{display:flex;gap:8px;margin-bottom:17px}.tab{border:1px solid var(--line);background:#ffffff08;color:#cbd4e2;border-radius:10px;padding:9px 14px;cursor:pointer}.tab.active{background:#70ef9b18;color:var(--green);border-color:#70ef9b66}.videos{grid-template-columns:repeat(3,1fr)}.video-frame{aspect-ratio:16/9;background:#080b10;position:relative}.video-frame iframe{width:100%;height:100%;border:0}.video-title{padding:12px 14px;font-size:13px;font-weight:700}
 .games-grid{grid-template-columns:repeat(3,1fr)}.game-card .cover{height:175px}.game-card .card-body{padding:15px}.game-card p{min-height:38px}
-.game-modal{position:fixed;inset:0;z-index:50;background:#05080deF;display:none;align-items:center;justify-content:center;padding:18px}.game-modal.open{display:flex}.game-shell{width:min(900px,100%);background:#111927;border:1px solid #40506a;border-radius:18px;overflow:hidden;box-shadow:0 25px 90px #000a}.game-top{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}.game-top h3{margin:0;font-size:15px}.close{background:#ffffff12;border:1px solid var(--line);color:white;border-radius:9px;padding:6px 12px;cursor:pointer}.game-info{display:flex;gap:18px;padding:8px 15px;color:#aebbd0;font-size:12px}.game-stage{height:min(56vw,480px);min-height:300px;position:relative;background:radial-gradient(ellipse at 50% 20%,#29496a,#0b1322 75%);overflow:hidden}.game-stage:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#ffffff0b,transparent 30%,#05091420)}.game-stage canvas{width:100%;height:100%;display:block;position:relative;z-index:0}.game-help{position:absolute;bottom:12px;right:12px;left:12px;text-align:center;font-size:11px;color:#dce8f4;background:#080d18a8;border:1px solid #ffffff1c;border-radius:10px;padding:6px;pointer-events:none}.touch-controls{display:none;position:absolute;bottom:16px;left:14px;width:145px;height:112px;gap:5px;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);pointer-events:auto}.touch-controls button{border:1px solid #b8f7d477;background:linear-gradient(145deg,#263c56ed,#101b2beF);color:white;border-radius:13px;font-size:21px;box-shadow:0 5px 15px #0007;touch-action:none}.touch-controls button:active,.touch-jump button:active{background:#26764d;transform:scale(.96)}.pad-left{grid-column:1;grid-row:2}.pad-forward{grid-column:2;grid-row:1}.pad-back{grid-column:2;grid-row:2}.pad-right{grid-column:3;grid-row:2}.touch-jump{position:absolute;bottom:37px;right:18px;display:none}.touch-jump button{width:72px;height:65px;border:1px solid #70ef9b99;background:linear-gradient(145deg,#247e50ed,#12432eeF);color:white;border-radius:20px;font-weight:900;box-shadow:0 7px 20px #0007;touch-action:none}
+.game-modal{position:fixed;inset:0;z-index:50;background:#05080deF;display:none;align-items:center;justify-content:center;padding:18px}.game-modal.open{display:flex}.game-shell{width:min(900px,100%);background:#111927;border:1px solid #40506a;border-radius:18px;overflow:hidden;box-shadow:0 25px 90px #000a}.game-top{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}.game-top h3{margin:0;font-size:15px}.close{background:#ffffff12;border:1px solid var(--line);color:white;border-radius:9px;padding:6px 12px;cursor:pointer}.game-info{display:flex;gap:18px;padding:8px 15px;color:#aebbd0;font-size:12px}.game-stage{height:min(56vw,480px);min-height:300px;position:relative;background:radial-gradient(ellipse at 50% 20%,#29496a,#0b1322 75%);overflow:hidden}.game-stage:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#ffffff0b,transparent 30%,#05091420)}.game-stage canvas{width:100%;height:100%;display:block;position:relative;z-index:0}.game-help{position:absolute;bottom:12px;right:12px;left:12px;text-align:center;font-size:11px;color:#dce8f4;background:#080d18a8;border:1px solid #ffffff1c;border-radius:10px;padding:6px;pointer-events:none}.touch-controls{display:none;position:absolute;bottom:16px;left:14px;width:145px;height:112px;gap:5px;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);pointer-events:auto}.touch-controls button{border:1px solid #b8f7d477;background:linear-gradient(145deg,#263c56ed,#101b2beF);color:white;border-radius:13px;font-size:21px;box-shadow:0 5px 15px #0007;touch-action:none;user-select:none;-webkit-user-select:none}.touch-controls button:active,.touch-jump button:active{background:#26764d;transform:scale(.96)}.pad-left{grid-column:1;grid-row:2}.pad-forward{grid-column:2;grid-row:1}.pad-back{grid-column:2;grid-row:2}.pad-right{grid-column:3;grid-row:2}.touch-jump{position:absolute;bottom:37px;right:18px;display:none}.touch-jump button{width:72px;height:65px;border:1px solid #70ef9b99;background:linear-gradient(145deg,#247e50ed,#12432eeF);color:white;border-radius:20px;font-weight:900;box-shadow:0 7px 20px #0007;touch-action:none}
 footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.toast{position:fixed;bottom:20px;left:20px;z-index:80;background:#1c2b3c;border:1px solid var(--line);padding:10px 15px;border-radius:12px;opacity:0;transform:translateY(12px);transition:.25s;pointer-events:none}.toast.show{opacity:1;transform:translateY(0)}
 .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:35px;border:1px dashed var(--line);border-radius:16px}
 @media(max-width:850px){nav{display:none;position:absolute;top:76px;right:16px;left:16px;background:#121a28;border:1px solid var(--line);border-radius:14px;padding:10px;flex-direction:column;align-items:stretch}nav.open{display:flex}nav a{padding:11px}.menu{display:block}.nav-cta{display:none}.hero{grid-template-columns:1fr;padding-top:48px;text-align:center}.hero p{margin-inline:auto}.hero-actions{justify-content:center}.hero-art{height:260px}.cube{transform:scale(.8)}.stats{margin-bottom:35px}.grid{grid-template-columns:repeat(2,1fr)}.channels{grid-template-columns:1fr}.videos{grid-template-columns:repeat(2,1fr)}}
@@ -50,6 +50,12 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
 .game-stage .touch-controls,.game-stage .touch-jump{z-index:7}
 @media(max-width:560px){.game-stage{height:70vh;min-height:380px}.game-stage .game-help{bottom:132px;font-size:10px}.game-stage .touch-controls{bottom:12px;left:12px}.game-stage .touch-jump{bottom:38px;right:15px}}
 
+
+.game-shell{background:linear-gradient(145deg,#17253a,#0b1220);border-color:#55708c}
+.game-stage{background:radial-gradient(ellipse at 50% 10%,#456b8b,#0b1322 75%)}
+.hud-chip{font-size:12px;letter-spacing:.2px}.game-start-card{backdrop-filter:blur(12px)}
+.game-card:hover .cover{filter:saturate(1.25) brightness(1.12)}
+@media(max-width:560px){.game-info{justify-content:space-between;gap:8px;font-size:11px}}
 </style>
 </head>
 <body>
@@ -134,6 +140,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
    </div><div class="touch-jump"><button data-key="Space">پرش ⤒</button></div></div>
  </div>
 </div><div class="toast" id="toast"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 $('#menuBtn').addEventListener('click',()=>$('#nav').classList.toggle('open'));
@@ -151,10 +158,37 @@ const titles={blocks:'Block World',racing:'3D Racing',parkour:'Sky Parkour',foot
 function mat(color,roughness=.72){return new THREE.MeshStandardMaterial({color,roughness,metalness:.04})}
 function cube(x,y,z,sx,sy,sz,color){const m=new THREE.Mesh(new THREE.BoxGeometry(sx,sy,sz),mat(color));m.position.set(x,y,z);scene.add(m);return m}
 function ball(x,y,z,r,color){const m=new THREE.Mesh(new THREE.SphereGeometry(r,18,14),mat(color));m.position.set(x,y,z);scene.add(m);return m}
-function resetWorld(){objects.forEach(o=>scene.remove(o));objects=[];if(renderer){renderer.dispose();renderer.domElement.remove()}scene=new THREE.Scene();scene.background=new THREE.Color(gameType==='space'?0x080d24:gameType==='parkour'?0x7bb7d9:0x9bc9e7);scene.fog=new THREE.Fog(scene.background,18,65);camera=new THREE.PerspectiveCamera(60,stage.clientWidth/stage.clientHeight,.1,100);renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.65));renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputEncoding=THREE.sRGBEncoding;renderer.setSize(stage.clientWidth,stage.clientHeight);stage.insertBefore(renderer.domElement,stage.firstChild);const hemi=new THREE.HemisphereLight(0xd9f4ff,0x35465a,2.15);scene.add(hemi);const sun=new THREE.DirectionalLight(0xfff0d7,2.5);sun.position.set(7,13,8);sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);scene.add(sun);const rim=new THREE.PointLight(gameType==="space"?0x5e9dff:0x62ffad,1.4,24);rim.position.set(-5,4,1);scene.add(rim);clock=new THREE.Clock();score=0;$('#score').textContent='0';objects=[];gameState={t:0,vy:0,lane:0,obstacles:[],collected:0};}
+function resetWorld(){objects.forEach(o=>scene.remove(o));objects=[];if(renderer){renderer.dispose();renderer.domElement.remove()}scene=new THREE.Scene();scene.background=new THREE.Color(gameType==='space'?0x080d24:gameType==='parkour'?0x7bb7d9:0x9bc9e7);scene.fog=new THREE.Fog(scene.background,18,65);camera=new THREE.PerspectiveCamera(60,stage.clientWidth/stage.clientHeight,.1,100);renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.65));renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputEncoding=THREE.sRGBEncoding;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.12;renderer.setSize(stage.clientWidth,stage.clientHeight);stage.insertBefore(renderer.domElement,stage.firstChild);const hemi=new THREE.HemisphereLight(0xd9f4ff,0x35465a,2.15);scene.add(hemi);const sun=new THREE.DirectionalLight(0xfff0d7,2.5);sun.position.set(7,13,8);sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);sun.shadow.camera.left=-24;sun.shadow.camera.right=24;sun.shadow.camera.top=24;sun.shadow.camera.bottom=-24;scene.add(sun);const rim=new THREE.PointLight(gameType==="space"?0x5e9dff:0x62ffad,1.4,24);rim.position.set(-5,4,1);scene.add(rim);clock=new THREE.Clock();score=0;$('#score').textContent='0';objects=[];gameState={t:0,vy:0,lane:0,obstacles:[],collected:0,coins:[],rocks:[],speed:10,jumpLock:false};}
 function addGround(color=0x477e4d){const g=cube(0,-.55,-12,30,1,45,color);objects.push(g);for(let i=0;i<18;i++){const x=(Math.random()-.5)*26,z=-Math.random()*35;const pebble=cube(x,-.02,z,.18,.12,.35,0x9aab83);objects.push(pebble)}} 
 function addTree(x,z){const trunk=cube(x,.65,z,.38,1.3,.38,0x765037);const crown=ball(x,1.65,z,.95,0x2c9b62);objects.push(trunk,crown)}
 function addCloud(x,y,z,s=1){const c=ball(x,y,z,s,0xe8f5ff);objects.push(c);return c}
+function addGlow(x,y,z,color=0x72f2a0,r=.18){const m=new THREE.Mesh(new THREE.SphereGeometry(r,16,12),new THREE.MeshBasicMaterial({color}));m.position.set(x,y,z);scene.add(m);objects.push(m);return m}
+function addRing(x,y,z,color=0x72f2a0,r=.65){const m=new THREE.Mesh(new THREE.TorusGeometry(r,.055,8,32),new THREE.MeshStandardMaterial({color,emissive:color,emissiveIntensity:.45,metalness:.35,roughness:.25}));m.position.set(x,y,z);m.userData.collectible=true;scene.add(m);objects.push(m);return m}
+function addRock(x,y,z,s=1,color=0x687889){const m=cube(x,y,z,s,s*.75,s,color);m.rotation.set(Math.random()*.5,Math.random(),Math.random()*.5);objects.push(m);return m}
+function addDecorations(){
+ if(gameType==='blocks'){
+  for(let i=0;i<34;i++){const x=(Math.random()-.5)*28,z=-Math.random()*42;const f=cube(x,-.08,z,.35,.18,.35,[0x9bca72,0xc8b879,0x7aa8c8][i%3]);objects.push(f)}
+  for(let i=0;i<9;i++){const x=(Math.random()-.5)*24,z=-Math.random()*36;const ring=addRing(x,1.15,z,0x65f3d0,.48);ring.userData.float=true}
+  for(let i=0;i<7;i++){const rock=addRock((Math.random()-.5)*23,.25,-Math.random()*35,.8,0x657b65);rock.rotation.y=Math.random()*3}
+ }
+ if(gameType==='racing'||gameType==='runner'){
+  for(let side of [-1,1]){for(let i=0;i<16;i++){let z=-i*4;let post=cube(side*5,.85,z,.18,1.7,.18,0xf4d06f);objects.push(post);let lamp=ball(side*5,1.8,z,.17,0xffe7a1);lamp.material= new THREE.MeshBasicMaterial({color:0xffe7a1});objects.push(lamp)}
+   for(let i=0;i<10;i++){const x=side*9,z=-i*6;const treeTrunk=cube(x,.7,z,.35,1.4,.35,0x765039);const treeTop=ball(x,1.8,z,1,0x28794d);objects.push(treeTrunk,treeTop)} }
+  for(let i=0;i<7;i++){let coin=addRing((Math.floor(Math.random()*3)-1)*3,1.35,-5-i*7,0xffdf58,.34);gameState.coins.push(coin)}
+ }
+ if(gameType==='parkour'){
+  for(let i=0;i<12;i++){let x=(i%2?5:-5),z=-i*5-2;let p=cube(x,1.1,z,1.2,2.2,1.2,0x8c9bab);objects.push(p);let cap=cube(x,2.25,z,1.5,.18,1.5,0x63dba1);objects.push(cap)}
+  for(let i=0;i<8;i++){let ring=addRing((i%2?2:-2),1.25,-i*4,0xffdf61,.4);gameState.coins.push(ring)}
+ }
+ if(gameType==='football'){
+  for(let x of [-7.1,7.1])for(let z=-19;z<5;z+=3){let post=cube(x,.6,z,.16,1.2,.16,0xffffff);objects.push(post)}
+  for(let i=0;i<12;i++){let spot=addGlow((Math.random()-.5)*12,.12,-Math.random()*18,0xc9ffd8,.06);objects.push(spot)}
+ }
+ if(gameType==='space'){
+  for(let i=0;i<18;i++){let rock=addRock((Math.random()-.5)*18,(Math.random()-.5)*9,-12-Math.random()*35,.45+Math.random()*.65,[0x716b91,0x8c789e,0x596b8e][i%3]);gameState.rocks.push(rock)}
+  for(let i=0;i<10;i++){let ring=addRing((Math.random()-.5)*12,(Math.random()-.5)*6,-10-i*5,0x6de5ff,.42);gameState.coins.push(ring)}
+ }
+}
 function startGame(type){gameType=type;$('#gameTitle').textContent=titles[type];$('#gameStatus').textContent='آماده شروع';const help={blocks:'▲ جلو | ▼ عقب | ◀ ▶ حرکت | کریستال‌ها را جمع کن.',racing:'▲ گاز | ▼ ترمز | ◀ ▶ فرمان | از موانع دوری کن.',parkour:'▲ جلو | ▼ عقب | ◀ ▶ حرکت | با Space بپر.',football:'▲ جلو | ▼ عقب | ◀ ▶ حرکت | با Space شوت کن.',runner:'▲ سرعت | ◀ ▶ تغییر مسیر | Space پرش.',space:'▲ جلو | ▼ عقب | ◀ ▶ هدایت سفینه | ستاره‌ها را جمع کن.'};$('#gameHelp').textContent=help[type];$('#startIcon').textContent=({blocks:'💎',racing:'🏎️',parkour:'🪜',football:'⚽',runner:'🏃',space:'🚀'})[type];$('#startTitle').textContent=titles[type];$('#startDesc').textContent='با کلیدهای WASD یا فلش‌ها بازی کن. در موبایل از کنترل‌های روی صفحه استفاده کن.';$('#startGameBtn').textContent='شروع بازی';$('#gameStartOverlay').style.display='flex';modal.classList.add('open');if(!window.THREE){$('#gameStatus').textContent='برای اجرای بازی اینترنت لازم است';return}if(anim)cancelAnimationFrame(anim);resetWorld();initLevel();running=false;setTimeout(resizeGame,40)}
 function launchCurrentGame(){if(!scene||!renderer){resetWorld();initLevel()}$('#gameStartOverlay').style.display='none';$('#gameStatus').textContent='در حال بازی';running=true;clock.start();loop()}
 function initLevel(){const type=gameType;
@@ -163,20 +197,65 @@ function initLevel(){const type=gameType;
  if(type==='parkour'){scene.background=new THREE.Color(0x78b8d8);for(let i=0;i<10;i++){let p=cube((i%2?2:-2),-.3,-i*4,3,.6,3,[0x51a76b,0x4c8cc5,0x9774ca][i%3]);p.material=mat([0x51a76b,0x4c8cc5,0x9774ca][i%3],.38);objects.push(p);const gem=ball((i%2?2:-2),.65,-i*4,.22,0xffe56d);objects.push(gem)}for(let i=0;i<6;i++)addCloud((Math.random()-.5)*18,6,-i*8,1.2);player=cube(0,.55,3,.8,1.1,.8,0xf0bd56);camera.position.set(0,5,10);camera.lookAt(0,0,-6)}
  if(type==='football'){addGround(0x27834c);const pitch=cube(0,.03,-8,15,.1,24,0x2ca75c);objects.push(pitch);for(let x of [-7.3,7.3]){let line=cube(x,.1,-8,.12,.04,24,0xffffff);objects.push(line)}for(let z of [4,-20]){let line=cube(0,.1,z,14.6,.04,.12,0xffffff);objects.push(line)}const goal=cube(0,1,-19,5,2,.5,0xffffff);objects.push(goal);player=cube(0,.7,3,.8,1.4,.8,0x3678ec);gameState.ball=ball(0,.45,-2,.48,0xffffff);objects.push(gameState.ball);camera.position.set(0,7,12);camera.lookAt(0,0,-6)}
  if(type==='space'){scene.background=new THREE.Color(0x080d24);for(let i=0;i<100;i++){let s=ball((Math.random()-.5)*35,(Math.random()-.5)*20,-Math.random()*45,.045,0xffffff);objects.push(s)}const planet=ball(8,5,-24,4,0x6a54ad);objects.push(planet);player=cube(0,0,4,.8,.35,1.4,0x64dafa);player.material=mat(0x64dafa,.25);const wing1=cube(-.65,-.05,4,.55,.12,.65,0xeffaff),wing2=cube(.65,-.05,4,.55,.12,.65,0xeffaff);objects.push(wing1,wing2);for(let i=0;i<8;i++){let a=ball((Math.random()-.5)*14,(Math.random()-.5)*7,-8-i*5,.5+Math.random()*.5,0x9b8bdc);gameState.obstacles.push(a);objects.push(a)}camera.position.set(0,4,12);camera.lookAt(0,0,-5)}
+ addDecorations();
 }
+
 function setScore(n){score=n;$('#score').textContent=String(n);const h=$('#hudScore');if(h)h.textContent=String(n)}
 function endGame(message){running=false;$('#gameStatus').textContent=message;$('#startIcon').textContent='🏆';$('#startTitle').textContent='پایان بازی';$('#startDesc').textContent=message+' امتیاز نهایی: '+score;$('#startGameBtn').textContent='دوباره بازی کن';$('#gameStartOverlay').style.display='flex'}
-function loop(){if(!running)return;anim=requestAnimationFrame(loop);const dt=Math.min(clock.getDelta(),.04);gameState.t+=dt;const left=keys.ArrowLeft||keys.KeyA,right=keys.ArrowRight||keys.KeyD,up=keys.ArrowUp||keys.KeyW,down=keys.ArrowDown||keys.KeyS,jump=keys.Space;
- if(gameType==='blocks'){if(left)player.position.x-=dt*4;if(right)player.position.x+=dt*4;if(up)player.position.z-=dt*4;if(down)player.position.z+=dt*4;player.position.x=THREE.MathUtils.clamp(player.position.x,-10,10);player.position.z=THREE.MathUtils.clamp(player.position.z,-25,7);camera.position.x+=(player.position.x-camera.position.x)*dt*2;camera.position.z+=(player.position.z+8-camera.position.z)*dt*2;camera.lookAt(player.position.x,0,player.position.z-5);objects.slice(1).forEach(o=>{if(o.visible&&o.position.distanceTo(player.position)<1.15){o.visible=false;setScore(score+1)}})}
- if(gameType==='racing'||gameType==='runner'){if(left)player.position.x-=dt*6;if(right)player.position.x+=dt*6;if(up)gameState.speed=Math.min(20,(gameState.speed||10)+dt*5);if(down)gameState.speed=Math.max(5,(gameState.speed||10)-dt*7);player.position.x=THREE.MathUtils.clamp(player.position.x,-3,3);gameState.obstacles.forEach(o=>{o.position.z+=dt*((gameState.speed||10)*(gameType==='runner'?1.05:1.3));if(o.position.z>8){o.position.z=-32-Math.random()*10;o.position.x=(Math.floor(Math.random()*3)-1)*3;setScore(score+1)}if(Math.abs(o.position.z-player.position.z)<1.25&&Math.abs(o.position.x-player.position.x)<1.15){endGame('برخورد کردی!')}});if(jump&&gameState.vy===0)gameState.vy=7;if(gameState.vy!==0){player.position.y+=gameState.vy*dt;gameState.vy-=18*dt;if(player.position.y<.55){player.position.y=.55;gameState.vy=0}}}
- if(gameType==='parkour'){if(left)player.position.x-=dt*4;if(right)player.position.x+=dt*4;if(up)player.position.z-=dt*4;if(down)player.position.z+=dt*3;if(jump&&gameState.vy===0)gameState.vy=8;if(gameState.vy!==0){player.position.y+=gameState.vy*dt;gameState.vy-=18*dt}let landed=false;objects.forEach(p=>{if(p.position.z<player.position.z+.4&&p.position.z>player.position.z-.5&&Math.abs(p.position.x-player.position.x)<1.6&&player.position.y<1.3){landed=true}});if(landed&&gameState.vy<0)gameState.vy=0;if(player.position.y< -4){endGame('از سکو افتادی!')}setScore(Math.max(score,Math.floor(Math.max(0,3-player.position.z)*2)))}
- if(gameType==='football'){if(left)player.position.x-=dt*4;if(right)player.position.x+=dt*4;if(up)player.position.z-=dt*4;if(down)player.position.z+=dt*4;const d=player.position.distanceTo(gameState.ball.position);if(d<1.5){gameState.ball.position.z-=dt*(keys.Space?15:7);gameState.ball.position.x+=(gameState.ball.position.x-player.position.x)*dt*2;if(gameState.ball.position.z< -18){setScore(score+1);gameState.ball.position.set(0,.45,-2)}}}
- if(gameType==='space'){if(left)player.position.x-=dt*7;if(right)player.position.x+=dt*7;if(up)player.position.y+=dt*6;if(down)player.position.y-=dt*6;gameState.obstacles.forEach(o=>{o.position.z+=dt*12;if(o.position.z>8){o.position.z=-40-Math.random()*15;o.position.x=(Math.random()-.5)*14;o.position.y=(Math.random()-.5)*7;setScore(score+1)}if(o.position.distanceTo(player.position)<1){endGame('به سیارک برخورد کردی!')}})}
- renderer.render(scene,camera)}
+function loop(){
+ if(!running)return;anim=requestAnimationFrame(loop);const dt=Math.min(clock.getDelta(),.04);gameState.t+=dt;
+ const left=keys.ArrowLeft||keys.KeyA,right=keys.ArrowRight||keys.KeyD,up=keys.ArrowUp||keys.KeyW,down=keys.ArrowDown||keys.KeyS,jump=keys.Space;
+ const clamp=(v,a,b)=>THREE.MathUtils.clamp(v,a,b);
+ if(gameType==='blocks'){
+  if(left)player.position.x-=dt*5;if(right)player.position.x+=dt*5;if(up)player.position.z-=dt*5;if(down)player.position.z+=dt*5;
+  player.position.x=clamp(player.position.x,-12,12);player.position.z=clamp(player.position.z,-38,7);
+  player.rotation.y+=(right?1:left?-1:0)*dt*1.8;player.position.y=.58+Math.sin(gameState.t*5)*.035;
+  camera.position.x+=(player.position.x-camera.position.x)*dt*2.2;camera.position.z+=(player.position.z+8-camera.position.z)*dt*2.2;camera.lookAt(player.position.x,.3,player.position.z-5);
+  objects.forEach(o=>{if(o.visible&&o.userData&&o.userData.collectible&&o.position.distanceTo(player.position)<1.25){o.visible=false;setScore(score+10)}});
+ }
+ if(gameType==='racing'||gameType==='runner'){
+  const speed=gameState.speed||10;if(left)player.position.x-=dt*7;if(right)player.position.x+=dt*7;if(up)gameState.speed=Math.min(23,speed+dt*6);if(down)gameState.speed=Math.max(6,speed-dt*8);
+  player.position.x=clamp(player.position.x,-3.25,3.25);player.rotation.z+=(player.position.x-player.userData.lastX||0)*-.04;player.userData.lastX=player.position.x;
+  if(gameType==='racing'){player.position.y=.55+Math.sin(gameState.t*18)*.025;}
+  gameState.obstacles.forEach(o=>{o.position.z+=dt*((gameState.speed||10)*(gameType==='runner'?1.1:1.25));o.rotation.y+=dt*.8;if(o.position.z>8){o.position.z=-38-Math.random()*15;o.position.x=(Math.floor(Math.random()*3)-1)*3;setScore(score+5)}if(Math.abs(o.position.z-player.position.z)<1.35&&Math.abs(o.position.x-player.position.x)<1.15){endGame('برخورد با مانع!');return}});
+  if(jump&&gameState.vy===0&&!gameState.jumpLock){gameState.vy=7.5;gameState.jumpLock=true}if(!jump)gameState.jumpLock=false;
+  if(gameState.vy!==0){player.position.y+=gameState.vy*dt;gameState.vy-=19*dt;if(player.position.y<.55){player.position.y=.55;gameState.vy=0}}
+  gameState.coins.forEach(c=>{c.position.z+=dt*((gameState.speed||10)*1.15);c.rotation.y+=dt*2;if(c.position.z>7)c.position.z=-45-Math.random()*20;if(c.visible&&Math.abs(c.position.z-player.position.z)<1.2&&Math.abs(c.position.x-player.position.x)<1){c.position.z=-55-Math.random()*10;setScore(score+15)}});
+  camera.position.x+=(player.position.x*.35-camera.position.x)*dt*2;camera.lookAt(player.position.x*.25,0,-7);
+ }
+ if(gameType==='parkour'){
+  if(left)player.position.x-=dt*4.5;if(right)player.position.x+=dt*4.5;if(up)player.position.z-=dt*4.2;if(down)player.position.z+=dt*3;
+  player.position.x=clamp(player.position.x,-7,7);
+  if(jump&&gameState.vy===0&&!gameState.jumpLock){gameState.vy=9;gameState.jumpLock=true}if(!jump)gameState.jumpLock=false;
+  const oldY=player.position.y;player.position.y+=gameState.vy*dt;gameState.vy-=20*dt;
+  let landed=false;objects.forEach(p=>{if(p.geometry&&p.geometry.type==='BoxGeometry'&&Math.abs(p.position.x-player.position.x)<1.45&&Math.abs(p.position.z-player.position.z)<1.5&&oldY>=p.position.y+.3&&player.position.y<=p.position.y+1.05&&gameState.vy<0){player.position.y=p.position.y+1.05;gameState.vy=0;landed=true}});
+  gameState.coins.forEach(c=>{c.rotation.y+=dt*2;if(c.visible&&c.position.distanceTo(player.position)<1.25){c.visible=false;setScore(score+20)}});
+  if(player.position.y< -4){endGame('از مسیر پارکور افتادی!');return}setScore(Math.max(score,Math.floor(Math.max(0,3-player.position.z)*2)));
+  camera.position.x+=(player.position.x*.35-camera.position.x)*dt*2;camera.position.z+=(player.position.z+9-camera.position.z)*dt*2;camera.lookAt(player.position.x,0,player.position.z-6);
+ }
+ if(gameType==='football'){
+  if(left)player.position.x-=dt*4.5;if(right)player.position.x+=dt*4.5;if(up)player.position.z-=dt*4.5;if(down)player.position.z+=dt*4.5;
+  player.position.x=clamp(player.position.x,-6.5,6.5);player.position.z=clamp(player.position.z,-5,8);
+  const d=player.position.distanceTo(gameState.ball.position);if(d<1.65){const power=keys.Space?17:8;gameState.ball.position.z-=dt*power;gameState.ball.position.x+=(gameState.ball.position.x-player.position.x)*dt*2.4;gameState.ball.position.y=.45+Math.abs(Math.sin(gameState.t*10))*.18}
+  if(gameState.ball.position.z< -18){setScore(score+100);gameState.ball.position.set((Math.random()-.5)*3,.45,-2)}
+  if(gameState.ball.position.z>7||Math.abs(gameState.ball.position.x)>8)gameState.ball.position.set(0,.45,-2);
+  camera.position.x+=(player.position.x*.25-camera.position.x)*dt;camera.lookAt(0,0,-7);
+ }
+ if(gameType==='space'){
+  if(left)player.position.x-=dt*7;if(right)player.position.x+=dt*7;if(up)player.position.y+=dt*6;if(down)player.position.y-=dt*6;
+  player.position.x=clamp(player.position.x,-8,8);player.position.y=clamp(player.position.y,-4.5,5);player.rotation.z+=(right?1:left?-1:0)*dt*.6;
+  gameState.obstacles.forEach(o=>{o.position.z+=dt*12;o.rotation.x+=dt*.7;o.rotation.y+=dt*.9;if(o.position.z>8){o.position.z=-42-Math.random()*18;o.position.x=(Math.random()-.5)*16;o.position.y=(Math.random()-.5)*9;setScore(score+5)}if(o.position.distanceTo(player.position)<1.15){endGame('سفینه با سیارک برخورد کرد!');return}});
+  gameState.rocks.forEach(o=>{o.position.z+=dt*5;if(o.position.z>8)o.position.z=-45-Math.random()*20;o.rotation.x+=dt*.3;o.rotation.y+=dt*.4});
+  gameState.coins.forEach(c=>{c.position.z+=dt*11;c.rotation.y+=dt*2;if(c.position.z>8)c.position.z=-48-Math.random()*18;if(c.visible&&c.position.distanceTo(player.position)<1.2){c.position.z=-55;setScore(score+25)}});
+  camera.position.x+=(player.position.x*.25-camera.position.x)*dt*2;camera.position.y+=(player.position.y*.25+3-camera.position.y)*dt*2;camera.lookAt(player.position.x*.15,0,-7);
+ }
+ if(!running)return;
+ objects.forEach(o=>{if(o.userData&&o.userData.float){o.position.y=1.15+Math.sin(gameState.t*2+o.position.z)*.18;o.rotation.y+=dt*.8}});
+ renderer.render(scene,camera);
+}
 function resizeGame(){if(!renderer||!camera)return;const w=stage.clientWidth,h=stage.clientHeight;camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h)}
 function closeGame(){running=false;if(anim)cancelAnimationFrame(anim);modal.classList.remove('open');keys={};if(renderer){renderer.dispose();renderer.domElement.remove();renderer=null}}
 $$('[data-game]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();startGame(a.dataset.game)}));$('#closeGame').addEventListener('click',closeGame);$('#restartGame').addEventListener('click',()=>startGame(gameType));$('#startGameBtn').addEventListener('click',launchCurrentGame);modal.addEventListener('click',e=>{if(e.target===modal)closeGame()});
 window.addEventListener('keydown',e=>{if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Space'].includes(e.code))e.preventDefault();keys[e.code]=true});window.addEventListener('keyup',e=>keys[e.code]=false);$$('[data-key]').forEach(b=>{const k=b.dataset.key;b.addEventListener('pointerdown',e=>{e.preventDefault();keys[k]=true});['pointerup','pointerleave','pointercancel'].forEach(ev=>b.addEventListener(ev,()=>keys[k]=false))});window.addEventListener('resize',resizeGame);
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </body></html>
