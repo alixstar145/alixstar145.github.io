@@ -7,388 +7,228 @@
 <meta name="theme-color" content="#080c14">
 <title>ALI X STAR | دنیای ماینکرفت</title>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
 <style>
 :root{
---bg:#080c14;--panel:#121a29;--panel2:#1a2639;
---line:#2a3b52;--text:#f4f8ff;--muted:#a4b2c7;
---green:#72f2a0;--cyan:#68ddff;--purple:#c09cff;
---radius:20px
+--bg:#080c14;--panel:#121a29;--line:#2a3b52;
+--text:#f4f8ff;--muted:#a4b2c7;--green:#72f2a0;
+--cyan:#68ddff;--purple:#c09cff
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
 margin:0;background:var(--bg);color:var(--text);
-font-family:Vazirmatn,Tahoma,sans-serif;
-line-height:1.8;overflow-x:hidden
-}
-body:before{
-content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
-background:
-radial-gradient(ellipse at 12% 0%,#1b3a3540,transparent 36%),
-radial-gradient(ellipse at 90% 12%,#34305b40,transparent 32%),
-linear-gradient(180deg,#0d111b,#0b0e15)
+font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.8
 }
 a{color:inherit;text-decoration:none}
 button,input,select{font:inherit}
 button{cursor:pointer}
-.wrap{width:min(1180px,calc(100% - 30px));margin:auto}
-.topline{
-height:4px;background:linear-gradient(90deg,var(--green),var(--cyan),var(--purple),var(--green));
-background-size:200%;animation:shine 7s linear infinite
-}
-@keyframes shine{to{background-position:200%}}
+.wrap{width:min(1180px,calc(100% - 24px));margin:auto}
+.topline{height:4px;background:linear-gradient(90deg,var(--green),var(--cyan),var(--purple))}
 header{
-position:sticky;top:0;z-index:20;
-background:#0c1019e8;backdrop-filter:blur(18px);
-border-bottom:1px solid #ffffff12
+position:sticky;top:0;z-index:20;background:#0c1019ed;
+backdrop-filter:blur(15px);border-bottom:1px solid #ffffff15
 }
-.nav{
-min-height:72px;display:flex;align-items:center;
-justify-content:space-between;gap:12px
-}
-.brand{display:flex;align-items:center;gap:12px;font-weight:900}
+.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900}
 .logo{
-width:43px;height:43px;border-radius:13px;
-background:linear-gradient(145deg,var(--green),#21a86a);
-display:grid;place-items:center;color:#092216;font-size:23px
+width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+background:var(--green);color:#092315;font-size:23px
 }
-.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1px}
-nav{display:flex;gap:5px;align-items:center}
-nav a{padding:9px 11px;border-radius:10px;color:#c5cedb;font-size:13px}
-nav a:hover{background:#ffffff0c;color:var(--green)}
+.brand small{display:block;color:var(--muted);font-size:10px}
+nav{display:flex;gap:5px}
+nav a{padding:8px 10px;border-radius:9px;font-size:13px;color:#cbd4e2}
+nav a:hover{background:#ffffff12;color:var(--green)}
 .nav-cta,.btn{
-border:0;border-radius:12px;padding:10px 16px;
-background:var(--green);color:#082315;font-weight:800;
-display:inline-flex;align-items:center;justify-content:center;gap:7px
+border:0;border-radius:12px;padding:10px 15px;
+background:var(--green);color:#092315;font-weight:900
 }
-.btn.secondary{background:#ffffff0b;color:#e8eef7;border:1px solid var(--line)}
-.menu{
-display:none;background:var(--panel);color:white;
-border:1px solid var(--line);border-radius:10px;padding:8px 12px
+.account-chip{
+display:none;align-items:center;gap:8px;
+background:#172638;border:1px solid #72f2a066;color:white;
+border-radius:30px;padding:5px 12px 5px 7px;
+font-weight:800;max-width:175px
 }
+.account-chip img,.account-chip .avatar{
+width:34px;height:34px;border-radius:50%;object-fit:cover;
+background:#29435a;display:grid;place-items:center;font-size:21px
+}
+.account-chip span:last-child{
+overflow:hidden;text-overflow:ellipsis;white-space:nowrap
+}
+.menu{display:none;background:#172334;color:white;border:1px solid var(--line);border-radius:9px;padding:8px 12px}
 .hero{
-padding:65px 0 45px;display:grid;
-grid-template-columns:1.1fr .9fr;align-items:center;gap:30px
+padding:55px 0 35px;display:grid;grid-template-columns:1.1fr .9fr;
+align-items:center;gap:25px
 }
-.eyebrow{
-display:inline-flex;align-items:center;gap:8px;
-color:var(--green);background:#70ef9b12;
-border:1px solid #70ef9b35;padding:6px 12px;
-border-radius:50px;font-size:12px;font-weight:800
-}
-.dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green)}
-h1{font-size:clamp(36px,5vw,62px);line-height:1.25;margin:20px 0 14px;font-weight:900}
-h1 span{
-background:linear-gradient(90deg,var(--green),var(--cyan));
--webkit-background-clip:text;background-clip:text;color:transparent
-}
-.hero p{color:var(--muted);max-width:570px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-.hero-note{font-size:12px;color:#8390a5;margin-top:16px}
-.hero-art{height:300px;position:relative;display:grid;place-items:center;perspective:900px}
-.orbit{
-position:absolute;width:260px;height:260px;border:1px solid #70ef9b32;
-border-radius:50%;transform:rotateX(68deg) rotateZ(-20deg)
-}
-.orbit:before{content:"";position:absolute;inset:20px;border:1px dashed #63d8f255;border-radius:50%}
+.eyebrow{color:var(--green);font-size:12px;font-weight:900}
+h1{font-size:clamp(36px,5vw,60px);line-height:1.3;margin:15px 0}
+h1 span{color:var(--green)}
+.hero p{color:var(--muted);max-width:550px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.secondary{background:#ffffff0b;color:white;border:1px solid var(--line)}
+.hero-art{height:260px;display:grid;place-items:center;position:relative}
 .cube{
-width:130px;height:130px;position:relative;transform-style:preserve-3d;
+width:120px;height:120px;position:relative;transform-style:preserve-3d;
 animation:spin 14s linear infinite
 }
-.cube i{
-position:absolute;width:130px;height:130px;border:2px solid #b5ffca88;
-background:linear-gradient(145deg,#69e995dd,#16764dcc)
-}
-.cube i:nth-child(1){transform:translateZ(65px)}
-.cube i:nth-child(2){transform:rotateY(90deg) translateZ(65px)}
-.cube i:nth-child(3){transform:rotateY(180deg) translateZ(65px)}
-.cube i:nth-child(4){transform:rotateY(-90deg) translateZ(65px)}
-.cube i:nth-child(5){transform:rotateX(90deg) translateZ(65px)}
-.cube i:nth-child(6){transform:rotateX(-90deg) translateZ(65px)}
+.cube i{position:absolute;width:120px;height:120px;background:#38b76ccc;border:2px solid #b8ffca}
+.cube i:nth-child(1){transform:translateZ(60px)}
+.cube i:nth-child(2){transform:rotateY(90deg) translateZ(60px)}
+.cube i:nth-child(3){transform:rotateY(180deg) translateZ(60px)}
+.cube i:nth-child(4){transform:rotateY(-90deg) translateZ(60px)}
+.cube i:nth-child(5){transform:rotateX(90deg) translateZ(60px)}
+.cube i:nth-child(6){transform:rotateX(-90deg) translateZ(60px)}
 @keyframes spin{to{transform:rotateX(360deg) rotateY(360deg)}}
-.float-tag{
-position:absolute;padding:7px 11px;border:1px solid var(--line);
-background:#171e2bdc;border-radius:12px;font-size:11px
-}
-.tag1{top:30px;right:4%}.tag2{bottom:30px;left:2%}.tag3{bottom:55px;right:8%;color:var(--cyan)}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:5px 0 45px}
-.stat{
-padding:15px 18px;border:1px solid var(--line);border-radius:16px;
-background:#ffffff05;display:flex;align-items:center;gap:12px
-}
-.stat b{font-size:21px;color:var(--green)}
-.stat span{font-size:12px;color:var(--muted)}
-section{padding:35px 0 50px;scroll-margin-top:85px}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:22px}
-.section-head h2{font-size:26px;margin:0;font-weight:900}
-.section-head p{color:var(--muted);font-size:13px;margin:3px 0}
-.section-kicker{color:var(--green);font-size:11px;font-weight:900;letter-spacing:1px}
-.searchbar{display:flex;gap:9px;margin:20px 0 17px}
-.searchbar input{
-flex:1;min-width:0;background:var(--panel);border:1px solid var(--line);
-color:white;border-radius:13px;padding:12px 15px;outline:none
-}
-.searchbar input:focus{border-color:var(--green)}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.filter{
-background:#ffffff08;border:1px solid var(--line);color:#cbd4e2;
-border-radius:30px;padding:7px 14px;font-size:12px
-}
-.filter.active,.filter:hover{background:#70ef9b18;border-color:#70ef9b77;color:var(--green)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.card{
-background:linear-gradient(145deg,#182131,#121824);
-border:1px solid var(--line);border-radius:var(--radius);
-overflow:hidden;transition:.2s;min-width:0
-}
-.card:hover{transform:translateY(-5px);border-color:#70ef9b99;box-shadow:0 18px 40px #0007}
-.cover{
-height:140px;position:relative;display:grid;place-items:center;overflow:hidden;
-background:linear-gradient(135deg,#1b4739,#182638)
-}
-.cover:before{
-content:"";position:absolute;width:190px;height:190px;
-border:1px solid #ffffff20;transform:rotate(35deg);
-box-shadow:0 0 0 25px #ffffff08,0 0 0 50px #ffffff05
-}
-.cover .symbol{font-size:52px;z-index:1}
+.orbit{position:absolute;width:245px;height:245px;border:1px solid #72f2a044;border-radius:50%;transform:rotateX(65deg)}
+.float-tag{position:absolute;background:#172334;padding:7px 11px;border-radius:10px;font-size:11px}
+.tag1{top:15px;right:5%}.tag2{bottom:15px;left:5%}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:15px 0 35px}
+.stat{padding:13px;background:#ffffff08;border:1px solid var(--line);border-radius:14px;text-align:center}
+.stat b{display:block;color:var(--green);font-size:20px}
+.stat span{color:var(--muted);font-size:12px}
+section{padding:30px 0 45px;scroll-margin-top:85px}
+.section-head{margin-bottom:18px}
+.section-head h2{margin:0;font-size:25px}
+.section-head p{margin:3px 0;color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:linear-gradient(145deg,#182131,#111824);border:1px solid var(--line);border-radius:18px;overflow:hidden;min-width:0}
+.card:hover{border-color:#72f2a088;transform:translateY(-3px)}
+.cover{height:125px;display:grid;place-items:center;position:relative;background:linear-gradient(135deg,#1b4739,#182638)}
 .cover.purple{background:linear-gradient(135deg,#3b285d,#1d2743)}
 .cover.blue{background:linear-gradient(135deg,#16465c,#1c293e)}
 .cover.orange{background:linear-gradient(135deg,#624027,#282b3b)}
 .cover.red{background:linear-gradient(135deg,#5c2935,#252a3b)}
-.cover.teal{background:linear-gradient(135deg,#1c514e,#1c2b3a)}
-.cover.minecraft{background:linear-gradient(135deg,#36b86b,#8acb55 48%,#2878bd)}
-.pill{
-position:absolute;top:10px;right:10px;background:#0c111dcc;
-border:1px solid #ffffff20;border-radius:20px;padding:4px 9px;font-size:10px;z-index:2
-}
-.card-body{padding:15px}
-.card h3{font-size:15px;margin:0 0 6px}
-.card p{font-size:12px;color:var(--muted);margin:0 0 13px;min-height:42px}
-.meta{display:flex;justify-content:space-between;gap:8px;color:#91a0b3;font-size:10px;margin-bottom:12px}
-.card-actions{display:flex;gap:8px}
-.card-actions a{
-flex:1;text-align:center;padding:8px 9px;border-radius:10px;
-font-size:11px;font-weight:800;background:#70ef9b;color:#092315
-}
-.card-actions a.ghost{background:#ffffff0a;color:#dce5ef;border:1px solid var(--line)}
-.feature-band{
-border:1px solid #70ef9b35;background:linear-gradient(100deg,#173c31aa,#18233aaa);
-border-radius:18px;padding:20px 22px;display:flex;align-items:center;
-justify-content:space-between;gap:15px;margin:10px 0 22px
-}
-.feature-band h3{margin:0 0 3px}.feature-band p{margin:0;color:var(--muted);font-size:12px}
+.cover .symbol{font-size:48px}
+.pill{position:absolute;top:8px;right:8px;background:#07101ddd;border-radius:20px;padding:3px 9px;font-size:10px}
+.card-body{padding:13px}
+.card h3{font-size:14px;margin:0 0 5px}
+.card p{font-size:12px;color:var(--muted);min-height:42px;margin:0 0 12px}
+.card-actions{display:flex;gap:7px}
+.card-actions a{flex:1;text-align:center;padding:7px;border-radius:9px;background:var(--green);color:#092315;font-size:11px;font-weight:900}
+.card-actions a.ghost{background:#ffffff0b;color:white;border:1px solid var(--line)}
+.searchbar{display:flex;gap:8px;margin:15px 0}
+.searchbar input{flex:1;min-width:0;padding:11px;background:var(--panel);border:1px solid var(--line);border-radius:11px;color:white}
+.filters{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:15px}
+.filter,.tab{border:1px solid var(--line);background:#ffffff09;color:white;border-radius:25px;padding:7px 13px;font-size:12px}
+.filter.active,.tab.active{border-color:var(--green);color:var(--green);background:#72f2a018}
 .channels{grid-template-columns:repeat(3,1fr)}
-.channel{padding:18px;display:flex;align-items:center;gap:13px}
-.channel-icon{width:45px;height:45px;border-radius:13px;display:grid;place-items:center;font-size:22px;background:#ff303015}
-.video-tabs{display:flex;gap:8px;margin-bottom:16px}
-.tab{border:1px solid var(--line);background:#ffffff08;color:#cbd4e2;border-radius:10px;padding:9px 14px}
-.tab.active{background:#70ef9b18;color:var(--green);border-color:#70ef9b66}
+.channel{padding:15px;display:flex;align-items:center;gap:12px}
+.channel-icon{font-size:28px}
+.channel p{margin:0}
+.video-tabs{display:flex;gap:8px;margin-bottom:14px}
 .videos{grid-template-columns:repeat(3,1fr)}
-.video-frame{aspect-ratio:16/9;background:#080b10}
+.video-frame{aspect-ratio:16/9;background:#05070c}
 .video-frame iframe{width:100%;height:100%;border:0}
-.video-title{padding:11px 13px;font-size:13px;font-weight:700}
+.video-title{padding:9px 12px;font-size:12px}
 .game-modal{
 position:fixed;inset:0;z-index:50;background:#030711f5;
 display:none;align-items:center;justify-content:center;padding:10px
 }
 .game-modal.open{display:flex}
-.game-shell{
-width:min(950px,100%);background:#111927;
-border:1px solid #40506a;border-radius:17px;overflow:hidden;
-box-shadow:0 25px 90px #000a
-}
-.game-top{display:flex;justify-content:space-between;align-items:center;padding:10px 15px;border-bottom:1px solid var(--line)}
+.game-shell{width:min(950px,100%);background:#111927;border:1px solid #40506a;border-radius:16px;overflow:hidden}
+.game-top{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line)}
 .game-top h3{margin:0;font-size:15px}
 .close{background:#ffffff12;border:1px solid var(--line);color:white;border-radius:9px;padding:6px 12px}
-.game-info{display:flex;gap:15px;padding:7px 13px;color:#aebbd0;font-size:12px;align-items:center}
-.game-stage{
-height:min(58vw,500px);min-height:340px;position:relative;
-background:#101d3b;overflow:hidden;isolation:isolate
-}
-.game-stage canvas{width:100%;height:100%;display:block;position:relative;z-index:1}
-.game-hud{
-position:absolute;top:10px;right:10px;left:10px;z-index:6;
-display:flex;justify-content:space-between;gap:7px;pointer-events:none
-}
-.hud-chip{
-background:#081321df;border:1px solid #ffffff28;color:#fff;
-border-radius:11px;padding:6px 10px;font-size:11px
-}
-.hud-chip b{color:var(--green);font-size:14px}
-.game-help{
-position:absolute;bottom:10px;right:10px;left:10px;text-align:center;
-font-size:11px;color:#dce8f4;background:#080d18c9;
-border:1px solid #ffffff1c;border-radius:10px;padding:5px;z-index:6;pointer-events:none
-}
+.game-info{display:flex;gap:12px;align-items:center;padding:7px 12px;font-size:12px;color:#cbd4e2}
+.game-stage{height:min(60vw,500px);min-height:340px;position:relative;overflow:hidden;background:#101d3b}
+.game-stage canvas{width:100%;height:100%;display:block}
+.game-hud{position:absolute;top:9px;right:9px;left:9px;z-index:5;display:flex;justify-content:space-between;pointer-events:none}
+.hud-chip{background:#081321df;border:1px solid #ffffff28;border-radius:10px;padding:5px 9px;font-size:11px}
+.hud-chip b{color:var(--green)}
+.game-help{position:absolute;bottom:8px;right:8px;left:8px;text-align:center;font-size:11px;color:white;background:#080d18d9;border-radius:9px;padding:5px;z-index:5;pointer-events:none}
 .touch-controls{
 display:none;position:absolute;bottom:12px;left:12px;width:140px;height:110px;
-gap:5px;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);
-pointer-events:auto;z-index:8
+gap:5px;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);z-index:8
 }
 .touch-controls button,.touch-jump button,.shoot-control button{
 border:1px solid #b8f7d477;background:#1a3049eF;color:white;
-border-radius:13px;font-size:21px;touch-action:none;user-select:none
+border-radius:13px;font-size:20px;touch-action:none;user-select:none
 }
 .pad-left{grid-column:1;grid-row:2}.pad-forward{grid-column:2;grid-row:1}
 .pad-back{grid-column:2;grid-row:2}.pad-right{grid-column:3;grid-row:2}
-.touch-jump{position:absolute;bottom:35px;right:15px;display:none;z-index:9}
-.touch-jump.active{display:block}
-.touch-jump button{width:72px;height:65px;background:#17613d;font-size:15px;font-weight:900}
-.shoot-control{
-position:absolute;bottom:35px;right:15px;z-index:10;display:none
-}
-.shoot-control.active{display:block}
-.shoot-control button{
-width:82px;height:68px;background:#b52e42ed;
-border:2px solid #ffffff77;font-size:16px;font-weight:900
-}
-.build-controls{
-display:none;position:absolute;left:10px;top:10px;z-index:12;
-gap:7px;flex-direction:column;align-items:flex-start
-}
-.inventory-toggle{
-border:1px solid #8be9ff88;background:linear-gradient(135deg,#183d69,#43276f);
-color:white;border-radius:12px;padding:9px 12px;font-weight:900
-}
-.inventory-toggle span{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:7px;background:#20c997;color:#06251e}
-.inventory-panel{
-width:215px;padding:10px;border:1px solid #7dd3fc66;border-radius:13px;
-background:#101a31f5;box-shadow:0 14px 35px #000c
-}
-.inventory-title{font-size:12px;font-weight:900;margin-bottom:8px}
-.inventory-slots{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
-.block-type{
-display:flex;flex-direction:column;align-items:center;gap:3px;
-padding:6px 2px;border:1px solid #7894b955;border-radius:8px;
-background:#253653;color:white
-}
-.block-type span{font-size:18px}.block-type small{font-size:9px}
-.block-type.selected{outline:2px solid #4ee5c3;background:#285b68}
-.inventory-actions{display:flex;gap:6px;margin-top:8px}
-.inventory-actions button{flex:1;border:0;border-radius:8px;padding:8px 3px;background:#c77c38;color:#fff;font-size:11px;font-weight:900}
+.touch-jump,.shoot-control{position:absolute;bottom:32px;right:14px;z-index:9;display:none}
+.touch-jump.active,.shoot-control.active{display:block}
+.touch-jump button{width:70px;height:65px;background:#17613d;font-size:14px}
+.shoot-control button{width:85px;height:68px;background:#b52e42;font-size:16px;font-weight:900}
+.game-start-overlay{position:absolute;inset:0;z-index:15;display:flex;align-items:center;justify-content:center;background:#07101acc;backdrop-filter:blur(5px)}
+.game-start-card{width:min(350px,92%);padding:20px;text-align:center;background:#172438;border:1px solid #72f2a066;border-radius:18px}
+.game-start-card .big-icon{font-size:42px}
+.game-start-card h3{margin:5px}
+.game-start-card p{font-size:12px;color:var(--muted)}
+.game-start-card button{border:0;background:var(--green);color:#092315;border-radius:10px;padding:10px 22px;font-weight:900}
+.build-controls{display:none;position:absolute;left:9px;top:9px;z-index:12}
+.inventory-toggle{background:#183d69;color:white;border:1px solid #8be9ff88;border-radius:10px;padding:8px}
+.inventory-panel{width:200px;margin-top:7px;padding:9px;background:#101a31;border:1px solid #7dd3fc66;border-radius:12px}
+.inventory-slots{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.block-type{background:#253653;color:white;border:1px solid #7894b955;border-radius:7px;padding:5px}
+.block-type.selected{outline:2px solid #4ee5c3}
+.block-type span{display:block;font-size:17px}
+.block-type small{font-size:9px}
+.inventory-actions{display:flex;gap:5px;margin-top:8px}
+.inventory-actions button{flex:1;border:0;border-radius:7px;padding:7px;color:white;background:#b87837}
 .inventory-actions button:last-child{background:#188c78}
-.game-start-overlay{
-position:absolute;inset:0;z-index:15;display:flex;
-align-items:center;justify-content:center;background:#07101acc;
-backdrop-filter:blur(6px);padding:15px
-}
-.game-start-card{
-width:min(360px,95%);padding:22px;text-align:center;
-background:linear-gradient(145deg,#1c2b40,#101827);
-border:1px solid #6ff0a055;border-radius:20px
-}
-.game-start-card .big-icon{font-size:45px}
-.game-start-card h3{font-size:21px;margin:5px 0}
-.game-start-card p{font-size:12px;color:#afbdd0;margin:0 0 15px}
-.game-start-card button{
-border:0;background:linear-gradient(90deg,#72f2a0,#5bd9d4);
-color:#082218;border-radius:11px;padding:10px 24px;font-weight:900
-}
-.toast{
-position:fixed;bottom:18px;left:18px;z-index:120;
-background:#1c2b3c;border:1px solid var(--line);
-padding:9px 14px;border-radius:11px;opacity:0;transition:.2s;pointer-events:none
-}
-.toast.show{opacity:1}
-.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:30px;border:1px dashed var(--line);border-radius:15px}
-footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px}
-.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-
-/* حساب کاربری */
-.account-modal{
-position:fixed;inset:0;z-index:100;background:#030711ed;
-display:none;align-items:center;justify-content:center;padding:15px
-}
+.account-modal{position:fixed;inset:0;z-index:100;background:#030711ed;display:none;align-items:center;justify-content:center;padding:14px}
 .account-modal.open{display:flex}
-.account-box{
-width:min(390px,100%);max-height:90vh;overflow:auto;
-background:linear-gradient(145deg,#1c2b40,#101827);
-border:1px solid #72f2a066;border-radius:22px;
-padding:25px;text-align:center;position:relative
-}
-.account-box h2{font-size:20px;margin:5px 0}
-.account-box p{color:var(--muted);font-size:12px}
-.account-logo{font-size:45px;color:var(--green)}
-.account-close{position:absolute;left:12px;top:12px}
-.account-tabs{display:flex;gap:8px;margin:18px 0}
-.account-tabs button{
-flex:1;padding:9px;border:1px solid var(--line);
-border-radius:10px;background:#ffffff0b;color:white
-}
-.account-tabs button.active{background:#72f2a0;color:#082315}
-.account-box input,.account-box select{
-width:100%;margin-bottom:10px;padding:12px;
-background:#0b1422;border:1px solid var(--line);
-border-radius:10px;color:white;outline:none
-}
-.account-box label{display:block;text-align:right;color:var(--muted);font-size:12px;margin:5px 0}
-.account-submit{
-width:100%;border:0;padding:11px;border-radius:11px;
-background:linear-gradient(90deg,#72f2a0,#68ddff);
-color:#082315;font-weight:900;margin-top:8px
-}
-.account-message{min-height:25px;color:var(--green)!important}
-.profile-avatar{font-size:65px;margin:10px}
-.profile-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:18px 0}
-.profile-stats div{
-padding:10px 4px;background:#ffffff0b;
-border:1px solid var(--line);border-radius:11px;font-size:11px
-}
+.account-box{width:min(390px,100%);max-height:90vh;overflow:auto;background:linear-gradient(145deg,#1c2b40,#101827);border:1px solid #72f2a066;border-radius:20px;padding:23px;text-align:center;position:relative}
+.account-box h2{font-size:20px;margin:5px}
+.account-box p{font-size:12px;color:var(--muted)}
+.account-logo{font-size:42px;color:var(--green)}
+.account-close{position:absolute;left:10px;top:10px}
+.account-tabs{display:flex;gap:7px;margin:15px 0}
+.account-tabs button{flex:1;padding:9px;border:1px solid var(--line);border-radius:9px;background:#ffffff0b;color:white}
+.account-tabs button.active{background:var(--green);color:#092315}
+.account-box input,.account-box select{width:100%;margin-bottom:9px;padding:11px;background:#0b1422;border:1px solid var(--line);border-radius:10px;color:white}
+.account-box label{display:block;text-align:right;color:var(--muted);font-size:12px}
+.account-submit{width:100%;border:0;padding:11px;border-radius:10px;background:linear-gradient(90deg,var(--green),var(--cyan));color:#082315;font-weight:900;margin-top:7px}
+.account-message{min-height:22px;color:var(--green)!important}
+.profile-avatar{font-size:60px;margin:8px}
+.profile-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:15px 0}
+.profile-stats div{padding:9px 3px;background:#ffffff0b;border:1px solid var(--line);border-radius:10px;font-size:11px}
 .profile-stats b{display:block;color:var(--green);font-size:17px}
-
+footer{border-top:1px solid var(--line);padding:23px 0;color:var(--muted);font-size:12px}
+.toast{position:fixed;bottom:15px;left:15px;z-index:120;background:#1c2b3c;border:1px solid var(--line);padding:9px 14px;border-radius:10px;opacity:0;transition:.2s;pointer-events:none}
+.toast.show{opacity:1}
+.empty{grid-column:1/-1;text-align:center;padding:25px;color:var(--muted)}
 @media(max-width:850px){
-nav{display:none;position:absolute;top:72px;right:15px;left:15px;background:#121a28;border:1px solid var(--line);border-radius:13px;padding:10px;flex-direction:column;align-items:stretch}
+nav{display:none;position:absolute;top:70px;right:12px;left:12px;background:#121a28;border:1px solid var(--line);border-radius:12px;padding:10px;flex-direction:column}
 nav.open{display:flex}.menu{display:block}
-.hero{grid-template-columns:1fr;text-align:center;padding-top:40px}
+.hero{grid-template-columns:1fr;text-align:center;padding-top:35px}
 .hero p{margin-inline:auto}.hero-actions{justify-content:center}
-.hero-art{height:240px}.stats{margin-bottom:30px}
-.grid{grid-template-columns:repeat(2,1fr)}.channels{grid-template-columns:1fr}
+.hero-art{height:210px}.grid{grid-template-columns:repeat(2,1fr)}
+.channels{grid-template-columns:1fr}
 }
 @media(max-width:560px){
-.wrap{width:calc(100% - 22px)}
-.nav{height:64px;min-height:64px}nav{top:64px}
-.hero{padding:30px 0 20px;gap:5px}
-.hero-art{height:210px}.orbit{width:210px;height:210px}
-.cube{scale:.72}h1{font-size:36px}
-.stats{gap:6px}.stat{padding:9px 5px;display:block;text-align:center}
-.stat b{display:block;font-size:18px}.stat span{font-size:10px}
-.section-head h2{font-size:22px}
-.grid,.videos{grid-template-columns:repeat(2,1fr);gap:9px}
-.cover{height:110px}.cover .symbol{font-size:42px}
-.card-body{padding:10px}.card h3{font-size:12px}
-.card p{font-size:10px;min-height:50px}
-.card-actions{flex-direction:column}.meta{font-size:9px}
-.feature-band{align-items:flex-start;flex-direction:column;padding:15px}
-.game-stage{height:72vh;min-height:390px}
-.touch-controls{display:grid}
-.game-help{bottom:130px;font-size:10px}
-.game-info{justify-content:space-between;gap:5px;font-size:10px}
-.build-controls{left:8px;top:8px}
-.inventory-panel{width:195px}
+.nav{min-height:64px}.brand small{font-size:8px}
+.account-chip{max-width:120px;padding:4px 8px 4px 5px;font-size:11px}
+.account-chip img,.account-chip .avatar{width:29px;height:29px}
+nav{top:64px}
+.hero{padding:25px 0 10px}
+h1{font-size:36px}.hero-art{height:185px}
+.cube{scale:.7}.orbit{width:200px;height:200px}
+.stats{gap:5px}.stat{padding:8px 3px}
+.stat b{font-size:16px}.stat span{font-size:9px}
+.grid,.videos{gap:8px}.cover{height:100px}
+.cover .symbol{font-size:38px}.card-body{padding:9px}
+.card h3{font-size:12px}.card p{font-size:10px;min-height:48px}
+.card-actions{flex-direction:column}.game-stage{height:72vh;min-height:390px}
+.touch-controls{display:grid}.game-help{bottom:130px;font-size:10px}
 }
 </style>
 </head>
-
 <body>
 <div class="topline"></div>
-
 <header>
 <div class="wrap nav">
-<a class="brand" href="#home">
-<span class="logo">✦</span>
-<span>ALI X STAR<small>MINECRAFT UNIVERSE</small></span>
-</a>
+<a class="brand" href="#home"><span class="logo">✦</span><span>ALI X STAR<small>MINECRAFT UNIVERSE</small></span></a>
 <nav id="nav">
-<a href="#home">خانه</a>
-<a href="#mods">مودها</a>
-<a href="#shaders">شیدر و تکسچر</a>
-<a href="#channels">کانال‌ها</a>
-<a href="#videos">ویدئوها</a>
-<a href="#games">بازی‌ها</a>
+<a href="#home">خانه</a><a href="#mods">مودها</a><a href="#shaders">شیدرها</a>
+<a href="#channels">کانال‌ها</a><a href="#videos">ویدئوها</a><a href="#games">بازی‌ها</a>
 </nav>
 <button class="nav-cta" id="accountBtn">👤 ورود / ساخت حساب</button>
+<button class="account-chip" id="accountChip" type="button">
+<span class="avatar" id="headerAvatar">🧑‍🚀</span>
+<span id="headerUsername">کاربر</span>
+</button>
 <button class="menu" id="menuBtn">☰</button>
 </div>
 </header>
@@ -396,122 +236,79 @@ nav.open{display:flex}.menu{display:block}
 <main class="wrap">
 <section class="hero" id="home">
 <div>
-<span class="eyebrow"><i class="dot"></i> دنیای ماینکرفت ALI X STAR</span>
+<div class="eyebrow">✦ دنیای ماینکرفت ALI X STAR</div>
 <h1>جهان ماینکرفتت را<br><span>متفاوت بساز!</span></h1>
 <p>مودهای جذاب، شیدرهای چشم‌نواز، ویدئوها و بازی‌های سه‌بعدی؛ همه در یک خانه برای طرفداران ماینکرفت.</p>
-<div class="hero-actions">
-<a class="btn" href="#mods">🚀 کشف مودها</a>
-<a class="btn secondary" href="#games">🎮 بازی کن</a>
+<div class="hero-actions"><a class="btn" href="#mods">🚀 کشف مودها</a><a class="btn secondary" href="#games">🎮 بازی کن</a></div>
 </div>
-<div class="hero-note">پروژه مستقل طرفداران ماینکرفت • طراحی شده برای موبایل و کامپیوتر</div>
-</div>
-<div class="hero-art">
-<div class="orbit"></div>
-<div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-<span class="float-tag tag1">✦ MODS & ADDONS</span>
-<span class="float-tag tag2">⬡ BUILD YOUR WORLD</span>
-<span class="float-tag tag3">3D GAME ZONE</span>
-</div>
+<div class="hero-art"><div class="orbit"></div><div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="float-tag tag1">✦ MODS & ADDONS</span><span class="float-tag tag2">3D GAME ZONE</span></div>
 </section>
 
 <div class="stats">
 <div class="stat"><b>MODS</b><span>دنیایی از مودها</span></div>
-<div class="stat"><b>3D × 7</b><span>هفت بازی قابل تجربه</span></div>
+<div class="stat"><b>3D × 7</b><span>هفت بازی</span></div>
 <div class="stat"><b>24/7</b><span>همیشه در دسترس</span></div>
 </div>
 
 <section id="mods">
-<div class="section-head"><div>
-<div class="section-kicker">DISCOVER & DOWNLOAD</div>
-<h2>کتابخانه مودها</h2>
-<p>مود موردنظرت را پیدا کن و وارد صفحه سازنده شو.</p>
-</div></div>
-<div class="feature-band">
-<div><h3>🔎 دنبال مود خاصی هستی؟</h3><p>جست‌وجو در کتابخانه و سپس مشاهده نتایج بیشتر در CurseForge</p></div>
-<a class="btn" target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft">رفتن به CurseForge ↗</a>
-</div>
-<div class="searchbar">
-<input id="modSearch" type="search" placeholder="نام مود را جست‌وجو کن...">
-<button class="btn" id="searchMods">جست‌وجو</button>
-</div>
+<div class="section-head"><h2>📦 کتابخانه مودها</h2><p>مود موردنظرت را جست‌وجو کن.</p></div>
+<div class="searchbar"><input id="modSearch" placeholder="نام مود را جست‌وجو کن..."><button class="btn" id="searchMods">جست‌وجو</button></div>
 <div class="filters" id="modFilters">
 <button class="filter active" data-filter="all">همه</button>
 <button class="filter" data-filter="performance">افزایش FPS</button>
 <button class="filter" data-filter="world">جهان و بقا</button>
 <button class="filter" data-filter="utility">کاربردی</button>
-<button class="filter" data-filter="magic">ماجراجویی</button>
 </div>
 <div class="grid" id="modGrid">
-<article class="card mod-card" data-category="performance" data-name="sodium">
-<div class="cover"><span class="pill">افزایش FPS</span><span class="symbol">⚡</span></div>
-<div class="card-body"><h3>Sodium</h3><p>بهینه‌سازی رندر گرافیکی برای اجرای روان‌تر ماینکرفت.</p><div class="meta"><span>Performance</span><span>چند نسخه</span></div><div class="card-actions"><a target="_blank" href="https://www.curseforge.com/minecraft/search?class=mc-mods&search=sodium">صفحه مود ↗</a><a class="ghost" target="_blank" href="https://modrinth.com/mod/sodium">Modrinth</a></div></div>
-</article>
-<article class="card mod-card" data-category="utility" data-name="just enough items jei">
-<div class="cover purple"><span class="pill">کاربردی</span><span class="symbol">📖</span></div>
-<div class="card-body"><h3>Just Enough Items</h3><p>دیدن دستور ساخت آیتم‌ها و جست‌وجوی سریع وسایل.</p><div class="meta"><span>Utility</span><span>چند نسخه</span></div><div class="card-actions"><a target="_blank" href="https://www.curseforge.com/minecraft/search?search=jei">صفحه مود ↗</a><a class="ghost" target="_blank" href="https://modrinth.com/mod/jei">Modrinth</a></div></div>
-</article>
-<article class="card mod-card" data-category="world" data-name="biomes o plenty">
-<div class="cover teal"><span class="pill">جهان و بقا</span><span class="symbol">🌲</span></div>
-<div class="card-body"><h3>Biomes O’ Plenty</h3><p>زیست‌بوم‌های متنوع و محیط‌های تازه برای ماجراجویی.</p><div class="meta"><span>World</span><span>چند نسخه</span></div><div class="card-actions"><a target="_blank" href="https://www.curseforge.com/minecraft/search?search=biomes%20o%20plenty">صفحه مود ↗</a><a class="ghost" target="_blank" href="https://modrinth.com/mod/biomes-o-plenty">Modrinth</a></div></div>
-</article>
-<article class="card mod-card" data-category="magic" data-name="waystones">
-<div class="cover orange"><span class="pill">ماجراجویی</span><span class="symbol">🌀</span></div>
-<div class="card-body"><h3>Waystones</h3><p>ساخت نقاط سفر سریع برای رفت‌وآمد در دنیای بازی.</p><div class="meta"><span>Adventure</span><span>چند نسخه</span></div><div class="card-actions"><a target="_blank" href="https://www.curseforge.com/minecraft/search?search=waystones">صفحه مود ↗</a><a class="ghost" target="_blank" href="https://modrinth.com/mod/waystones">Modrinth</a></div></div>
-</article>
-<article class="card mod-card" data-category="performance" data-name="entity culling">
-<div class="cover blue"><span class="pill">افزایش FPS</span><span class="symbol">👁️</span></div>
-<div class="card-body"><h3>Entity Culling</h3><p>کاهش پردازش موجودات و اشیای پنهان.</p><div class="meta"><span>Performance</span><span>چند نسخه</span></div><div class="card-actions"><a target="_blank" href="https://www.curseforge.com/minecraft/search?search=entity%20culling">صفحه مود ↗</a><a class="ghost" target="_blank" href="https://modrinth.com/mod/entityculling">Modrinth</a></div></div>
-</article>
-<article class="card mod-card" data-category="utility" data-name="journeymap">
-<div class="cover red"><span class="pill">کاربردی</span><span class="symbol">🗺️</span></div>
-<div class="card-body"><h3>JourneyMap</h3><p>نقشه قابل مشاهده از محیط و مسیرهای دنیای ماینکرفت.</p><div class="meta"><span>Utility</span><span>چند نسخه</span></div><div class="card-actions"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/journeymap">صفحه مود ↗</a><a class="ghost" target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/journeymap">CurseForge</a></div></div>
-</article>
+<article class="card mod-card" data-category="performance" data-name="sodium"><div class="cover"><span class="symbol">⚡</span></div><div class="card-body"><h3>Sodium</h3><p>بهینه‌سازی گرافیک و افزایش عملکرد.</p><div class="card-actions"><a target="_blank" href="https://modrinth.com/mod/sodium">مشاهده مود ↗</a></div></div></article>
+<article class="card mod-card" data-category="utility" data-name="jei just enough items"><div class="cover purple"><span class="symbol">📖</span></div><div class="card-body"><h3>Just Enough Items</h3><p>نمایش دستور ساخت آیتم‌ها.</p><div class="card-actions"><a target="_blank" href="https://modrinth.com/mod/jei">مشاهده مود ↗</a></div></div></article>
+<article class="card mod-card" data-category="world" data-name="biomes o plenty"><div class="cover blue"><span class="symbol">🌲</span></div><div class="card-body"><h3>Biomes O’ Plenty</h3><p>زیست‌بوم‌های تازه برای ماجراجویی.</p><div class="card-actions"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty">مشاهده مود ↗</a></div></div></article>
+<article class="card mod-card" data-category="performance" data-name="entity culling"><div class="cover orange"><span class="symbol">👁️</span></div><div class="card-body"><h3>Entity Culling</h3><p>کاهش پردازش موجودات پنهان.</p><div class="card-actions"><a target="_blank" href="https://modrinth.com/mod/entityculling">مشاهده مود ↗</a></div></div></article>
+<article class="card mod-card" data-category="utility" data-name="journeymap"><div class="cover red"><span class="symbol">🗺️</span></div><div class="card-body"><h3>JourneyMap</h3><p>نقشه محیط و مسیرهای دنیای بازی.</p><div class="card-actions"><a target="_blank" href="https://www.curseforge.com/minecraft/mc-mods/journeymap">مشاهده مود ↗</a></div></div></article>
+<article class="card mod-card" data-category="world" data-name="waystones"><div class="cover"><span class="symbol">🌀</span></div><div class="card-body"><h3>Waystones</h3><p>ساخت نقاط سفر سریع.</p><div class="card-actions"><a target="_blank" href="https://modrinth.com/mod/waystones">مشاهده مود ↗</a></div></div></article>
 </div>
-<div id="modEmpty" class="empty" hidden>مودی با این نام پیدا نشد.</div>
+<div class="empty" id="modEmpty" hidden>موردی پیدا نشد.</div>
 </section>
 
 <section id="shaders">
-<div class="section-head"><div><div class="section-kicker">VISUAL UPGRADE</div><h2>شیدرها و تکسچرپک‌ها</h2><p>ظاهر دنیای ماینکرفت را تغییر بده.</p></div></div>
+<div class="section-head"><h2>🌅 شیدرها و تکسچرپک‌ها</h2><p>ظاهر ماینکرفت را تغییر بده.</p></div>
 <div class="grid">
-<article class="card"><div class="cover purple"><span class="symbol">🌅</span></div><div class="card-body"><h3>Complementary Reimagined</h3><p>نورپردازی و جلوه‌های زیبا با تنظیمات متنوع.</p><div class="card-actions"><a target="_blank" href="https://www.curseforge.com/minecraft/search?search=complementary%20reimagined">مشاهده شیدر ↗</a></div></div></article>
-<article class="card"><div class="cover teal"><span class="symbol">🌤️</span></div><div class="card-body"><h3>MakeUp Ultra Fast</h3><p>شیدری سبک با تمرکز بر عملکرد و تنظیمات قابل تغییر.</p><div class="card-actions"><a target="_blank" href="https://www.curseforge.com/minecraft/search?search=makeup%20ultra%20fast">مشاهده شیدر ↗</a></div></div></article>
-<article class="card"><div class="cover orange"><span class="symbol">🧱</span></div><div class="card-body"><h3>Faithful</h3><p>بافت‌های آشنا با وضوح بالاتر و سبک اصلی بازی.</p><div class="card-actions"><a target="_blank" href="https://www.curseforge.com/minecraft/search?search=faithful">مشاهده تکسچر ↗</a></div></div></article>
+<article class="card"><div class="cover purple"><span class="symbol">🌄</span></div><div class="card-body"><h3>Complementary Reimagined</h3><p>نورپردازی زیبا و تنظیمات متنوع.</p><div class="card-actions"><a target="_blank" href="https://www.curseforge.com/minecraft/search?search=complementary%20reimagined">مشاهده ↗</a></div></div></article>
+<article class="card"><div class="cover blue"><span class="symbol">🌤️</span></div><div class="card-body"><h3>MakeUp Ultra Fast</h3><p>شیدر سبک با تنظیمات عملکردی.</p><div class="card-actions"><a target="_blank" href="https://www.curseforge.com/minecraft/search?search=makeup%20ultra%20fast">مشاهده ↗</a></div></div></article>
+<article class="card"><div class="cover orange"><span class="symbol">🧱</span></div><div class="card-body"><h3>Faithful</h3><p>بافت‌های آشنا با وضوح بالاتر.</p><div class="card-actions"><a target="_blank" href="https://www.curseforge.com/minecraft/search?search=faithful">مشاهده ↗</a></div></div></article>
 </div>
 </section>
 
 <section id="channels">
-<div class="section-head"><div><div class="section-kicker">FOLLOW THE ADVENTURE</div><h2>کانال‌های ALI X STAR</h2><p>ماجراجویی‌ها را دنبال کن.</p></div></div>
+<div class="section-head"><h2>📡 کانال‌های ALI X STAR</h2><p>ماجراجویی‌ها را دنبال کن.</p></div>
 <div class="grid channels">
-<a class="card channel" target="_blank" href="https://www.youtube.com/@ALIXSTARYoutube"><span class="channel-icon">▶️</span><span><h3>YouTube</h3><p>@ALIXSTARYoutube</p></span></a>
-<a class="card channel" target="_blank" href="https://www.aparat.com/ALI_X_STARaparat"><span class="channel-icon">📺</span><span><h3>Aparat</h3><p>ALI_X_STARaparat</p></span></a>
-<a class="card channel" target="_blank" href="https://rubika.ir/ALIXSTARsoper"><span class="channel-icon">✈️</span><span><h3>Rubika</h3><p>ALIXSTARsoper</p></span></a>
+<a class="card channel" target="_blank" href="https://www.youtube.com/@ALIXSTARYoutube"><span class="channel-icon">▶️</span><div><h3>YouTube</h3><p>@ALIXSTARYoutube</p></div></a>
+<a class="card channel" target="_blank" href="https://www.aparat.com/ALI_X_STARaparat"><span class="channel-icon">📺</span><div><h3>Aparat</h3><p>ALI_X_STARaparat</p></div></a>
+<a class="card channel" target="_blank" href="https://rubika.ir/ALIXSTARsoper"><span class="channel-icon">✈️</span><div><h3>Rubika</h3><p>ALIXSTARsoper</p></div></a>
 </div>
 </section>
 
 <section id="videos">
-<div class="section-head"><div><div class="section-kicker">WATCH & ENJOY</div><h2>ویدئوها</h2><p>ویدئوهای کانال را همین‌جا تماشا کن.</p></div></div>
-<div class="video-tabs">
-<button class="tab active" data-tab="youtube">🔴 یوتیوب</button>
-<button class="tab" data-tab="aparat">🔵 آپارات</button>
-</div>
+<div class="section-head"><h2>🎬 ویدئوها</h2><p>ویدئوهای کانال را همین‌جا تماشا کن.</p></div>
+<div class="video-tabs"><button class="tab active" data-tab="youtube">🔴 یوتیوب</button><button class="tab" data-tab="aparat">🔵 آپارات</button></div>
 <div class="grid videos" id="videoGrid"></div>
 </section>
 
 <section id="games">
-<div class="section-head"><div><div class="section-kicker">PLAY ZONE</div><h2>اتاق بازی سه‌بعدی</h2><p>هفت بازی سه‌بعدی با امتیاز و کنترل لمسی.</p></div></div>
+<div class="section-head"><h2>🎮 اتاق بازی سه‌بعدی</h2><p>هفت بازی با کنترل لمسی و امتیاز.</p></div>
 <div class="grid">
-<article class="card game-card"><div class="cover minecraft"><span class="pill">ساخت‌وساز</span><span class="symbol">🧊</span></div><div class="card-body"><h3>Block World</h3><p>در جزیره مکعبی حرکت کن و کریستال جمع کن.</p><div class="card-actions"><a href="#" data-game="blocks">شروع بازی ▶</a></div></div></article>
-<article class="card game-card"><div class="cover orange"><span class="pill">مسابقه</span><span class="symbol">🏎️</span></div><div class="card-body"><h3>3D Racing</h3><p>ماشین را کنترل کن و از موانع دوری کن.</p><div class="card-actions"><a href="#" data-game="racing">شروع بازی ▶</a></div></div></article>
-<article class="card game-card"><div class="cover purple"><span class="pill">مهارتی</span><span class="symbol">🪜</span></div><div class="card-body"><h3>Sky Parkour</h3><p>از سکوهای معلق بپر و به پایان برس.</p><div class="card-actions"><a href="#" data-game="parkour">شروع بازی ▶</a></div></div></article>
-<article class="card game-card"><div class="cover red"><span class="pill">ورزشی</span><span class="symbol">⚽</span></div><div class="card-body"><h3>3D Football</h3><p>با دکمه شوت توپ را به سمت دروازه بفرست.</p><div class="card-actions"><a href="#" data-game="football">شروع بازی ▶</a></div></div></article>
-<article class="card game-card"><div class="cover blue"><span class="pill">بی‌پایان</span><span class="symbol">🏃</span></div><div class="card-body"><h3>Endless Runner</h3><p>از موانع جاخالی بده و امتیاز بگیر.</p><div class="card-actions"><a href="#" data-game="runner">شروع بازی ▶</a></div></div></article>
-<article class="card game-card"><div class="cover teal"><span class="pill">فضایی</span><span class="symbol">🚀</span></div><div class="card-body"><h3>Space Explorer</h3><p>سفینه را در میدان سیارک‌ها هدایت کن.</p><div class="card-actions"><a href="#" data-game="space">شروع بازی ▶</a></div></div></article>
-<article class="card game-card"><div class="cover minecraft"><span class="pill">جهان مکعبی</span><span class="symbol">⛏️</span></div><div class="card-body"><h3>Mini Minecraft</h3><p>بلوک بشکن، بلوک بگذار و خانه بساز.</p><div class="card-actions"><a href="#" data-game="mini">ورود به دنیا ▶</a></div></div></article>
+<article class="card"><div class="cover"><span class="symbol">🧊</span></div><div class="card-body"><h3>Block World</h3><p>در جزیره حرکت کن و کریستال جمع کن.</p><div class="card-actions"><a href="#" data-game="blocks">شروع بازی ▶</a></div></div></article>
+<article class="card"><div class="cover orange"><span class="symbol">🏎️</span></div><div class="card-body"><h3>3D Racing</h3><p>ماشین را کنترل کن و از موانع دوری کن.</p><div class="card-actions"><a href="#" data-game="racing">شروع بازی ▶</a></div></div></article>
+<article class="card"><div class="cover purple"><span class="symbol">🪜</span></div><div class="card-body"><h3>Sky Parkour</h3><p>از سکوهای معلق بپر.</p><div class="card-actions"><a href="#" data-game="parkour">شروع بازی ▶</a></div></div></article>
+<article class="card"><div class="cover red"><span class="symbol">⚽</span></div><div class="card-body"><h3>3D Football</h3><p>توپ را حرکت بده و در مراحل مختلف گل بزن.</p><div class="card-actions"><a href="#" data-game="football">شروع بازی ▶</a></div></div></article>
+<article class="card"><div class="cover blue"><span class="symbol">🏃</span></div><div class="card-body"><h3>Endless Runner</h3><p>از موانع جاخالی بده.</p><div class="card-actions"><a href="#" data-game="runner">شروع بازی ▶</a></div></div></article>
+<article class="card"><div class="cover"><span class="symbol">🚀</span></div><div class="card-body"><h3>Space Explorer</h3><p>سفینه را در میدان سیارک‌ها هدایت کن.</p><div class="card-actions"><a href="#" data-game="space">شروع بازی ▶</a></div></div></article>
+<article class="card"><div class="cover"><span class="symbol">⛏️</span></div><div class="card-body"><h3>Mini Minecraft</h3><p>بلوک بشکن و بلوک بساز.</p><div class="card-actions"><a href="#" data-game="mini">شروع بازی ▶</a></div></div></article>
 </div>
 </section>
 </main>
 
-<footer><div class="wrap footer-row"><span>© 2026 ALI X STAR — ساخته‌شده برای عاشقان ماینکرفت</span><span>قدرت تخیل، دنیای بی‌نهایت ✦</span></div></footer>
+<footer><div class="wrap">© 2026 ALI X STAR — دنیای ماینکرفت</div></footer>
 
 <!-- پنجره حساب -->
 <div class="account-modal" id="accountModal">
@@ -520,38 +317,36 @@ nav.open{display:flex}.menu{display:block}
 <div class="account-logo">✦</div>
 <h2>ALI X STAR ACCOUNT</h2>
 <p>به حساب کاربری خودت وارد شو یا حساب جدید بساز.</p>
-
 <div class="account-tabs" id="accountTabs">
 <button id="registerTab" class="active" type="button">ساخت حساب</button>
 <button id="loginTab" type="button">ورود</button>
 </div>
-
 <form id="registerForm">
 <input id="regUsername" placeholder="نام کاربری" minlength="3" maxlength="18" required>
 <input id="regEmail" type="email" placeholder="ایمیل (اختیاری)">
 <input id="regPassword" type="password" placeholder="رمز عبور (حداقل ۶ حرف)" minlength="6" required>
 <input id="regConfirm" type="password" placeholder="تکرار رمز عبور" required>
-<label>انتخاب آواتار</label>
+<label>انتخاب عکس پروفایل</label>
 <select id="regAvatar">
-<option>🧑‍🚀</option><option>🧙</option><option>🧑‍🎤</option>
-<option>🦊</option><option>🐲</option><option>⚔️</option><option>⛏️</option>
+<option value="🧑‍🚀">🧑‍🚀 فضانورد</option><option value="🧙">🧙 جادوگر</option>
+<option value="🦊">🦊 روباه</option><option value="🐲">🐲 اژدها</option>
+<option value="⚔️">⚔️ جنگجو</option><option value="⛏️">⛏️ معدنچی</option>
+<option value="👑">👑 پادشاه</option>
 </select>
 <button class="account-submit">ساخت حساب ✨</button>
 </form>
-
 <form id="loginForm" hidden>
 <input id="loginUsername" placeholder="نام کاربری" required>
 <input id="loginPassword" type="password" placeholder="رمز عبور" required>
 <button class="account-submit">ورود به حساب 🚀</button>
 </form>
-
 <div id="accountProfile" hidden>
 <div class="profile-avatar" id="profileAvatar">🧑‍🚀</div>
 <h3 id="profileName"></h3>
 <div class="profile-stats">
-<div>⭐ سطح <b id="profileLevel">۱</b></div>
-<div>✨ XP <b id="profileXP">۰</b></div>
-<div>🏆 رکورد <b id="profileBest">۰</b></div>
+<div>⭐ سطح<b id="profileLevel">۱</b></div>
+<div>✨ XP<b id="profileXP">۰</b></div>
+<div>🏆 رکورد<b id="profileBest">۰</b></div>
 </div>
 <p id="profileEmail"></p>
 <button class="account-submit" id="logoutButton">خروج از حساب</button>
@@ -561,9 +356,9 @@ nav.open{display:flex}.menu{display:block}
 </div>
 
 <!-- پنجره بازی -->
-<div class="game-modal" id="gameModal" role="dialog" aria-modal="true">
+<div class="game-modal" id="gameModal">
 <div class="game-shell">
-<div class="game-top"><h3 id="gameTitle">بازی سه‌بعدی</h3><button class="close" id="closeGame">بستن ✕</button></div>
+<div class="game-top"><h3 id="gameTitle">بازی</h3><button class="close" id="closeGame">بستن ✕</button></div>
 <div class="game-info">
 <span>امتیاز: <b id="score">0</b></span>
 <span id="gameStatus">آماده بازی</span>
@@ -573,38 +368,29 @@ nav.open{display:flex}.menu{display:block}
 <div class="game-hud"><span class="hud-chip">امتیاز <b id="hudScore">0</b></span><span class="hud-chip" id="hudGoal">هدف بازی</span></div>
 <div class="game-start-overlay" id="gameStartOverlay">
 <div class="game-start-card">
-<div class="big-icon" id="startIcon">🎮</div>
-<h3 id="startTitle">آماده‌ای؟</h3>
-<p id="startDesc">برای شروع دکمه زیر را بزن.</p>
-<button id="startGameBtn">شروع بازی</button>
+<div class="big-icon" id="startIcon">🎮</div><h3 id="startTitle">آماده‌ای؟</h3>
+<p id="startDesc">برای شروع دکمه زیر را بزن.</p><button id="startGameBtn">شروع بازی</button>
 </div>
 </div>
 <div class="game-help" id="gameHelp">با کلیدهای جهت‌دار حرکت کن.</div>
-
 <div class="touch-controls">
 <button class="pad-left" data-key="ArrowLeft">◀</button>
 <button class="pad-forward" data-key="ArrowUp">▲</button>
 <button class="pad-back" data-key="ArrowDown">▼</button>
 <button class="pad-right" data-key="ArrowRight">▶</button>
 </div>
-
-<div class="touch-jump" id="jumpControls"><button type="button" id="jumpButton">پرش ⤒</button></div>
-<div class="shoot-control" id="shootControls"><button type="button" id="shootButton">⚽ شوت!</button></div>
-
+<div class="touch-jump" id="jumpControls"><button id="jumpButton">پرش ⤒</button></div>
+<div class="shoot-control" id="shootControls"><button id="shootButton">⚽ شوت!</button></div>
 <div class="build-controls" id="buildControls">
-<button type="button" id="inventoryToggle" class="inventory-toggle">🎒 اینونتوری <span id="inventoryCount">0</span></button>
+<button id="inventoryToggle" class="inventory-toggle">🎒 اینونتوری</button>
 <div class="inventory-panel" id="inventoryPanel" hidden>
-<div class="inventory-title">کوله‌پشتی و ابزارها</div>
 <div class="inventory-slots">
 <button class="block-type selected" data-block="0"><span>🟩</span><small>چمن</small></button>
 <button class="block-type" data-block="1"><span>🟫</span><small>خاک</small></button>
 <button class="block-type" data-block="2"><span>⬜</span><small>سنگ</small></button>
 <button class="block-type" data-block="3"><span>🧱</span><small>آجر</small></button>
 </div>
-<div class="inventory-actions">
-<button data-action="break">⛏️ کندن</button>
-<button data-action="place">🧱 گذاشتن</button>
-</div>
+<div class="inventory-actions"><button data-action="break">⛏️ کندن</button><button data-action="place">🧱 گذاشتن</button></div>
 </div>
 </div>
 </div>
@@ -621,50 +407,47 @@ const $$=s=>[...document.querySelectorAll(s)];
 $('#menuBtn').addEventListener('click',()=>$('#nav').classList.toggle('open'));
 $$('#nav a').forEach(a=>a.addEventListener('click',()=>$('#nav').classList.remove('open')));
 
-/* پیام کوتاه */
+/* پیام */
 let toastTimer;
 function toast(message){
-const el=$('#toast');
-el.textContent=message;
-el.classList.add('show');
-clearTimeout(toastTimer);
-toastTimer=setTimeout(()=>el.classList.remove('show'),2500);
+const el=$('#toast');el.textContent=message;el.classList.add('show');
+clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2400);
 }
 
 /* حساب کاربری */
-const ACCOUNT_KEY='alixstar_accounts_v1';
-const SESSION_KEY='alixstar_session_v1';
+const ACCOUNT_KEY='alixstar_accounts_v2';
+const SESSION_KEY='alixstar_session_v2';
 let currentUser=null;
 
 function getAccounts(){
 try{return JSON.parse(localStorage.getItem(ACCOUNT_KEY)||'{}');}
 catch(e){return {};}
 }
-function saveAccounts(data){
-localStorage.setItem(ACCOUNT_KEY,JSON.stringify(data));
-}
-function getSession(){
-try{return localStorage.getItem(SESSION_KEY)||'';}
-catch(e){return '';}
-}
-function saveSession(username){
-localStorage.setItem(SESSION_KEY,username);
-}
-function clearSession(){
-localStorage.removeItem(SESSION_KEY);
-currentUser=null;
-}
-function normalizeUsername(s){return s.trim().toLowerCase();}
+function saveAccounts(a){localStorage.setItem(ACCOUNT_KEY,JSON.stringify(a));}
+function userKey(s){return s.trim().toLowerCase();}
 
 async function hashPassword(password){
 const data=new TextEncoder().encode(password);
 const hash=await crypto.subtle.digest('SHA-256',data);
-return [...new Uint8Array(hash)].map(b=>b.toString(16).padStart(2,'0')).join('');
+return [...new Uint8Array(hash)].map(x=>x.toString(16).padStart(2,'0')).join('');
 }
 
-function showAccountMessage(message){
-$('#accountMessage').textContent=message;
+function accountMessage(s){$('#accountMessage').textContent=s;}
+
+function updateHeader(){
+const accounts=getAccounts();
+const user=currentUser?accounts[currentUser]:null;
+if(user){
+$('#accountBtn').style.display='none';
+$('#accountChip').style.display='inline-flex';
+$('#headerAvatar').textContent=user.avatar||'🧑‍🚀';
+$('#headerUsername').textContent=user.username;
+}else{
+$('#accountBtn').style.display='inline-flex';
+$('#accountChip').style.display='none';
 }
+}
+
 function showAccountTab(tab){
 $('#registerForm').hidden=tab!=='register';
 $('#loginForm').hidden=tab!=='login';
@@ -672,50 +455,46 @@ $('#accountProfile').hidden=true;
 $('#accountTabs').hidden=false;
 $('#registerTab').classList.toggle('active',tab==='register');
 $('#loginTab').classList.toggle('active',tab==='login');
-showAccountMessage('');
+accountMessage('');
 }
+
 function updateProfile(){
 if(!currentUser)return;
-const accounts=getAccounts();
-const user=accounts[normalizeUsername(currentUser)];
-if(!user){clearSession();showAccountTab('register');return;}
-currentUser=normalizeUsername(currentUser);
+const user=getAccounts()[currentUser];
+if(!user){currentUser=null;updateHeader();return;}
 $('#registerForm').hidden=true;
 $('#loginForm').hidden=true;
 $('#accountTabs').hidden=true;
 $('#accountProfile').hidden=false;
 $('#profileAvatar').textContent=user.avatar||'🧑‍🚀';
 $('#profileName').textContent=user.username;
-$('#profileEmail').textContent=user.email||'ماجراجوی ALI X STAR';
-$('#profileLevel').textContent=String(Math.floor((user.xp||0)/100)+1);
-$('#profileXP').textContent=String(user.xp||0);
-$('#profileBest').textContent=String(user.best||0);
-showAccountMessage('حساب کاربری فعال است.');
+$('#profileEmail').textContent=user.email||'عضو ALI X STAR';
+$('#profileXP').textContent=user.xp||0;
+$('#profileLevel').textContent=Math.floor((user.xp||0)/100)+1;
+$('#profileBest').textContent=user.best||0;
+accountMessage('حساب کاربری فعال است.');
+updateHeader();
 }
-function updateUserStats(points){
-if(!currentUser||points<=0)return;
-const accounts=getAccounts();
-const user=accounts[currentUser];
-if(!user)return;
-user.xp=(user.xp||0)+points;
-user.best=Math.max(user.best||0,score);
-accounts[currentUser]=user;
-saveAccounts(accounts);
-}
-function recordBest(){
+
+function saveUserProgress(points){
 if(!currentUser)return;
 const accounts=getAccounts();
 const user=accounts[currentUser];
 if(!user)return;
+if(points>0)user.xp=(user.xp||0)+points;
 user.best=Math.max(user.best||0,score);
 accounts[currentUser]=user;
 saveAccounts(accounts);
+if(!$('#accountModal').classList.contains('open'))updateHeader();
 }
 
 $('#accountBtn').addEventListener('click',()=>{
 $('#accountModal').classList.add('open');
-if(currentUser)updateProfile();
-else showAccountTab('register');
+showAccountTab('register');
+});
+$('#accountChip').addEventListener('click',()=>{
+$('#accountModal').classList.add('open');
+updateProfile();
 });
 $('#accountClose').addEventListener('click',()=>$('#accountModal').classList.remove('open'));
 $('#accountModal').addEventListener('click',e=>{
@@ -727,106 +506,73 @@ $('#loginTab').addEventListener('click',()=>showAccountTab('login'));
 $('#registerForm').addEventListener('submit',async e=>{
 e.preventDefault();
 const username=$('#regUsername').value.trim();
-const key=normalizeUsername(username);
-const email=$('#regEmail').value.trim();
+const key=userKey(username);
 const password=$('#regPassword').value;
-const confirm=$('#regConfirm').value;
-
-if(!/^[a-zA-Z0-9_\u0600-\u06FF]+$/.test(username)){
-showAccountMessage('نام کاربری فقط می‌تواند شامل حروف، عدد و _ باشد.');
-return;
-}
-if(username.length<3){
-showAccountMessage('نام کاربری باید حداقل ۳ حرف باشد.');
-return;
-}
-if(password.length<6){
-showAccountMessage('رمز عبور باید حداقل ۶ حرف باشد.');
-return;
-}
-if(password!==confirm){
-showAccountMessage('رمزهای عبور یکسان نیستند.');
-return;
-}
+if(username.length<3){accountMessage('نام کاربری باید حداقل ۳ حرف باشد.');return;}
+if(!/^[a-zA-Z0-9_\u0600-\u06FF]+$/.test(username)){accountMessage('از حروف، عدد و _ استفاده کن.');return;}
+if(password.length<6){accountMessage('رمز عبور باید حداقل ۶ حرف باشد.');return;}
+if(password!==$('#regConfirm').value){accountMessage('تکرار رمز عبور درست نیست.');return;}
 const accounts=getAccounts();
-if(accounts[key]){
-showAccountMessage('این نام کاربری قبلاً ثبت شده است.');
-return;
-}
+if(accounts[key]){accountMessage('این نام کاربری قبلاً ثبت شده است.');return;}
 try{
-const passwordHash=await hashPassword(password);
 accounts[key]={
-username,email,passwordHash,
+username,email:$('#regEmail').value.trim(),
 avatar:$('#regAvatar').value,
-xp:0,best:0,
-createdAt:new Date().toISOString()
+passwordHash:await hashPassword(password),
+xp:0,best:0,createdAt:new Date().toISOString()
 };
 saveAccounts(accounts);
 currentUser=key;
-saveSession(key);
+localStorage.setItem(SESSION_KEY,key);
 updateProfile();
 toast('حساب ساخته شد!');
-}catch(err){
-showAccountMessage('ساخت حساب انجام نشد. دوباره تلاش کن.');
-}
+}catch(err){accountMessage('ساخت حساب انجام نشد.');}
 });
 
 $('#loginForm').addEventListener('submit',async e=>{
 e.preventDefault();
-const key=normalizeUsername($('#loginUsername').value);
-const password=$('#loginPassword').value;
-const accounts=getAccounts();
-const user=accounts[key];
-if(!user){
-showAccountMessage('این نام کاربری پیدا نشد.');
-return;
-}
+const key=userKey($('#loginUsername').value);
+const user=getAccounts()[key];
+if(!user){accountMessage('این نام کاربری پیدا نشد.');return;}
 try{
-const hash=await hashPassword(password);
-if(hash!==user.passwordHash){
-showAccountMessage('رمز عبور اشتباه است.');
-return;
+if(await hashPassword($('#loginPassword').value)!==user.passwordHash){
+accountMessage('رمز عبور اشتباه است.');return;
 }
 currentUser=key;
-saveSession(key);
+localStorage.setItem(SESSION_KEY,key);
 updateProfile();
 toast('خوش آمدی '+user.username);
-}catch(err){
-showAccountMessage('ورود انجام نشد.');
-}
+}catch(err){accountMessage('ورود انجام نشد.');}
 });
 
 $('#logoutButton').addEventListener('click',()=>{
-clearSession();
+currentUser=null;
+localStorage.removeItem(SESSION_KEY);
+updateHeader();
 showAccountTab('register');
 toast('از حساب خارج شدی.');
 });
 
-(function restoreSession(){
-const key=normalizeUsername(getSession());
-const accounts=getAccounts();
-if(key&&accounts[key]){
-currentUser=key;
-}
+(function restoreAccount(){
+const key=userKey(localStorage.getItem(SESSION_KEY)||'');
+if(key&&getAccounts()[key])currentUser=key;
+updateHeader();
 })();
 
-/* فیلتر مودها */
+/* جست‌وجو و فیلتر مودها */
 let activeFilter='all';
 function filterMods(){
 const q=$('#modSearch').value.trim().toLowerCase();
 let count=0;
 $$('.mod-card').forEach(c=>{
 const ok=(activeFilter==='all'||c.dataset.category===activeFilter)&&c.dataset.name.includes(q);
-c.style.display=ok?'':'none';
-if(ok)count++;
+c.style.display=ok?'':'none';if(ok)count++;
 });
 $('#modEmpty').hidden=count!==0;
 }
 $$('#modFilters button').forEach(b=>b.addEventListener('click',()=>{
 $$('#modFilters button').forEach(x=>x.classList.remove('active'));
-b.classList.add('active');
-activeFilter=b.dataset.filter;
-filterMods();
+b.classList.add('active');activeFilter=b.dataset.filter;filterMods();
 }));
 $('#modSearch').addEventListener('input',filterMods);
 $('#searchMods').addEventListener('click',()=>{
@@ -837,15 +583,8 @@ if(q)window.open('https://www.curseforge.com/minecraft/search?search='+encodeURI
 
 /* ویدئوها */
 const videos={
-youtube:[
-{title:'ویدئو ۱',id:'lcGwyPt278g'},
-{title:'ویدئو ۲',id:'zOS_lJYAx44'}
-],
-aparat:[
-{title:'ویدئو ۱',id:'znroeg7'},
-{title:'ویدئو ۲',id:'rka9a77'},
-{title:'ویدئو ۳',id:'osx8e40'}
-]
+youtube:[{title:'ویدئو ۱',id:'lcGwyPt278g'},{title:'ویدئو ۲',id:'zOS_lJYAx44'}],
+aparat:[{title:'ویدئو ۱',id:'znroeg7'},{title:'ویدئو ۲',id:'rka9a77'},{title:'ویدئو ۳',id:'osx8e40'}]
 };
 function renderVideos(type){
 $('#videoGrid').innerHTML=videos[type].map(v=>`
@@ -854,346 +593,182 @@ $('#videoGrid').innerHTML=videos[type].map(v=>`
 ${type==='youtube'
 ?`<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/${v.id}" title="${v.title}" allowfullscreen></iframe>`
 :`<iframe loading="lazy" src="https://www.aparat.com/video/video/embed/videohash/${v.id}/vt/frame" title="${v.title}" allowfullscreen></iframe>`}
-</div>
-<div class="video-title">${v.title}</div>
-</article>`).join('');
+</div><div class="video-title">${v.title}</div></article>`).join('');
 }
 $$('.tab').forEach(b=>b.addEventListener('click',()=>{
 $$('.tab').forEach(x=>x.classList.remove('active'));
-b.classList.add('active');
-renderVideos(b.dataset.tab);
+b.classList.add('active');renderVideos(b.dataset.tab);
 }));
 renderVideos('youtube');
 
-/* تنظیمات بازی */
-const modal=$('#gameModal'),stage=$('#gameStage');
+/* موتور بازی */
 let renderer=null,scene=null,camera=null,player=null,clock=null,anim=0;
 let gameType='',score=0,keys={},objects=[],gameState={},running=false;
-const titles={
-blocks:'Block World',racing:'3D Racing',parkour:'Sky Parkour',
-football:'3D Football',runner:'Endless Runner',space:'Space Explorer',mini:'Mini Minecraft'
-};
+const modal=$('#gameModal');
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const titles={blocks:'Block World',racing:'3D Racing',parkour:'Sky Parkour',football:'3D Football',runner:'Endless Runner',space:'Space Explorer',mini:'Mini Minecraft'};
 
-function mat(color,roughness=.75){
-return new THREE.MeshStandardMaterial({color,roughness,metalness:.03});
-}
 function addObject(m){scene.add(m);objects.push(m);return m;}
+function mat(color){return new THREE.MeshStandardMaterial({color,roughness:.8});}
 function cube(x,y,z,sx,sy,sz,color){
 const m=new THREE.Mesh(new THREE.BoxGeometry(sx,sy,sz),mat(color));
-m.position.set(x,y,z);
-return addObject(m);
+m.position.set(x,y,z);return addObject(m);
 }
 function ball(x,y,z,r,color){
-const m=new THREE.Mesh(new THREE.SphereGeometry(r,14,10),mat(color));
-m.position.set(x,y,z);
-return addObject(m);
+const m=new THREE.Mesh(new THREE.SphereGeometry(r,16,12),mat(color));
+m.position.set(x,y,z);return addObject(m);
 }
-function ring(x,y,z,color=0x72f2a0,r=.5){
-const m=new THREE.Mesh(
-new THREE.TorusGeometry(r,.055,8,24),
-new THREE.MeshStandardMaterial({color,emissive:color,emissiveIntensity:.4})
-);
-m.position.set(x,y,z);
-m.userData.collectible=true;
-return addObject(m);
+function ring(x,y,z,color=0x72f2a0){
+const m=new THREE.Mesh(new THREE.TorusGeometry(.4,.05,8,24),mat(color));
+m.position.set(x,y,z);return addObject(m);
 }
 function ground(color=0x477e4d){cube(0,-.55,-12,30,1,45,color);}
 function tree(x,z){
-cube(x,.65,z,.38,1.3,.38,0x765037);
-const c=ball(x,1.65,z,.95,0x2c9b62);
-c.scale.set(1,1.1,1);
+cube(x,.6,z,.4,1.2,.4,0x765037);
+ball(x,1.5,z,.9,0x2c9b62);
 }
 function setScore(n){
-const delta=Math.max(0,n-score);
-score=n;
-$('#score').textContent=String(n);
-$('#hudScore').textContent=String(n);
-if(delta>0)updateUserStats(delta);
-recordBest();
-}
-function resetWorld(){
-if(anim)cancelAnimationFrame(anim);
-if(renderer){
-renderer.dispose();
-renderer.domElement.remove();
-renderer=null;
-}
-scene=new THREE.Scene();
-const skies={
-blocks:0x172d43,racing:0x101a35,parkour:0x30205d,
-football:0x102d27,runner:0x25113f,space:0x050817,mini:0x123b4b
-};
-scene.background=new THREE.Color(skies[gameType]);
-scene.fog=new THREE.Fog(scene.background,20,65);
-camera=new THREE.PerspectiveCamera(60,stage.clientWidth/stage.clientHeight,.1,100);
-renderer=new THREE.WebGLRenderer({antialias:false,alpha:false});
-renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.25));
-renderer.shadowMap.enabled=false;
-renderer.outputEncoding=THREE.sRGBEncoding;
-renderer.setSize(stage.clientWidth,stage.clientHeight);
-stage.insertBefore(renderer.domElement,stage.firstChild);
-scene.add(new THREE.HemisphereLight(0xc2dfff,0x263344,1.35));
-const sun=new THREE.DirectionalLight(0xffffff,1.1);
-sun.position.set(7,13,8);
-scene.add(sun);
-clock=new THREE.Clock();
-objects=[];
-score=0;
-setScore(0);
-gameState={
-t:0,vy:0,inventory:0,blockType:0,voxels:[],
-obstacles:[],coins:[],rocks:[],
-jumpLock:false,jumpQueued:false,
-speed:10,ball:null,ballVelocity:new THREE.Vector3(),
-parkourPlatforms:[]
-};
-}
-function addVoxel(x,y,z,color,kind){
-const m=cube(x,y,z,1,1,1,color);
-m.userData.voxel=true;
-m.userData.kind=kind;
-m.userData.grid={x,y,z};
-gameState.voxels.push(m);
-return m;
+const delta=Math.max(0,n-score);score=n;
+$('#score').textContent=score;$('#hudScore').textContent=score;
+if(delta)saveUserProgress(delta);
 }
 
+/* مرحله‌های فوتبال */
+function setFootballLevel(level){
+gameState.level=level;
+gameState.goalWidth=Math.max(1.35,4.8-(level-1)*.35);
+const colors=[0x27834c,0x287b60,0x356c8b,0x63528e,0x8a563e,0x287d82];
+const color=colors[(level-1)%colors.length];
+scene.background=new THREE.Color(color);
+scene.fog.color=new THREE.Color(color);
+gameState.field.material.color.setHex(color);
+gameState.goalLeft.position.x=-gameState.goalWidth/2;
+gameState.goalRight.position.x=gameState.goalWidth/2;
+gameState.goalBar.scale.x=gameState.goalWidth/4.8;
+$('#hudGoal').textContent='مرحله '+level+' | گل‌ها: '+gameState.goals;
+$('#gameStatus').textContent='مرحله '+level+' شروع شد!';
+}
+
+function resetWorld(){
+if(anim)cancelAnimationFrame(anim);
+if(renderer){renderer.dispose();renderer.domElement.remove();renderer=null;}
+scene=new THREE.Scene();
+scene.background=new THREE.Color(0x172d43);
+scene.fog=new THREE.Fog(scene.background,20,65);
+camera=new THREE.PerspectiveCamera(60,stageWidth(),stageHeight(),.1,100);
+renderer=new THREE.WebGLRenderer({antialias:false});
+renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.25));
+renderer.setSize(stageWidth(),stageHeight());
+$('#gameStage').insertBefore(renderer.domElement,$('#gameStage').firstChild);
+scene.add(new THREE.HemisphereLight(0xc2dfff,0x263344,1.4));
+const sun=new THREE.DirectionalLight(0xffffff,1.1);sun.position.set(7,13,8);scene.add(sun);
+clock=new THREE.Clock();objects=[];score=0;
+$('#score').textContent='0';$('#hudScore').textContent='0';
+gameState={
+t:0,vy:0,coins:[],obstacles:[],parkourPlatforms:[],
+inventory:0,blockType:0,voxels:[],jumpLock:false,
+speed:10,ballVelocity:new THREE.Vector3(),goals:0,level:1,
+lastKick:0
+};
+}
+function stageWidth(){return $('#gameStage').clientWidth||700;}
+function stageHeight(){return $('#gameStage').clientHeight||450;}
+
 /* Mini Minecraft */
+function addVoxel(x,y,z,color){
+const m=cube(x,y,z,1,1,1,color);m.userData.voxel=true;
+gameState.voxels.push(m);return m;
+}
 function buildMiniWorld(){
-const colors=[0x65b94f,0x93613d,0x89949e,0xc96a4c];
-const kinds=['grass','dirt','stone','brick'];
-for(let x=-8;x<=8;x++){
-for(let z=-13;z<=5;z++){
-const edge=Math.abs(x)>6||z>3||z< -11;
-const h=(Math.sin(x*.65)+Math.cos(z*.48))*.10;
-addVoxel(x,-.5+h,z,edge?colors[1]:colors[0],edge?kinds[1]:kinds[0]);
-}
-}
-for(const [tx,tz] of [[-5,-5],[4,-8],[6,1],[-2,-11]]){
-for(let y=0;y<3;y++)addVoxel(tx,-.5+y,tz,colors[1],kinds[1]);
-for(let x=-1;x<=1;x++)for(let z=-1;z<=1;z++)for(let y=2;y<=3;y++){
-if(Math.abs(x)+Math.abs(z)<3)addVoxel(tx+x,-.5+y,tz+z,0x278c48,'leaf');
-}
-addVoxel(tx,3.5,tz,0x278c48,'leaf');
-}
-for(let i=0;i<6;i++)addVoxel(-3+i,-.5,-2,colors[2],kinds[2]);
-addVoxel(2,.5,-3,0xf2c84b,'gold');
-addVoxel(3,.5,-3,colors[3],kinds[3]);
+for(let x=-7;x<=7;x++)for(let z=-11;z<=4;z++)addVoxel(x,-.5,z,(x+z)%4===0?0x93613d:0x65b94f);
+for(let i=0;i<5;i++)addVoxel(-3+i,-.5,-3,0x89949e);
 }
 function nearestVoxel(){
-const fx=player.userData.faceX??0;
-const fz=player.userData.faceZ??-1;
-let best=null,bestScore=Infinity;
+let best=null,dmin=3;
 for(const v of gameState.voxels){
-if(!v.visible)continue;
-const dx=v.position.x-player.position.x;
-const dz=v.position.z-player.position.z;
-const distance=Math.hypot(dx,dz);
-if(distance>3.1)continue;
-const dot=dx*fx+dz*fz;
-if(dot<-.25)continue;
-const side=Math.abs(dx*fz-dz*fx);
-const rank=distance+side*1.5-dot*.12;
-if(rank<bestScore){best=v;bestScore=rank;}
+if(!v.visible||v.position.y<-.7)continue;
+const d=Math.hypot(v.position.x-player.position.x,v.position.z-player.position.z);
+if(d<dmin){best=v;dmin=d;}
 }
 return best;
 }
 function breakVoxel(){
 if(gameType!=='mini'||!running)return;
 const v=nearestVoxel();
-if(!v){$('#gameStatus').textContent='جلوی بازیکن بلوکی نیست!';return;}
-if(v.position.y<-.7){$('#gameStatus').textContent='کف جزیره را نمی‌توان کند!';return;}
-v.visible=false;
-gameState.inventory++;
-$('#inventoryCount').textContent=gameState.inventory;
-$('#hudGoal').textContent='بلوک‌ها: '+gameState.inventory;
-$('#gameStatus').textContent='بلوک جمع شد!';
+if(!v){$('#gameStatus').textContent='بلوک نزدیک پیدا نشد.';return;}
+v.visible=false;gameState.inventory++;
+$('#inventoryToggle').textContent='🎒 اینونتوری: '+gameState.inventory;
 setScore(score+5);
 }
 function placeVoxel(){
-if(gameType!=='mini'||!running)return;
-if(gameState.inventory<1){
-$('#gameStatus').textContent='اول یک بلوک بکن!';
-return;
-}
-const fx=player.userData.faceX??0;
-const fz=player.userData.faceZ??-1;
-const x=Math.round(player.position.x+fx);
-const z=Math.round(player.position.z+fz);
-const y=Math.round(player.position.y-.65)+.5;
-const occupied=gameState.voxels.some(v=>v.visible&&
-Math.abs(v.position.x-x)<.1&&
-Math.abs(v.position.y-y)<.1&&
-Math.abs(v.position.z-z)<.1);
-if(occupied){$('#gameStatus').textContent='این خانه پر است!';return;}
+if(gameType!=='mini'||!running||gameState.inventory<1)return;
+const x=Math.round(player.position.x+(player.userData.fx||0));
+const z=Math.round(player.position.z+(player.userData.fz||-1));
+const y=.5;
+const occupied=gameState.voxels.some(v=>v.visible&&Math.abs(v.position.x-x)<.1&&Math.abs(v.position.z-z)<.1&&Math.abs(v.position.y-y)<.1);
+if(occupied)return;
 const colors=[0x65b94f,0x93613d,0x89949e,0xc96a4c];
-const kinds=['grass','dirt','stone','brick'];
-addVoxel(x,y,z,colors[gameState.blockType],kinds[gameState.blockType]);
-gameState.inventory--;
-$('#inventoryCount').textContent=gameState.inventory;
-$('#hudGoal').textContent='بلوک‌ها: '+gameState.inventory;
-$('#gameStatus').textContent='بلوک ساخته شد!';
-setScore(score+2);
+addVoxel(x,y,z,colors[gameState.blockType]);gameState.inventory--;setScore(score+2);
 }
 
-/* ساخت سکوهای پارکور */
-function addParkourPlatform(x,z,index){
-const platform=cube(x,-.3,z,3,.6,3,[0x51a76b,0x4c8cc5,0x9774ca][index%3]);
-platform.userData.isParkourPlatform=true;
-gameState.parkourPlatforms.push(platform);
-return platform;
-}
-
-/* ساخت مراحل بازی */
+/* ساخت مرحله */
 function initLevel(){
 if(gameType==='mini'){
-cube(0,-1.35,-5,22,.35,22,0x329de0);
-buildMiniWorld();
+cube(0,-1.35,-5,22,.35,22,0x329de0);buildMiniWorld();
 player=cube(0,.55,3,.72,1.1,.72,0x2878ff);
-player.material=mat(0x2878ff,.35);
-player.userData.faceX=0;
-player.userData.faceZ=-1;
-player.userData.head=ball(0,1.55,3,.28,0xffd0a1);
-camera.position.set(0,7,11);
-camera.lookAt(0,0,-4);
-return;
+player.userData.fx=0;player.userData.fz=-1;
+camera.position.set(0,7,11);camera.lookAt(0,0,-4);return;
 }
 if(gameType==='blocks'){
 ground(0x438a54);
-for(let i=0;i<24;i++)cube((Math.random()-.5)*20,0,-Math.random()*28,1.3,1.3,1.3,[0x65b96c,0x8a684a,0x5793c7][i%3]);
-for(let i=0;i<10;i++)tree((Math.random()-.5)*24,-Math.random()*30);
-for(let i=0;i<12;i++)gameState.coins.push(ring((Math.random()-.5)*20,1.15,-i*3-3,0x65f3d0,.45));
+for(let i=0;i<18;i++)cube((Math.random()-.5)*20,0,-Math.random()*28,1.3,1.3,1.3,0x65b96c);
+for(let i=0;i<8;i++)tree((Math.random()-.5)*20,-Math.random()*30);
+for(let i=0;i<10;i++)gameState.coins.push(ring((Math.random()-.5)*18,1,-i*3-3));
 player=cube(0,.55,3,.8,1.1,.8,0x2878ff);
-camera.position.set(0,5,9);
-camera.lookAt(0,0,-5);
+camera.position.set(0,5,9);camera.lookAt(0,0,-5);
 }
 if(gameType==='racing'||gameType==='runner'){
 ground(0x303a45);
 for(let x=-1;x<=1;x++)cube(x*3,-.03,-12,.08,.08,40,0xe6e0c7);
-for(let side of [-1,1])for(let i=0;i<10;i++)cube(side*8,1,-i*5,1,2,1,0x4d7184);
 player=cube(0,.55,5,1.1,.8,1.8,gameType==='racing'?0xe45c55:0x4dd9a1);
-cube(0,1.15,5,.7,.45,.8,0x25354a);
-for(let i=0;i<9;i++){
+for(let i=0;i<8;i++){
 const o=cube((Math.floor(Math.random()*3)-1)*3,.65,-8-i*5,1.25,1.3,1.2,0xffb45e);
 gameState.obstacles.push(o);
 }
-for(let i=0;i<8;i++)gameState.coins.push(ring((Math.floor(Math.random()*3)-1)*3,1.3,-10-i*8,0xffdf58,.34));
-camera.position.set(0,6,11);
-camera.lookAt(0,0,-5);
+camera.position.set(0,6,11);camera.lookAt(0,0,-5);
 }
 if(gameType==='parkour'){
-/* سکوی شروع دقیقاً زیر پای بازیکن */
-addParkourPlatform(0,3,0);
-
-/* سکوهای بعدی */
-for(let i=1;i<13;i++){
-const x=i%2?2.5:-2.5;
+for(let i=0;i<13;i++){
+const x=i===0?0:(i%2?2.5:-2.5);
 const z=3-i*4;
-addParkourPlatform(x,z,i);
-gameState.coins.push(ring(x,.65,z,0xffdf61,.35));
+const p=cube(x,-.3,z,3,.6,3,[0x51a76b,0x4c8cc5,0x9774ca][i%3]);
+gameState.parkourPlatforms.push(p);
+if(i>0)gameState.coins.push(ring(x,.65,z,0xffdf61));
 }
 player=cube(0,.55,3,.8,1.1,.8,0xf0bd56);
-camera.position.set(0,5,10);
-camera.lookAt(0,0,-6);
+camera.position.set(0,5,10);camera.lookAt(0,0,-6);
 }
 if(gameType==='football'){
 ground(0x27834c);
-cube(0,.03,-8,15,.1,24,0x2ca75c);
+gameState.field=cube(0,.03,-8,15,.1,24,0x2ca75c);
 for(let x of [-7.3,7.3])cube(x,.1,-8,.12,.04,24,0xffffff);
 for(let z of [4,-20])cube(0,.1,z,14.6,.04,.12,0xffffff);
-cube(0,1,-19,5,2,.5,0xffffff);
-cube(-2.5,1,-19, .12,2,.5,0xffffff);
-cube(2.5,1,-19, .12,2,.5,0xffffff);
+gameState.goalLeft=cube(-2.4,1,-19,.14,2,.3,0xffffff);
+gameState.goalRight=cube(2.4,1,-19,.14,2,.3,0xffffff);
+gameState.goalBar=cube(0,2,-19,4.8,.14,.3,0xffffff);
 player=cube(0,.7,3,.8,1.4,.8,0x3678ec);
-gameState.ball=ball(0,.45,-2,.48,0xffffff);
+gameState.ball=ball(0,.48,-1,.48,0xffffff);
 gameState.ballVelocity.set(0,0,0);
-camera.position.set(0,7,12);
-camera.lookAt(0,0,-6);
+gameState.goals=0;
+setFootballLevel(1);
+camera.position.set(0,7,12);camera.lookAt(0,0,-6);
 }
 if(gameType==='space'){
 scene.background=new THREE.Color(0x080d24);
-for(let i=0;i<90;i++)ball((Math.random()-.5)*35,(Math.random()-.5)*20,-Math.random()*45,.045,0xffffff);
-ball(8,5,-24,4,0x6a54ad);
+for(let i=0;i<70;i++)ball((Math.random()-.5)*35,(Math.random()-.5)*20,-Math.random()*45,.045,0xffffff);
 player=cube(0,0,4,.8,.35,1.4,0x64dafa);
-cube(-.65,-.05,4,.55,.12,.65,0xeffaff);
-cube(.65,-.05,4,.55,.12,.65,0xeffaff);
-for(let i=0;i<10;i++){
-const o=ball((Math.random()-.5)*14,(Math.random()-.5)*7,-8-i*5,.5+Math.random()*.5,0x9b8bdc);
-gameState.obstacles.push(o);
-}
-for(let i=0;i<8;i++)gameState.coins.push(ring((Math.random()-.5)*12,(Math.random()-.5)*6,-12-i*7,0x6de5ff,.4));
-camera.position.set(0,4,12);
-camera.lookAt(0,0,-5);
-}
-}
-
-/* شروع بازی */
-function startGame(type){
-gameType=type;
-keys={};
-$('#gameTitle').textContent=titles[type];
-$('#gameStatus').textContent='آماده شروع';
-const help={
-blocks:'با فلش‌ها یا WASD حرکت کن و کریستال جمع کن.',
-racing:'▲ گاز | ▼ ترمز | ◀ ▶ فرمان | از موانع دوری کن.',
-parkour:'حرکت کن و با دکمه پرش از سکوها بالا برو.',
-football:'به توپ نزدیک شو و دکمه شوت یا Space را بزن.',
-runner:'▲ سرعت | ◀ ▶ تغییر مسیر | دکمه پرش.',
-space:'▲ و ▼ حرکت عمودی | ◀ ▶ هدایت سفینه.',
-mini:'WASD برای حرکت، Q برای کندن و E برای ساختن.'
-};
-$('#gameHelp').textContent=help[type];
-$('#buildControls').style.display=type==='mini'?'flex':'none';
-$('#inventoryPanel').hidden=true;
-$('#inventoryCount').textContent='0';
-$('#jumpControls').classList.toggle('active',['parkour','runner','racing'].includes(type));
-$('#shootControls').classList.toggle('active',type==='football');
-$('#hudGoal').textContent=type==='mini'?'بلوک‌ها: 0':'هدف: رکورد خودت را بشکن!';
-$('#startIcon').textContent={
-blocks:'💎',racing:'🏎️',parkour:'🪜',football:'⚽',
-runner:'🏃',space:'🚀',mini:'⛏️'
-}[type];
-$('#startTitle').textContent=titles[type];
-$('#startDesc').textContent='برای شروع بازی دکمه زیر را بزن.';
-$('#startGameBtn').textContent='شروع بازی';
-$('#gameStartOverlay').style.display='flex';
-modal.classList.add('open');
-if(!window.THREE){
-$('#gameStatus').textContent='برای بازی اینترنت لازم است.';
-return;
-}
-resetWorld();
-initLevel();
-running=false;
-setTimeout(resizeGame,60);
-}
-function launchGame(){
-if(!renderer)return;
-$('#gameStartOverlay').style.display='none';
-$('#gameStatus').textContent='در حال بازی';
-running=true;
-clock.start();
-loop();
-}
-function endGame(message){
-running=false;
-recordBest();
-$('#gameStatus').textContent=message;
-$('#startIcon').textContent='🏆';
-$('#startTitle').textContent='پایان بازی';
-$('#startDesc').textContent=message+' امتیاز: '+score;
-$('#startGameBtn').textContent='دوباره بازی کن';
-$('#gameStartOverlay').style.display='flex';
-}
-
-/* پرش */
-function jumpPlayer(){
-if(!running)return;
-if(gameType==='parkour'||gameType==='racing'||gameType==='runner'){
-if(gameState.vy===0&&!gameState.jumpLock){
-gameState.vy=gameType==='parkour'?10:8.5;
-gameState.jumpLock=true;
-}
+for(let i=0;i<9;i++)gameState.obstacles.push(ball((Math.random()-.5)*14,(Math.random()-.5)*7,-8-i*5,.7,0x9b8bdc));
+camera.position.set(0,4,12);camera.lookAt(0,0,-5);
 }
 }
 
@@ -1201,25 +776,106 @@ gameState.jumpLock=true;
 function shootFootball(){
 if(!running||gameType!=='football')return;
 const b=gameState.ball;
-if(!b)return;
-const distance=Math.hypot(
-player.position.x-b.position.x,
-player.position.z-b.position.z
-);
-if(distance>2.5){
-$('#gameStatus').textContent='به توپ نزدیک‌تر شو!';
-return;
-}
-/* شوت به طرف دروازه */
-const dx=-b.position.x;
-const dz=-1;
-const length=Math.hypot(dx,dz)||1;
-const power=17;
-gameState.ballVelocity.set(dx/length*power,2.2,dz*power/length);
-$('#gameStatus').textContent='شوووت! ⚽';
+const dx=b.position.x-player.position.x;
+const dz=b.position.z-player.position.z;
+const distance=Math.hypot(dx,dz);
+if(distance>3.2){$('#gameStatus').textContent='به توپ نزدیک‌تر شو!';return;}
+const len=Math.hypot(dx,-Math.abs(dz)-2)||1;
+gameState.ballVelocity.x=(dx/len)*13;
+gameState.ballVelocity.z=(-Math.abs(dz)-2)/len*13;
+gameState.ballVelocity.y=3.5;
+gameState.lastKick=gameState.t;
+$('#gameStatus').textContent='شوت کردی! ⚽';
 }
 
-/* حلقه اصلی بازی */
+/* کنترل برخورد بازیکن و توپ */
+function playerBallCollision(dt){
+const b=gameState.ball;
+const dx=b.position.x-player.position.x;
+const dz=b.position.z-player.position.z;
+const distance=Math.hypot(dx,dz);
+if(distance<1.25&&gameState.t-gameState.lastKick>.22){
+let moveX=(keys.ArrowRight||keys.KeyD?1:0)-(keys.ArrowLeft||keys.KeyA?1:0);
+let moveZ=(keys.ArrowDown||keys.KeyS?1:0)-(keys.ArrowUp||keys.KeyW?1:0);
+let mx=moveX,mz=moveZ;
+if(!mx&&!mz){mx=dx;mz=dz;}
+const len=Math.hypot(mx,mz)||1;
+gameState.ballVelocity.x+=(mx/len)*8;
+gameState.ballVelocity.z+=(mz/len)*8;
+gameState.ballVelocity.y=Math.max(gameState.ballVelocity.y,1.1);
+gameState.lastKick=gameState.t;
+$('#gameStatus').textContent='به توپ ضربه زدی! ⚽';
+}
+}
+
+/* ثبت گل و تغییر مرحله */
+function scoreFootballGoal(){
+gameState.goals++;
+setScore(score+100);
+const next=gameState.level+1;
+gameState.ball.position.set(0,.48,-1);
+gameState.ballVelocity.set(0,0,0);
+setFootballLevel(next);
+toast('گل! وارد مرحله '+next+' شدی.');
+}
+
+/* شروع و پایان */
+function startGame(type){
+gameType=type;keys={};
+$('#gameTitle').textContent=titles[type];
+const help={
+blocks:'با فلش‌ها یا WASD حرکت کن و کریستال جمع کن.',
+racing:'فلش‌ها برای حرکت و تغییر مسیر.',
+parkour:'حرکت کن و با دکمه پرش از سکوها بالا برو.',
+football:'با حرکت به توپ ضربه بزن یا نزدیک شو و شوت کن.',
+runner:'از موانع دوری کن و امتیاز بگیر.',
+space:'فلش‌ها برای هدایت سفینه.',
+mini:'WASD حرکت، Q کندن بلوک، E ساختن بلوک.'
+};
+$('#gameHelp').textContent=help[type];
+$('#buildControls').style.display=type==='mini'?'block':'none';
+$('#inventoryPanel').hidden=true;
+$('#jumpControls').classList.toggle('active',['parkour','runner','racing'].includes(type));
+$('#shootControls').classList.toggle('active',type==='football');
+$('#startIcon').textContent={blocks:'💎',racing:'🏎️',parkour:'🪜',football:'⚽',runner:'🏃',space:'🚀',mini:'⛏️'}[type];
+$('#startTitle').textContent=titles[type];
+$('#startDesc').textContent='برای شروع بازی دکمه زیر را بزن.';
+$('#startGameBtn').textContent='شروع بازی';
+$('#gameStartOverlay').style.display='flex';
+modal.classList.add('open');
+resetWorld();initLevel();running=false;
+}
+function launchGame(){
+if(!renderer)return;
+$('#gameStartOverlay').style.display='none';
+running=true;clock.start();loop();
+}
+function endGame(message){
+running=false;
+$('#gameStatus').textContent=message;
+$('#startIcon').textContent='🏆';
+$('#startTitle').textContent='پایان بازی';
+$('#startDesc').textContent=message+' امتیاز: '+score;
+$('#startGameBtn').textContent='دوباره بازی کن';
+$('#gameStartOverlay').style.display='flex';
+}
+function closeGame(){
+running=false;if(anim)cancelAnimationFrame(anim);
+modal.classList.remove('open');keys={};
+if(renderer){renderer.dispose();renderer.domElement.remove();renderer=null;}
+scene=null;player=null;
+}
+
+/* پرش */
+function jumpPlayer(){
+if(!running)return;
+if(['parkour','racing','runner'].includes(gameType)&&gameState.vy===0&&!gameState.jumpLock){
+gameState.vy=gameType==='parkour'?10:8;
+gameState.jumpLock=true;
+}
+}
+
+/* حلقه بازی */
 function loop(){
 if(!running)return;
 anim=requestAnimationFrame(loop);
@@ -1232,53 +888,32 @@ const down=keys.ArrowDown||keys.KeyS;
 const jump=keys.Space||gameState.jumpQueued;
 gameState.jumpQueued=false;
 
-/* Block World */
-if(gameType==='blocks'){
-if(left)player.position.x-=dt*5;
-if(right)player.position.x+=dt*5;
-if(up)player.position.z-=dt*5;
-if(down)player.position.z+=dt*5;
-player.position.x=clamp(player.position.x,-12,12);
-player.position.z=clamp(player.position.z,-38,7);
-player.position.y=.58+Math.sin(gameState.t*5)*.035;
-camera.position.x+=(player.position.x-camera.position.x)*dt*2;
-camera.position.z+=(player.position.z+8-camera.position.z)*dt*2;
-camera.lookAt(player.position.x,0,player.position.z-5);
-gameState.coins.forEach(c=>{
-c.rotation.y+=dt*2;
-if(c.visible&&c.position.distanceTo(player.position)<1.3){
-c.visible=false;setScore(score+10);
-}
-});
-}
-
-/* Mini Minecraft */
-if(gameType==='mini'){
-const speed=4.2*dt;
-let moved=false;
-if(left){player.position.x-=speed;player.userData.faceX=-1;player.userData.faceZ=0;moved=true;}
-if(right){player.position.x+=speed;player.userData.faceX=1;player.userData.faceZ=0;moved=true;}
-if(up){player.position.z-=speed;player.userData.faceX=0;player.userData.faceZ=-1;moved=true;}
-if(down){player.position.z+=speed;player.userData.faceX=0;player.userData.faceZ=1;moved=true;}
+if(gameType==='blocks'||gameType==='mini'){
+const speed=4.5*dt;
+if(left){player.position.x-=speed;player.userData.fx=-1;player.userData.fz=0;}
+if(right){player.position.x+=speed;player.userData.fx=1;player.userData.fz=0;}
+if(up){player.position.z-=speed;player.userData.fx=0;player.userData.fz=-1;}
+if(down){player.position.z+=speed;player.userData.fx=0;player.userData.fz=1;}
 player.position.x=clamp(player.position.x,-8,8);
 player.position.z=clamp(player.position.z,-13,5);
-player.position.y=.65+Math.sin(gameState.t*4)*.025;
-if(moved)player.rotation.y=Math.atan2(player.userData.faceX,player.userData.faceZ);
-player.userData.head.position.set(player.position.x,1.55,player.position.z);
+player.position.y=.6+Math.sin(gameState.t*4)*.025;
 camera.position.x+=(player.position.x-camera.position.x)*dt*2;
 camera.position.z+=(player.position.z+9-camera.position.z)*dt*2;
 camera.lookAt(player.position.x,0,player.position.z-4);
+if(gameType==='blocks'){
+gameState.coins.forEach(c=>{
+c.rotation.y+=dt*2;
+if(c.visible&&c.position.distanceTo(player.position)<1.3){c.visible=false;setScore(score+10);}
+});
+}
 }
 
-/* Racing و Runner */
 if(gameType==='racing'||gameType==='runner'){
 if(left)player.position.x-=dt*7;
 if(right)player.position.x+=dt*7;
-if(up)gameState.speed=Math.min(23,gameState.speed+dt*6);
-if(down)gameState.speed=Math.max(6,gameState.speed-dt*8);
 player.position.x=clamp(player.position.x,-3.3,3.3);
-player.rotation.z=clamp((player.position.x-(player.userData.lastX||0))*-.15,-.25,.25);
-player.userData.lastX=player.position.x;
+if(up)gameState.speed=Math.min(22,gameState.speed+dt*5);
+if(down)gameState.speed=Math.max(6,gameState.speed-dt*7);
 if(jump)jumpPlayer();
 if(!keys.Space)gameState.jumpLock=false;
 player.position.y+=gameState.vy*dt;
@@ -1286,276 +921,162 @@ gameState.vy-=19*dt;
 if(player.position.y<.55){player.position.y=.55;gameState.vy=0;}
 for(const o of gameState.obstacles){
 o.position.z+=dt*gameState.speed*1.2;
-o.rotation.y+=dt;
-if(o.position.z>8){
-o.position.z=-45-Math.random()*15;
-o.position.x=(Math.floor(Math.random()*3)-1)*3;
-setScore(score+5);
+if(o.position.z>8){o.position.z=-45-Math.random()*15;o.position.x=(Math.floor(Math.random()*3)-1)*3;setScore(score+5);}
+if(Math.abs(o.position.z-player.position.z)<1.3&&Math.abs(o.position.x-player.position.x)<1.1&&player.position.y<1.25){endGame('با مانع برخورد کردی!');break;}
 }
-if(Math.abs(o.position.z-player.position.z)<1.3&&
-Math.abs(o.position.x-player.position.x)<1.15&&
-player.position.y<1.25){
-endGame('با مانع برخورد کردی!');
-break;
-}
-}
-for(const c of gameState.coins){
-c.position.z+=dt*gameState.speed;
-c.rotation.y+=dt*2;
-if(c.position.z>8)c.position.z=-50-Math.random()*20;
-if(c.visible&&Math.abs(c.position.z-player.position.z)<1.2&&
-Math.abs(c.position.x-player.position.x)<1){
-c.visible=false;setScore(score+15);
-}
-}
-camera.position.x+=(player.position.x*.35-camera.position.x)*dt*2;
+camera.position.x+=(player.position.x*.3-camera.position.x)*dt*2;
 camera.lookAt(player.position.x*.25,0,-7);
 }
 
-/* پارکور: اسپاون امن و تشخیص برخورد با سطح سکو */
 if(gameType==='parkour'){
 if(left)player.position.x-=dt*4.5;
 if(right)player.position.x+=dt*4.5;
 if(up)player.position.z-=dt*4.2;
 if(down)player.position.z+=dt*3;
 player.position.x=clamp(player.position.x,-7,7);
-
 const oldFeet=player.position.y-.55;
-
 if(jump)jumpPlayer();
 if(!keys.Space)gameState.jumpLock=false;
-
 player.position.y+=gameState.vy*dt;
 gameState.vy-=20*dt;
-
 const newFeet=player.position.y-.55;
-
-/* فقط هنگام پایین آمدن روی سطح سکو فرود می‌آییم */
 if(gameState.vy<=0){
-for(const platform of gameState.parkourPlatforms){
-const top=platform.position.y+.3;
-const insideX=Math.abs(player.position.x-platform.position.x)<1.75;
-const insideZ=Math.abs(player.position.z-platform.position.z)<1.75;
-if(insideX&&insideZ&&oldFeet>=top-.08&&newFeet<=top){
-player.position.y=top+.55;
-gameState.vy=0;
-break;
+for(const p of gameState.parkourPlatforms){
+const top=p.position.y+.3;
+if(Math.abs(player.position.x-p.position.x)<1.75&&Math.abs(player.position.z-p.position.z)<1.75&&oldFeet>=top-.08&&newFeet<=top){
+player.position.y=top+.55;gameState.vy=0;break;
 }
 }
 }
-
-for(const c of gameState.coins){
-c.rotation.y+=dt*2;
-if(c.visible&&c.position.distanceTo(player.position)<1.2){
-c.visible=false;setScore(score+20);
-}
-}
-
-/* سقوط: بازیکن به سکوی شروع برمی‌گردد */
 if(player.position.y< -5){
-player.position.set(0,.55,3);
-gameState.vy=0;
-gameState.jumpLock=false;
-$('#gameStatus').textContent='دوباره از سکوی شروع تلاش کن!';
+player.position.set(0,.55,3);gameState.vy=0;gameState.jumpLock=false;
+$('#gameStatus').textContent='دوباره تلاش کن!';
 }
-
 camera.position.x+=(player.position.x*.35-camera.position.x)*dt*2;
 camera.position.z+=(player.position.z+9-camera.position.z)*dt*2;
 camera.lookAt(player.position.x,0,player.position.z-6);
 }
 
-/* فوتبال */
 if(gameType==='football'){
-if(left)player.position.x-=dt*4.5;
-if(right)player.position.x+=dt*4.5;
-if(up)player.position.z-=dt*4.5;
-if(down)player.position.z+=dt*4.5;
+/* حرکت بازیکن */
+const speed=5.2;
+let mx=(right?1:0)-(left?1:0);
+let mz=(down?1:0)-(up?1:0);
+const length=Math.hypot(mx,mz)||1;
+player.position.x+=mx/length*speed*dt;
+player.position.z+=mz/length*speed*dt;
 player.position.x=clamp(player.position.x,-6.5,6.5);
 player.position.z=clamp(player.position.z,-5,8);
 
-const b=gameState.ball;
-const velocity=gameState.ballVelocity;
+/* برخورد بازیکن با توپ */
+playerBallCollision(dt);
 
-/* حرکت توپ بر اساس نیروی شوت */
-b.position.x+=velocity.x*dt;
-b.position.z+=velocity.z*dt;
-b.position.y+=velocity.y*dt;
-velocity.y-=9.8*dt;
+/* حرکت توپ */
+const b=gameState.ball,v=gameState.ballVelocity;
+b.position.x+=v.x*dt;
+b.position.z+=v.z*dt;
+b.position.y+=v.y*dt;
+v.y-=10*dt;
+if(b.position.y<.48){b.position.y=.48;v.y=0;v.x*=.94;v.z*=.94;}
+v.x*=Math.pow(.985,dt*60);
+v.z*=Math.pow(.985,dt*60);
+b.rotation.x+=dt*6;
+b.rotation.z+=dt*4;
 
-/* برخورد توپ با زمین */
-if(b.position.y<.45){
-b.position.y=.45;
-velocity.y=0;
-velocity.x*=.94;
-velocity.z*=.94;
+/* برخورد با کناره‌های زمین */
+if(Math.abs(b.position.x)>7){
+b.position.x=Math.sign(b.position.x)*7;
+v.x*=-.65;
 }
 
-/* اصطکاک */
-velocity.x*=Math.pow(.985,dt*60);
-velocity.z*=Math.pow(.985,dt*60);
-
-/* گل */
-if(b.position.z< -18.5&&Math.abs(b.position.x)<2.4){
-setScore(score+100);
-$('#gameStatus').textContent='گل شد! ⚽🎉';
-b.position.set(0,.45,-2);
-velocity.set(0,0,0);
+/* گل: دروازه با هر مرحله کوچک‌تر می‌شود */
+if(b.position.z< -18.7&&Math.abs(b.position.x)<gameState.goalWidth/2){
+scoreFootballGoal();
 }
 
-/* توپ از زمین بیرون نرود */
-if(b.position.z>8||Math.abs(b.position.x)>8){
-b.position.set(0,.45,-2);
-velocity.set(0,0,0);
+/* بیرون رفتن توپ */
+if(b.position.z>8||b.position.z< -23){
+b.position.set(0,.48,-1);
+v.set(0,0,0);
 }
-
-/* چرخش توپ */
-b.rotation.x+=dt*5;
-b.rotation.z+=dt*3;
-
-camera.position.x+=(player.position.x*.25-camera.position.x)*dt;
+camera.position.x+=(player.position.x*.22-camera.position.x)*dt*2;
 camera.lookAt(0,0,-7);
 }
 
-/* فضایی */
 if(gameType==='space'){
 if(left)player.position.x-=dt*7;
 if(right)player.position.x+=dt*7;
 if(up)player.position.y+=dt*6;
 if(down)player.position.y-=dt*6;
 player.position.x=clamp(player.position.x,-8,8);
-player.position.y=clamp(player.position.y,-4.5,5);
+player.position.y=clamp(player.position.y,-4,5);
 for(const o of gameState.obstacles){
 o.position.z+=dt*12;
-o.rotation.x+=dt;
-o.rotation.y+=dt;
-if(o.position.z>8){
-o.position.z=-45-Math.random()*18;
-o.position.x=(Math.random()-.5)*16;
-o.position.y=(Math.random()-.5)*9;
-setScore(score+5);
-}
-if(o.position.distanceTo(player.position)<1.1){
-endGame('سفینه با سیارک برخورد کرد!');
-break;
-}
-}
-for(const c of gameState.coins){
-c.position.z+=dt*11;
-c.rotation.y+=dt*2;
-if(c.position.z>8)c.position.z=-48-Math.random()*18;
-if(c.visible&&c.position.distanceTo(player.position)<1.2){
-c.visible=false;setScore(score+25);
-}
+if(o.position.z>8){o.position.z=-45-Math.random()*18;o.position.x=(Math.random()-.5)*16;}
+if(o.position.distanceTo(player.position)<1.1){endGame('سفینه با سیارک برخورد کرد!');break;}
 }
 camera.position.x+=(player.position.x*.25-camera.position.x)*dt*2;
-camera.position.y+=(player.position.y*.25+3-camera.position.y)*dt*2;
 camera.lookAt(player.position.x*.15,0,-7);
 }
-
 if(!running)return;
 renderer.render(scene,camera);
 }
 
-/* اندازه بازی */
-function resizeGame(){
-if(!renderer||!camera)return;
-const w=stage.clientWidth,h=stage.clientHeight;
-if(!w||!h)return;
-camera.aspect=w/h;
-camera.updateProjectionMatrix();
-renderer.setSize(w,h);
-}
-
-/* بستن بازی */
-function closeGame(){
-running=false;
-if(anim)cancelAnimationFrame(anim);
-anim=0;
-modal.classList.remove('open');
-keys={};
-$('#inventoryPanel').hidden=true;
-$('#buildControls').style.display='none';
-$('#jumpControls').classList.remove('active');
-$('#shootControls').classList.remove('active');
-if(renderer){
-renderer.dispose();
-renderer.domElement.remove();
-renderer=null;
-}
-scene=null;
-player=null;
-}
-
-/* رویداد دکمه‌ها */
+/* رویدادها */
 $$('[data-game]').forEach(a=>a.addEventListener('click',e=>{
-e.preventDefault();
-startGame(a.dataset.game);
+e.preventDefault();startGame(a.dataset.game);
 }));
 $('#closeGame').addEventListener('click',closeGame);
-$('#restartGame').addEventListener('click',()=>{if(gameType)startGame(gameType);});
+$('#restartGame').addEventListener('click',()=>startGame(gameType));
 $('#startGameBtn').addEventListener('click',launchGame);
-modal.addEventListener('click',e=>{if(e.target===modal)closeGame();});
-$('#shootButton').addEventListener('pointerdown',e=>{
-e.preventDefault();
-shootFootball();
-});
-$('#jumpButton').addEventListener('pointerdown',e=>{
-e.preventDefault();
-jumpPlayer();
-gameState.jumpQueued=true;
-});
+$('#shootButton').addEventListener('pointerdown',e=>{e.preventDefault();shootFootball();});
+$('#jumpButton').addEventListener('pointerdown',e=>{e.preventDefault();jumpPlayer();gameState.jumpQueued=true;});
 
-/* صفحه‌کلید */
 window.addEventListener('keydown',e=>{
 if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Space'].includes(e.code))e.preventDefault();
 keys[e.code]=true;
-
-if(gameType==='football'&&running&&e.code==='Space'&&!e.repeat){
-shootFootball();
-}
+if(gameType==='football'&&running&&e.code==='Space'&&!e.repeat)shootFootball();
 if(gameType==='mini'&&running&&!e.repeat){
 if(e.code==='KeyQ')breakVoxel();
 if(e.code==='KeyE')placeVoxel();
-if(e.code==='Digit1')selectBlock(0);
-if(e.code==='Digit2')selectBlock(1);
-if(e.code==='Digit3')selectBlock(2);
-if(e.code==='Digit4')selectBlock(3);
+if(e.code==='Digit1')gameState.blockType=0;
+if(e.code==='Digit2')gameState.blockType=1;
+if(e.code==='Digit3')gameState.blockType=2;
+if(e.code==='Digit4')gameState.blockType=3;
 }
 });
-window.addEventListener('keyup',e=>{keys[e.code]=false;});
+window.addEventListener('keyup',e=>keys[e.code]=false);
+window.addEventListener('blur',()=>keys={});
 
-/* کنترل لمسی */
 $$('.touch-controls [data-key]').forEach(b=>{
 const k=b.dataset.key;
 b.addEventListener('pointerdown',e=>{
-e.preventDefault();
-keys[k]=true;
+e.preventDefault();keys[k]=true;
 try{b.setPointerCapture(e.pointerId);}catch(err){}
 });
 ['pointerup','pointercancel','lostpointercapture'].forEach(ev=>{
-b.addEventListener(ev,()=>{keys[k]=false;});
+b.addEventListener(ev,()=>keys[k]=false);
 });
 });
-window.addEventListener('blur',()=>{keys={};});
 
-/* اینونتوری */
-function selectBlock(n){
-gameState.blockType=n;
-$$('#inventoryPanel [data-block]').forEach(b=>{
-b.classList.toggle('selected',Number(b.dataset.block)===n);
-});
-}
-$$('[data-block]').forEach(b=>b.addEventListener('click',()=>selectBlock(Number(b.dataset.block))));
+$$('[data-block]').forEach(b=>b.addEventListener('click',()=>{
+gameState.blockType=Number(b.dataset.block);
+$$('[data-block]').forEach(x=>x.classList.toggle('selected',x===b));
+}));
 $$('[data-action]').forEach(b=>b.addEventListener('click',()=>{
 if(b.dataset.action==='break')breakVoxel();
 if(b.dataset.action==='place')placeVoxel();
 }));
 $('#inventoryToggle').addEventListener('click',()=>{
-if(gameType==='mini')$('#inventoryPanel').hidden=!$('#inventoryPanel').hidden;
+$('#inventoryPanel').hidden=!$('#inventoryPanel').hidden;
 });
-
-/* تغییر اندازه */
-window.addEventListener('resize',resizeGame);
+window.addEventListener('resize',()=>{
+if(renderer&&camera){
+camera.aspect=stageWidth()/stageHeight();
+camera.updateProjectionMatrix();
+renderer.setSize(stageWidth(),stageHeight());
+}
+});
 </script>
 </body>
 </html>
