@@ -56,10 +56,11 @@
 <article class="card"><div class="cover"><span class="symbol">🚀</span></div><div class="card-body"><h3>Space Explorer</h3><p>سفینه را در میدان سیارک‌ها هدایت کن.</p><div class="card-actions"><a href="#" data-game="space">شروع بازی ▶</a></div></div></article>
 <article class="card"><div class="cover"><span class="symbol">⛏️</span></div><div class="card-body"><h3>Mini Minecraft</h3><p>بلوک بشکن و بلوک بساز.</p><div class="card-actions"><a href="#" data-game="mini">شروع بازی ▶</a></div></div></article></div></section>
 
-<section class="two-d-games" id="games2d"><div class="section-head"><h2>🕹️ بازی‌های دوبعدی <span class="two-d-tag">NEW</span></h2><p>سه بازی کلاسیک با کنترل کامپیوتر و موبایل.</p></div><div class="grid">
+<section class="two-d-games" id="games2d"><div class="section-head"><h2>🕹️ بازی‌های دوبعدی <span class="two-d-tag">NEW</span></h2><p>چهار بازی دوبعدی با جزئیات بیشتر؛ قابل بازی با کامپیوتر و موبایل.</p></div><div class="grid">
 <article class="card"><div class="cover blue"><span class="symbol">🏓</span></div><div class="card-body"><h3>Atari Pong</h3><p>پینگ‌پنگ آتاری؛ با هوش مصنوعی مسابقه بده.</p><div class="card-actions"><a href="#" data-2d-game="pong">شروع بازی ▶</a></div></div></article>
 <article class="card"><div class="cover purple"><span class="symbol">🧱</span></div><div class="card-body"><h3>Tetris</h3><p>قطعه‌ها را بچرخان و ردیف‌ها را کامل کن.</p><div class="card-actions"><a href="#" data-2d-game="tetris">شروع بازی ▶</a></div></div></article>
 <article class="card"><div class="cover"><span class="symbol">🐍</span></div><div class="card-body"><h3>Snake</h3><p>غذا جمع کن و مراقب برخورد با خودت باش.</p><div class="card-actions"><a href="#" data-2d-game="snake">شروع بازی ▶</a></div></div></article>
+<article class="card"><div class="cover blue"><span class="symbol">⭐</span></div><div class="card-body"><h3>Super Star Platformer</h3><p>پلتفرمر دوبعدی به سبک بازی‌های کلاسیک؛ سکه بگیر، از دشمن‌ها بپر و به پرچم برس!</p><div class="card-actions"><a href="#" data-2d-game="platformer">شروع بازی ▶</a></div></div></article>
 </div></section>
 </main><footer><div class="wrap">© 2026 ALI X STAR — دنیای ماینکرفت</div></footer>
 <div class="account-modal" id="accountModal"><div class="account-box"><button class="close account-close" id="accountClose">✕</button><div class="account-logo">✦</div><h2>ALI X STAR ACCOUNT</h2><p>به حساب کاربری خودت وارد شو یا حساب جدید بساز.</p><div class="account-tabs" id="accountTabs"><button id="registerTab" class="active" type="button">ساخت حساب</button><button id="loginTab" type="button">ورود</button></div>
@@ -67,7 +68,7 @@
 <form id="loginForm" hidden><input id="loginUsername" placeholder="نام کاربری" required><input id="loginPassword" type="password" placeholder="رمز عبور" required><button class="account-submit">ورود به حساب 🚀</button></form>
 <div id="accountProfile" hidden><div class="profile-avatar" id="profileAvatar">🧑‍🚀</div><h3 id="profileName"></h3><div class="profile-stats"><div>⭐ سطح<b id="profileLevel">۱</b></div><div>✨ XP<b id="profileXP">۰</b></div><div>🏆 رکورد<b id="profileBest">۰</b></div></div><p id="profileEmail"></p><button class="account-submit" id="logoutButton">خروج از حساب</button></div><p id="accountMessage" class="account-message"></p></div></div>
 <div class="game-modal" id="gameModal"><div class="game-shell"><div class="game-top"><h3 id="gameTitle">بازی</h3><button class="close" id="closeGame">بستن ✕</button></div><div class="game-info"><span>امتیاز: <b id="score">0</b></span><span id="gameStatus">آماده بازی</span><button class="close" id="restartGame">شروع دوباره ↻</button></div><div class="game-stage" id="gameStage"><div class="game-hud"><span class="hud-chip">امتیاز <b id="hudScore">0</b></span><span class="hud-chip" id="hudGoal">هدف بازی</span></div><div class="game-start-overlay" id="gameStartOverlay"><div class="game-start-card"><div class="big-icon" id="startIcon">🎮</div><h3 id="startTitle">آماده‌ای؟</h3><p id="startDesc">برای شروع دکمه زیر را بزن.</p><button id="startGameBtn">شروع بازی</button></div></div><div class="game-help" id="gameHelp">با کلیدهای جهت‌دار حرکت کن.</div><div class="touch-controls"><button class="pad-left" data-key="ArrowLeft">◀</button><button class="pad-forward" data-key="ArrowUp">▲</button><button class="pad-back" data-key="ArrowDown">▼</button><button class="pad-right" data-key="ArrowRight">▶</button></div><div class="touch-jump" id="jumpControls"><button id="jumpButton">پرش ⤒</button></div><div class="shoot-control" id="shootControls"><button id="shootButton">⚽ شوت!</button></div><div class="build-controls" id="buildControls"><button id="inventoryToggle" class="inventory-toggle">🎒 اینونتوری</button><div class="inventory-panel" id="inventoryPanel" hidden><div class="inventory-slots"><button class="block-type selected" data-block="0"><span>🟩</span><small>چمن</small></button><button class="block-type" data-block="1"><span>🟫</span><small>خاک</small></button><button class="block-type" data-block="2"><span>⬜</span><small>سنگ</small></button><button class="block-type" data-block="3"><span>🧱</span><small>آجر</small></button></div><div class="inventory-actions"><button data-action="break">⛏️ کندن</button><button data-action="place">🧱 گذاشتن</button></div></div></div></div></div></div>
-<div class="two-d-modal" id="twoDModal"><div class="two-d-shell"><div class="two-d-top"><h3 id="twoDTitle">بازی دوبعدی</h3><button class="close" id="twoDClose">بستن ✕</button></div><div class="two-d-info"><span>امتیاز: <b id="twoDScore">0</b></span><span id="twoDStatus">آماده بازی</span><button class="close" id="twoDRestart">شروع دوباره ↻</button></div><div class="two-d-board"><canvas id="twoDCanvas" width="800" height="500"></canvas><div class="two-d-message" id="twoDMessage" hidden></div></div><div class="two-d-bottom" id="twoDControls"><button data-2d-key="ArrowLeft">◀</button><button data-2d-key="ArrowUp">▲</button><button data-2d-key="ArrowDown">▼</button><button data-2d-key="ArrowRight">▶</button><button class="primary" id="twoDStart">شروع / ادامه</button></div><div class="two-d-hint" id="twoDHint">با کلیدهای جهت‌دار بازی کن.</div></div></div>
+<div class="two-d-modal" id="twoDModal"><div class="two-d-shell"><div class="two-d-top"><h3 id="twoDTitle">بازی دوبعدی</h3><button class="close" id="twoDClose">بستن ✕</button></div><div class="two-d-info"><span>امتیاز: <b id="twoDScore">0</b></span><span id="twoDStatus">آماده بازی</span><button class="close" id="twoDRestart">شروع دوباره ↻</button></div><div class="two-d-board"><canvas id="twoDCanvas" width="800" height="500"></canvas><div class="two-d-message" id="twoDMessage" hidden></div></div><div class="two-d-bottom" id="twoDControls"><button data-2d-key="ArrowLeft">◀</button><button data-2d-key="ArrowUp">▲</button><button data-2d-key="ArrowDown">▼</button><button data-2d-key="ArrowRight">▶</button><button data-2d-key="Space">پرش</button><button class="primary" id="twoDStart">شروع / ادامه</button></div><div class="two-d-hint" id="twoDHint">با کلیدهای جهت‌دار بازی کن.</div></div></div>
 <div class="toast" id="toast"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
@@ -116,46 +117,170 @@ window.addEventListener('keydown',e=>{if(['ArrowUp','ArrowDown','ArrowLeft','Arr
 $$('.touch-controls [data-key]').forEach(b=>{const k=b.dataset.key;b.addEventListener('pointerdown',e=>{e.preventDefault();keys[k]=true;try{b.setPointerCapture(e.pointerId)}catch(err){}});['pointerup','pointercancel','lostpointercapture'].forEach(ev=>b.addEventListener(ev,()=>keys[k]=false))});$$('[data-block]').forEach(b=>b.addEventListener('click',()=>{gameState.blockType=Number(b.dataset.block);$$('[data-block]').forEach(x=>x.classList.toggle('selected',x===b))}));$$('[data-action]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.action==='break')breakVoxel();if(b.dataset.action==='place')placeVoxel()}));$('#inventoryToggle').addEventListener('click',()=>$('#inventoryPanel').hidden=!$('#inventoryPanel').hidden);
 window.addEventListener('resize',()=>{if(renderer&&camera){camera.aspect=stageWidth()/stageHeight();camera.updateProjectionMatrix();renderer.setSize(stageWidth(),stageHeight())}});window.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeGame()});
 
-/* بازی‌های دوبعدی کلاسیک: Pong، Tetris و Snake */
+/* بازی‌های دوبعدی ارتقایافته: Pong، Tetris، Snake و پلتفرمر ستاره‌ای */
 (()=>{
  const modal=document.getElementById('twoDModal'),canvas=document.getElementById('twoDCanvas'),ctx=canvas.getContext('2d');
  const title=document.getElementById('twoDTitle'),scoreEl=document.getElementById('twoDScore'),status=document.getElementById('twoDStatus'),message=document.getElementById('twoDMessage'),hint=document.getElementById('twoDHint');
- let mode='',raf=0,last=0,elapsed=0,score=0,over=false,started=false,keys={},state={};
+ let mode='',raf=0,last=0,score=0,over=false,started=false,keys={},state={},particles=[];
  const colors=['#5ee7a0','#f5c451','#64b5ff','#bd8cff','#ff7c91','#5ce1df','#ff9d57'];
+ const rand=(a,b)=>a+Math.random()*(b-a),clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
  function setScore(n){score=n;scoreEl.textContent=String(score)}
  function showMessage(t){message.textContent=t;message.hidden=false}
  function hideMessage(){message.hidden=true}
+ function finish(msg){over=true;started=false;status.textContent='پایان بازی';showMessage(msg);cancelAnimationFrame(raf)}
  function open(type){mode=type;modal.classList.add('open');start(true)}
  function close(){cancelAnimationFrame(raf);modal.classList.remove('open');keys={};started=false}
- function start(reset){cancelAnimationFrame(raf);if(reset){score=0;setScore(0);over=false;elapsed=0;last=0;keys={};hideMessage();started=true;
-  if(mode==='pong'){canvas.width=800;canvas.height=500;state={p1:210,p2:210,ballX:400,ballY:250,vx:5,vy:3, paddle:90, hits:0};title.textContent='🏓 Atari Pong';hint.textContent='کامپیوتر: W و S یا ↑ و ↓ | موبایل: دکمه‌های بالا و پایین';}
-  if(mode==='tetris'){canvas.width=300;canvas.height=600;state={cols:10,rows:20,cell:30,board:Array.from({length:20},()=>Array(10).fill(0)),piece:null,x:3,y:0,drop:0,interval:.55};title.textContent='🧱 Tetris';hint.textContent='← → حرکت | ↑ چرخش | ↓ پایین‌تر | Space سقوط سریع | موبایل: دکمه‌ها';spawnPiece();}
-  if(mode==='snake'){canvas.width=600;canvas.height=600;state={cell:30,cols:20,rows:20,snake:[{x:9,y:10},{x:8,y:10},{x:7,y:10}],dir:{x:1,y:0},next:{x:1,y:0},food:{x:14,y:10},tick:0,interval:.13};title.textContent='🐍 Snake';hint.textContent='با فلش‌ها یا WASD حرکت کن؛ در موبایل از دکمه‌ها استفاده کن.';placeFood();}
- }hideMessage();status.textContent='در حال بازی';draw();raf=requestAnimationFrame(loop)}
- const SHAPES=[[[1,1,1,1]],[[1,1],[1,1]],[[0,1,0],[1,1,1]],[[1,0,0],[1,1,1]],[[0,0,1],[1,1,1]],[[0,1,1],[1,1,0]],[[1,1,0],[0,1,1]]];
- function spawnPiece(){const id=Math.floor(Math.random()*SHAPES.length);state.piece=SHAPES[id].map(r=>r.slice());state.pieceColor=id+1;state.x=3;state.y=0;if(collides(0,0,state.piece))finish('بازی تمام شد! دوباره تلاش کن.');}
- function collides(dx,dy,shape){for(let y=0;y<shape.length;y++)for(let x=0;x<shape[y].length;x++)if(shape[y][x]){let nx=state.x+x+dx,ny=state.y+y+dy;if(nx<0||nx>=state.cols||ny>=state.rows||(ny>=0&&state.board[ny][nx]))return true;}return false}
- function rotate(){const a=state.piece;const r=a[0].map((_,i)=>a.map(row=>row[i]).reverse());if(!collides(0,0,r))state.piece=r;}
- function lockPiece(){state.piece.forEach((row,y)=>row.forEach((v,x)=>{if(v&&state.y+y>=0)state.board[state.y+y][state.x+x]=state.pieceColor}));let cleared=0;state.board=state.board.filter(row=>{if(row.every(Boolean)){cleared++;return false}return true});while(state.board.length<20)state.board.unshift(Array(10).fill(0));if(cleared)setScore(score+[0,100,300,500,800][cleared]);spawnPiece();}
- function placeFood(){let p;do{p={x:Math.floor(Math.random()*state.cols),y:Math.floor(Math.random()*state.rows)}}while(state.snake.some(s=>s.x===p.x&&s.y===p.y));state.food=p;}
- function finish(msg){over=true;started=false;status.textContent='پایان بازی';showMessage(msg);cancelAnimationFrame(raf)}
- function input(key){if(!modal.classList.contains('open'))return;if(mode==='pong'){if(key==='ArrowUp'||key==='KeyW')state.p1=Math.max(0,state.p1-32);if(key==='ArrowDown'||key==='KeyS')state.p1=Math.min(410,state.p1+32);return}
-  if(mode==='tetris'){if(key==='ArrowLeft'&&!collides(-1,0,state.piece))state.x--;if(key==='ArrowRight'&&!collides(1,0,state.piece))state.x++;if(key==='ArrowUp')rotate();if(key==='ArrowDown'&&!collides(0,1,state.piece)){state.y++;setScore(score+1)}if(key==='Space'){while(!collides(0,1,state.piece)){state.y++;setScore(score+2)}lockPiece()}return}
-  if(mode==='snake'){const map={ArrowUp:{x:0,y:-1},KeyW:{x:0,y:-1},ArrowDown:{x:0,y:1},KeyS:{x:0,y:1},ArrowLeft:{x:-1,y:0},KeyA:{x:-1,y:0},ArrowRight:{x:1,y:0},KeyD:{x:1,y:0}};const d=map[key];if(d&&!(d.x===-state.dir.x&&d.y===-state.dir.y))state.next=d;}}
- function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);
-  if(mode==='pong'){ctx.fillStyle='#071322';ctx.fillRect(0,0,800,500);ctx.strokeStyle='#36516e';ctx.setLineDash([12,12]);ctx.beginPath();ctx.moveTo(400,0);ctx.lineTo(400,500);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#5ee7a0';ctx.fillRect(24,state.p1,15,state.paddle);ctx.fillStyle='#ffca68';ctx.fillRect(761,state.p2,15,state.paddle);ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(state.ballX,state.ballY,10,0,Math.PI*2);ctx.fill();ctx.font='bold 30px Arial';ctx.fillStyle='#cfe4ff';ctx.textAlign='center';ctx.fillText(String(score),350,45);ctx.fillText(String(state.cpu||0),450,45);}
-  if(mode==='tetris'){ctx.fillStyle='#081323';ctx.fillRect(0,0,300,600);for(let y=0;y<20;y++)for(let x=0;x<10;x++){const v=state.board[y][x];ctx.fillStyle=v?colors[(v-1)%colors.length]:'#14243a';ctx.fillRect(x*30+1,y*30+1,28,28);if(v){ctx.strokeStyle='#ffffff55';ctx.strokeRect(x*30+2,y*30+2,26,26)}}if(state.piece)state.piece.forEach((r,y)=>r.forEach((v,x)=>{if(v){ctx.fillStyle=colors[(state.pieceColor-1)%colors.length];ctx.fillRect((state.x+x)*30+1,(state.y+y)*30+1,28,28);ctx.strokeStyle='#ffffff66';ctx.strokeRect((state.x+x)*30+2,(state.y+y)*30+2,26,26)}}));}
-  if(mode==='snake'){ctx.fillStyle='#081323';ctx.fillRect(0,0,600,600);ctx.strokeStyle='#172a40';for(let i=0;i<=20;i++){ctx.beginPath();ctx.moveTo(i*30,0);ctx.lineTo(i*30,600);ctx.stroke();ctx.beginPath();ctx.moveTo(0,i*30);ctx.lineTo(600,i*30);ctx.stroke()}ctx.fillStyle='#ff6b6b';ctx.beginPath();ctx.arc(state.food.x*30+15,state.food.y*30+15,12,0,Math.PI*2);ctx.fill();state.snake.forEach((p,i)=>{ctx.fillStyle=i?'#37b879':'#a2ffbd';ctx.fillRect(p.x*30+2,p.y*30+2,26,26)});}
+ function start(reset){
+  cancelAnimationFrame(raf);
+  if(reset){
+   score=0;setScore(0);over=false;last=0;keys={};particles=[];hideMessage();started=true;
+   if(mode==='pong'){
+    canvas.width=900;canvas.height=560;
+    state={p1:230,p2:230,ballX:450,ballY:280,vx:5.3,vy:3.1,paddle:104,cpu:0,trail:[],serve:0,flash:0};
+    title.textContent='🏓 Atari Pong Deluxe';
+    hint.textContent='W / S یا ↑ / ↓ برای حرکت؛ روی موبایل دکمه‌های جهت را نگه دار. تا ۷ امتیاز مسابقه بده.';
+   }
+   if(mode==='tetris'){
+    canvas.width=520;canvas.height=620;
+    state={cols:10,rows:20,cell:28,board:Array.from({length:20},()=>Array(10).fill(0)),piece:null,next:null,x:3,y:0,drop:0,interval:.62,lines:0,level:1,soft:false};
+    title.textContent='🧱 Tetris Deluxe';
+    hint.textContent='← → حرکت | ↑ چرخش | ↓ سقوط نرم | Space سقوط سریع. با پاک کردن ردیف‌ها مرحله و سرعت بیشتر می‌شود.';
+    state.next=randomPiece();spawnPiece();
+   }
+   if(mode==='snake'){
+    canvas.width=640;canvas.height=640;
+    state={cell:32,cols:20,rows:20,snake:[{x:9,y:10},{x:8,y:10},{x:7,y:10},{x:6,y:10}],dir:{x:1,y:0},next:{x:1,y:0},food:null,tick:0,interval:.145,level:1,foods:0,bonus:null,bonusTimer:0};
+    title.textContent='🐍 Snake Neon';
+    hint.textContent='با فلش‌ها یا WASD حرکت کن؛ هر چند غذا سرعت بیشتر می‌شود. به دیوار و بدن خودت نخور.';
+    placeFood();
+   }
+   if(mode==='platformer'){
+    canvas.width=960;canvas.height=540;
+    state={world:3600,camera:0,player:{x:70,y:390,w:34,h:48,vx:0,vy:0,ground:false,face:1,inv:0},platforms:[],coins:[],enemies:[],checkpoints:[],goal:3500,won:false,level:1,stars:0,particles:[],time:0};
+    title.textContent='⭐ Super Star Platformer';
+    hint.textContent='حرکت: ← → یا A / D | پرش: Space یا ↑. سکه‌ها را جمع کن، روی دشمن‌ها بپر و به پرچم آخر مسیر برس. این بازی قهرمان و دنیای اختصاصی خودش را دارد.';
+    buildPlatformer();
+   }
+  }
+  hideMessage();status.textContent='در حال بازی';draw();raf=requestAnimationFrame(loop);
  }
- function update(dt){if(mode==='pong'){if(keys.ArrowUp||keys.KeyW)state.p1=Math.max(0,state.p1-330*dt);if(keys.ArrowDown||keys.KeyS)state.p1=Math.min(410,state.p1+330*dt);state.ballX+=state.vx*60*dt;state.ballY+=state.vy*60*dt;if(state.ballY<10||state.ballY>490)state.vy*=-1;if(state.ballX<45&&state.ballY>state.p1-10&&state.ballY<state.p1+100){state.vx=Math.abs(state.vx)*1.04;state.vy+=(state.ballY-(state.p1+50))*.035;setScore(score+1)}if(state.ballX>750&&state.ballY>state.p2-10&&state.ballY<state.p2+100){state.vx=-Math.abs(state.vx)*1.04;state.vy+=(state.ballY-(state.p2+50))*.035;}state.p2+=(state.ballY-(state.p2+50))*(Math.min(1,dt*3.2));state.p2=Math.max(0,Math.min(410,state.p2));if(state.ballX<0){finish('کامپیوتر امتیاز گرفت! دوباره بازی کن.')}if(state.ballX>800){setScore(score+5);state.ballX=400;state.ballY=250;state.vx=-5;state.vy=3;}}
-  if(mode==='tetris'){state.drop+=dt;if(state.drop>state.interval){state.drop=0;if(!collides(0,1,state.piece))state.y++;else lockPiece();}}
-  if(mode==='snake'){state.tick+=dt;if(state.tick>state.interval){state.tick=0;state.dir=state.next;const h={x:state.snake[0].x+state.dir.x,y:state.snake[0].y+state.dir.y};if(h.x<0||h.x>=20||h.y<0||h.y>=20||state.snake.some((p,i)=>i>0&&p.x===h.x&&p.y===h.y)){finish('مار به خودش یا دیوار برخورد کرد!');return}state.snake.unshift(h);if(h.x===state.food.x&&h.y===state.food.y){setScore(score+10);placeFood()}else state.snake.pop();}}
+ const SHAPES=[[[1,1,1,1]],[[1,1],[1,1]],[[0,1,0],[1,1,1]],[[1,0,0],[1,1,1]],[[0,0,1],[1,1,1]],[[0,1,1],[1,1,0]],[[1,1,0],[0,1,1]]];
+ function randomPiece(){const id=Math.floor(Math.random()*SHAPES.length);return {shape:SHAPES[id].map(r=>r.slice()),color:id+1}}
+ function spawnPiece(){const p=state.next||randomPiece();state.piece=p.shape;state.pieceColor=p.color;state.next=randomPiece();state.x=3;state.y=0;if(collides(0,0,state.piece))finish('بازی تمام شد! دوباره تلاش کن.')}
+ function collides(dx,dy,shape){for(let y=0;y<shape.length;y++)for(let x=0;x<shape[y].length;x++)if(shape[y][x]){let nx=state.x+x+dx,ny=state.y+y+dy;if(nx<0||nx>=state.cols||ny>=state.rows||(ny>=0&&state.board[ny][nx]))return true;}return false}
+ function rotate(){const a=state.piece,r=a[0].map((_,i)=>a.map(row=>row[i]).reverse());if(!collides(0,0,r))state.piece=r}
+ function lockPiece(){state.piece.forEach((row,y)=>row.forEach((v,x)=>{if(v&&state.y+y>=0)state.board[state.y+y][state.x+x]=state.pieceColor}));let cleared=0;state.board=state.board.filter(row=>{if(row.every(Boolean)){cleared++;return false}return true});while(state.board.length<20)state.board.unshift(Array(10).fill(0));if(cleared){const pts=[0,100,300,500,800][cleared]||1000;setScore(score+pts*state.level);state.lines+=cleared;state.level=1+Math.floor(state.lines/8);state.interval=Math.max(.12,.62-(state.level-1)*.055);status.textContent='مرحله '+state.level+' | ردیف‌ها: '+state.lines;for(let i=0;i<cleared*8;i++)particles.push({x:rand(80,360),y:rand(40,580),vx:rand(-2,2),vy:rand(-3,1),life:1,color:colors[Math.floor(Math.random()*colors.length)]})}spawnPiece()}
+ function placeFood(){let p;do{p={x:Math.floor(Math.random()*state.cols),y:Math.floor(Math.random()*state.rows)}}while(state.snake.some(s=>s.x===p.x&&s.y===p.y));state.food=p}
+ function input(key){
+  if(!modal.classList.contains('open')||!started)return;
+  if(mode==='pong')return;
+  if(mode==='tetris'){if(key==='ArrowLeft'&&!collides(-1,0,state.piece))state.x--;if(key==='ArrowRight'&&!collides(1,0,state.piece))state.x++;if(key==='ArrowUp')rotate();if(key==='ArrowDown'&&!collides(0,1,state.piece)){state.y++;setScore(score+1)}if(key==='Space'){while(!collides(0,1,state.piece)){state.y++;setScore(score+2)}lockPiece()}return}
+  if(mode==='snake'){const map={ArrowUp:{x:0,y:-1},KeyW:{x:0,y:-1},ArrowDown:{x:0,y:1},KeyS:{x:0,y:1},ArrowLeft:{x:-1,y:0},KeyA:{x:-1,y:0},ArrowRight:{x:1,y:0},KeyD:{x:1,y:0}};const d=map[key];if(d&&!(d.x===-state.dir.x&&d.y===-state.dir.y))state.next=d;return}
+  if(mode==='platformer'&&(key==='Space'||key==='ArrowUp'||key==='KeyW'))jump();
+ }
+ function jump(){if(mode==='platformer'&&started&&state.player.ground){state.player.vy=-650;state.player.ground=false;for(let i=0;i<7;i++)state.particles.push({x:state.player.x+17,y:state.player.y+45,vx:rand(-70,70),vy:rand(-130,-20),life:.5,color:'#d7efff'})}}
+ function roundRect(x,y,w,h,r,fill,stroke){ctx.beginPath();ctx.roundRect(x,y,w,h,r);if(fill){ctx.fillStyle=fill;ctx.fill()}if(stroke){ctx.strokeStyle=stroke;ctx.stroke()}}
+ function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  if(mode==='pong')drawPong();
+  if(mode==='tetris')drawTetris();
+  if(mode==='snake')drawSnake();
+  if(mode==='platformer')drawPlatformer();
+  drawParticles();
+ }
+ function drawPong(){
+  const g=ctx.createLinearGradient(0,0,900,560);g.addColorStop(0,'#07172a');g.addColorStop(1,'#142b42');ctx.fillStyle=g;ctx.fillRect(0,0,900,560);
+  for(let i=0;i<18;i++){ctx.fillStyle=i%2?'#ffffff08':'#63e6b008';ctx.fillRect(i*52,0,25,560)}
+  ctx.strokeStyle='#8ca9c855';ctx.lineWidth=3;ctx.setLineDash([14,14]);ctx.beginPath();ctx.moveTo(450,12);ctx.lineTo(450,548);ctx.stroke();ctx.setLineDash([]);
+  ctx.fillStyle='#d5e8ff';ctx.font='bold 48px Arial';ctx.textAlign='center';ctx.fillText(score,340,65);ctx.fillText(state.cpu,560,65);
+  ctx.font='14px Arial';ctx.fillStyle='#9bb5d0';ctx.fillText('PLAYER',340,91);ctx.fillText('CPU',560,91);
+  const paddle=(x,y,c)=>{const pg=ctx.createLinearGradient(x,y,x+18,y+state.paddle);pg.addColorStop(0,c);pg.addColorStop(1,'#ffffff');roundRect(x,y,18,state.paddle,9,pg);ctx.shadowBlur=18;ctx.shadowColor=c;ctx.strokeStyle=c;ctx.stroke();ctx.shadowBlur=0};
+  paddle(34,state.p1,'#5ee7a0');paddle(848,state.p2,'#ffc76a');
+  state.trail.forEach((p,i)=>{ctx.globalAlpha=(i+1)/state.trail.length*.28;ctx.fillStyle='#ffffff';ctx.beginPath();ctx.arc(p.x,p.y,5+i*.25,0,Math.PI*2);ctx.fill()});ctx.globalAlpha=1;
+  ctx.shadowBlur=24;ctx.shadowColor='#ffffff';const bg=ctx.createRadialGradient(state.ballX-3,state.ballY-3,2,state.ballX,state.ballY,15);bg.addColorStop(0,'#fff');bg.addColorStop(1,'#77c8ff');ctx.fillStyle=bg;ctx.beginPath();ctx.arc(state.ballX,state.ballY,12,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;
+  ctx.fillStyle='#6b8aa9';ctx.font='13px Arial';ctx.fillText('FIRST TO 7',450,530);
+ }
+ function drawTetris(){
+  const g=ctx.createLinearGradient(0,0,520,620);g.addColorStop(0,'#091426');g.addColorStop(1,'#172c45');ctx.fillStyle=g;ctx.fillRect(0,0,520,620);
+  const ox=28,oy=28,c=28;roundRect(ox-7,oy-7,294,574,13,'#050d1b','#3c5572');
+  for(let y=0;y<20;y++)for(let x=0;x<10;x++){const v=state.board[y][x];drawCell(ox+x*c,oy+y*c,c,v?colors[(v-1)%colors.length]:null)}
+  if(state.piece){let ghost=state.y;while(!collides(0,ghost-state.y+1,state.piece))ghost++;state.piece.forEach((row,y)=>row.forEach((v,x)=>{if(v){ctx.globalAlpha=.22;drawCell(ox+(state.x+x)*c,oy+(ghost+y)*c,c,colors[(state.pieceColor-1)%colors.length]);ctx.globalAlpha=1;drawCell(ox+(state.x+x)*c,oy+(state.y+y)*c,c,colors[(state.pieceColor-1)%colors.length])}}))}
+  ctx.textAlign='left';ctx.fillStyle='#dceaff';ctx.font='bold 19px Arial';ctx.fillText('NEXT',360,75);ctx.fillText('LEVEL',360,235);ctx.fillText(String(state.level),360,265);ctx.fillText('LINES',360,330);ctx.fillText(String(state.lines),360,360);ctx.fillText('SCORE',360,425);ctx.fillText(String(score),360,455);
+  roundRect(350,92,140,100,10,'#0b192b','#39516d');if(state.next)state.next.shape.forEach((r,y)=>r.forEach((v,x)=>{if(v)drawCell(370+x*24,115+y*24,24,colors[(state.next.color-1)%colors.length])}));
+  ctx.fillStyle='#829bb7';ctx.font='12px Arial';ctx.fillText('ALI X STAR',360,555);
+ }
+ function drawCell(x,y,s,color){roundRect(x+1,y+1,s-2,s-2,color||'#15263a',color?'#ffffff55':'#233951');if(color){ctx.fillStyle='#ffffff33';ctx.fillRect(x+4,y+3,s-8,3);ctx.fillStyle='#00000022';ctx.fillRect(x+4,y+s-6,s-8,2)}}
+ function drawSnake(){
+  const c=32;const bg=ctx.createLinearGradient(0,0,640,640);bg.addColorStop(0,'#071a25');bg.addColorStop(1,'#102c34');ctx.fillStyle=bg;ctx.fillRect(0,0,640,640);
+  ctx.strokeStyle='#9be7c00d';ctx.lineWidth=1;for(let i=0;i<=20;i++){ctx.beginPath();ctx.moveTo(i*c,0);ctx.lineTo(i*c,640);ctx.stroke();ctx.beginPath();ctx.moveTo(0,i*c);ctx.lineTo(640,i*c);ctx.stroke()}
+  ctx.fillStyle='#9deacb';ctx.font='bold 15px Arial';ctx.textAlign='left';ctx.fillText('FOOD '+state.foods+'   LEVEL '+state.level,16,22);
+  const fx=state.food.x*c+16,fy=state.food.y*c+16;ctx.shadowBlur=24;ctx.shadowColor='#ff617a';const fg=ctx.createRadialGradient(fx-5,fy-5,2,fx,fy,17);fg.addColorStop(0,'#fff0aa');fg.addColorStop(.4,'#ffbd54');fg.addColorStop(1,'#fa4c76');ctx.fillStyle=fg;ctx.beginPath();ctx.arc(fx,fy,12,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;ctx.fillStyle='#8df3a8';ctx.fillRect(fx-2,fy-16,4,7);
+  state.snake.forEach((p,i)=>{const x=p.x*c+2,y=p.y*c+2;const gr=ctx.createLinearGradient(x,y,x+28,y+28);gr.addColorStop(0,i?'#45d69a':'#d0ff9b');gr.addColorStop(1,i?'#167d73':'#38c58b');ctx.shadowBlur=i?7:14;ctx.shadowColor='#42f0ae';roundRect(x,y,28,28, i?8:10,gr,'#c1ffdd88');ctx.shadowBlur=0;if(i===0){ctx.fillStyle='#062a28';const ex=p.x*32+(state.dir.x===1?22:state.dir.x===-1?9:state.dir.x===0?12:12),ey=p.y*32+(state.dir.y===1?22:state.dir.y===-1?9:12);ctx.beginPath();ctx.arc(ex,ey,2.5,0,7);ctx.fill();ctx.beginPath();ctx.arc(ex+(state.dir.y?7:0),ey+(state.dir.x?7:0),2.5,0,7);ctx.fill()}}); 
+ }
+ function buildPlatformer(){
+  const s=state;const add=(x,y,w,h,type='ground')=>s.platforms.push({x,y,w,h,type});
+  add(0,490,520,80);add(600,490,500,80);add(1180,490,420,80);add(1680,490,500,80);add(2260,490,500,80);add(2840,490,760,80);
+  [[260,405,120],[430,345,110],[710,400,140],[930,340,130],[1110,390,110],[1320,330,130],[1510,390,120],[1780,405,140],[1990,340,130],[2190,390,120],[2440,330,140],[2660,390,120],[2910,400,130],[3150,340,150]].forEach(p=>add(p[0],p[1],p[2],18,'platform'));
+  for(let x=150;x<3400;x+=190){s.coins.push({x,y:rand(300,410),taken:false})}
+  [[560,452],[1030,452],[1610,452],[2110,452],[2780,452],[3300,452]].forEach(p=>s.enemies.push({x:p[0],y:p[1],w:32,h:32,vx:rand(35,60),min:p[0]-55,max:p[0]+55,alive:true}));
+  s.checkpoints=[850,1900,2850];
+  for(let i=0;i<14;i++)s.coins.push({x:300+i*220,y:rand(270,350),taken:false});
+ }
+ function platformInput(){return (keys.ArrowRight||keys.KeyD?1:0)-(keys.ArrowLeft||keys.KeyA?1:0)}
+ function updatePlatformer(dt){
+  const s=state,p=s.player;s.time+=dt;p.inv=Math.max(0,p.inv-dt);
+  const dir=platformInput();p.vx=dir*260;if(dir)p.face=dir;
+  p.x=clamp(p.x+p.vx*dt,0,s.world-p.w);const oldBottom=p.y+p.h;p.vy=Math.min(900,p.vy+1500*dt);p.y+=p.vy*dt;p.ground=false;
+  for(const q of s.platforms){if(p.x+p.w>q.x&&p.x<q.x+q.w&&oldBottom<=q.y+8&&p.y+p.h>=q.y&&p.vy>=0){p.y=q.y-p.h;p.vy=0;p.ground=true}}
+  if(p.y>650){p.x=Math.max(50,s.checkpoints.filter(x=>x<s.camera+450).slice(-1)[0]||50);p.y=360;p.vy=0;p.inv=1.4;status.textContent='از نقطهٔ ذخیره دوباره شروع کردی.'}
+  for(const coin of s.coins){if(!coin.taken&&Math.hypot(p.x+p.w/2-coin.x,p.y+p.h/2-coin.y)<34){coin.taken=true;setScore(score+10);s.stars++;for(let i=0;i<7;i++)s.particles.push({x:coin.x,y:coin.y,vx:rand(-100,100),vy:rand(-180,0),life:.55,color:'#ffe27a'})}}
+  for(const e of s.enemies){if(!e.alive)continue;e.x+=e.vx*dt;if(e.x<e.min||e.x>e.max)e.vx*=-1;if(p.x+p.w>e.x&&p.x<e.x+e.w&&p.y+p.h>e.y&&p.y<e.y+e.h){if(p.vy>100&&oldBottom<e.y+18){e.alive=false;p.vy=-430;setScore(score+30)}else if(p.inv<=0){p.x=Math.max(0,p.x-70);p.vy=-300;p.inv=1.1;status.textContent='مراقب دشمن‌ها باش!'}}}
+  s.camera=clamp(p.x-300,0,s.world-canvas.width);
+  if(p.x>s.goal-70&&!s.won){s.won=true;setScore(score+250);status.textContent='مرحله را بردی! ⭐';finish('آفرین! به پرچم پایان رسیدی؛ امتیاز نهایی: '+score)}
+ }
+ function drawPlatformer(){
+  const s=state,cx=s.camera;
+  const sky=ctx.createLinearGradient(0,0,0,540);sky.addColorStop(0,'#55b8f4');sky.addColorStop(.62,'#b8e9ff');sky.addColorStop(1,'#f4fbd0');ctx.fillStyle=sky;ctx.fillRect(0,0,960,540);
+  // distant hills and clouds
+  for(let i=0;i<7;i++){const x=((i*230-cx*.22)%1250+1250)%1250-140;ctx.fillStyle='#75c98c';ctx.beginPath();ctx.arc(x,430,105,Math.PI,0);ctx.fill();ctx.fillRect(x-105,430,210,80)}
+  for(let i=0;i<8;i++){const x=((i*190-cx*.12)%1150+1150)%1150-80,y=70+(i%3)*48;ctx.fillStyle='#ffffffb8';ctx.beginPath();ctx.arc(x,y,22,0,7);ctx.arc(x+25,y-9,29,0,7);ctx.arc(x+55,y,21,0,7);ctx.fill()}
+  // decorative distant trees
+  for(let i=0;i<12;i++){const x=((i*300-cx*.48)%1300+1300)%1300-100;ctx.fillStyle='#8c5837';ctx.fillRect(x,405,13,65);ctx.fillStyle='#269c62';ctx.beginPath();ctx.arc(x+6,394,34,0,7);ctx.fill()}
+  for(const q of s.platforms){const x=q.x-cx;if(x+q.w<0||x>960)continue;ctx.fillStyle=q.type==='ground'?'#8b552f':'#a96b42';ctx.fillRect(x,q.y,q.w,q.h);ctx.fillStyle=q.type==='ground'?'#54c94f':'#72db70';ctx.fillRect(x,q.y,q.w,9);for(let bx=x+12;bx<x+q.w-8;bx+=32){ctx.strokeStyle='#573a2b66';ctx.strokeRect(bx,q.y+15,24,17);ctx.fillStyle='#6d482f';ctx.fillRect(bx+5,q.y+18,3,3)}}
+  for(const coin of s.coins)if(!coin.taken){const x=coin.x-cx;ctx.save();ctx.translate(x,coin.y);ctx.rotate(Math.sin(s.time*4+coin.x)*.18);ctx.shadowBlur=15;ctx.shadowColor='#ffdc55';const cg=ctx.createLinearGradient(-10,-15,10,15);cg.addColorStop(0,'#fff5a5');cg.addColorStop(.5,'#ffc62e');cg.addColorStop(1,'#d77a13');ctx.fillStyle=cg;ctx.beginPath();ctx.ellipse(0,0,10,15,0,0,7);ctx.fill();ctx.strokeStyle='#fff5b5';ctx.stroke();ctx.restore()}
+  for(const e of s.enemies)if(e.alive){const x=e.x-cx;ctx.fillStyle='#713c8d';ctx.beginPath();ctx.ellipse(x+16,e.y+17,17,15,0,0,7);ctx.fill();ctx.fillStyle='#fff';ctx.fillRect(x+7,e.y+9,7,8);ctx.fillRect(x+20,e.y+9,7,8);ctx.fillStyle='#202039';ctx.fillRect(x+10,e.y+12,3,4);ctx.fillRect(x+23,e.y+12,3,4);ctx.fillStyle='#3b2850';ctx.fillRect(x+4,e.y+28,9,5);ctx.fillRect(x+20,e.y+28,9,5)}
+  // goal flag and pole
+  const gx=s.goal-cx;ctx.fillStyle='#e8edf4';ctx.fillRect(gx,270,8,220);ctx.fillStyle='#ffdf57';ctx.beginPath();ctx.moveTo(gx+8,275);ctx.lineTo(gx+88,300);ctx.lineTo(gx+8,328);ctx.fill();ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(gx+4,267,9,0,7);ctx.fill();
+  // custom star explorer hero, intentionally original design
+  const p=s.player,x=p.x-cx,y=p.y;ctx.save();if(p.inv>0&&Math.floor(s.time*14)%2===0)ctx.globalAlpha=.45;
+  ctx.fillStyle='#243b67';roundRect(x+4,y+35,12,13,4,'#263c69');roundRect(x+20,y+35,12,13,4,'#263c69');
+  ctx.fillStyle='#f2bd8c';roundRect(x+5,y+7,25,25,8,'#f2bd8c');ctx.fillStyle='#26324c';ctx.fillRect(x+7,y+4,23,8);ctx.fillStyle='#f8f8ff';ctx.fillRect(x+10,y+16,5,6);ctx.fillRect(x+22,y+16,5,6);ctx.fillStyle='#26324c';ctx.fillRect(x+12,y+18,2,3);ctx.fillRect(x+24,y+18,2,3);
+  ctx.fillStyle='#f5b934';roundRect(x+1,y+27,32,13,5,'#f5b934');ctx.fillStyle='#e66e54';roundRect(x+7,y+29,20,7,3,'#e66e54');ctx.fillStyle='#fff';ctx.font='bold 11px Arial';ctx.textAlign='center';ctx.fillText('★',x+17,y+35);
+  ctx.fillStyle='#d64d58';roundRect(x+2,y+40,12,8,3,'#d64d58');roundRect(x+20,y+40,12,8,3,'#d64d58');ctx.restore();
+  ctx.fillStyle='#12344c';ctx.font='bold 18px Arial';ctx.textAlign='left';ctx.fillText('⭐ '+s.stars,18,32);ctx.fillText('DISTANCE '+Math.floor(p.x/10)+'m',780,32);
+ }
+ function drawParticles(){for(const p of particles){ctx.globalAlpha=clamp(p.life,0,1);ctx.fillStyle=p.color;ctx.beginPath();ctx.arc(p.x,p.y,3,0,7);ctx.fill()}ctx.globalAlpha=1}
+ function update(dt){
+  if(mode==='pong'){
+   if(keys.ArrowUp||keys.KeyW)state.p1=Math.max(0,state.p1-390*dt);if(keys.ArrowDown||keys.KeyS)state.p1=Math.min(456,state.p1+390*dt);
+   state.trail.push({x:state.ballX,y:state.ballY});if(state.trail.length>12)state.trail.shift();
+   state.ballX+=state.vx*60*dt;state.ballY+=state.vy*60*dt;if(state.ballY<12||state.ballY>548)state.vy*=-1;
+   if(state.ballX<55&&state.ballX>35&&state.ballY>state.p1-12&&state.ballY<state.p1+state.paddle+12){state.vx=Math.abs(state.vx)*1.045;state.vy+=(state.ballY-(state.p1+state.paddle/2))*.045;state.ballX=56;setScore(score+1)}
+   if(state.ballX>845&&state.ballX<865&&state.ballY>state.p2-12&&state.ballY<state.p2+state.paddle+12){state.vx=-Math.abs(state.vx)*1.035;state.vy+=(state.ballY-(state.p2+state.paddle/2))*.035;state.ballX=844}
+   const target=state.ballY-state.paddle/2;state.p2+=(target-state.p2)*Math.min(1,dt*2.7);state.p2=clamp(state.p2,0,456);
+   if(state.ballX<0){state.cpu++;state.ballX=450;state.ballY=280;state.vx=5.3;state.vy=rand(-3.5,3.5);state.trail=[];status.textContent='امتیاز حریف: '+state.cpu;if(state.cpu>=7)finish('کامپیوتر برنده شد! دوباره تلاش کن.')}
+   if(state.ballX>900){setScore(score+5);state.ballX=450;state.ballY=280;state.vx=-5.3;state.vy=rand(-3.5,3.5);state.trail=[];if(score>=35)finish('تو برنده شدی! 🏆')}
+  }
+  if(mode==='tetris'){state.drop+=dt;if(state.drop>state.interval){state.drop=0;if(!collides(0,1,state.piece))state.y++;else lockPiece()}}
+  if(mode==='snake'){state.tick+=dt;if(state.tick>state.interval){state.tick=0;state.dir=state.next;const h={x:state.snake[0].x+state.dir.x,y:state.snake[0].y+state.dir.y};if(h.x<0||h.x>=20||h.y<0||h.y>=20||state.snake.some((p,i)=>i>0&&p.x===h.x&&p.y===h.y)){finish('مار به خودش یا دیوار برخورد کرد!');return}state.snake.unshift(h);if(h.x===state.food.x&&h.y===state.food.y){state.foods++;setScore(score+10);if(state.foods%5===0){state.level++;state.interval=Math.max(.065,state.interval-.012);status.textContent='مرحله '+state.level+'! سرعت بیشتر شد.'}placeFood()}else state.snake.pop()}}
+  if(mode==='platformer')updatePlatformer(dt);
+  particles=particles.filter(p=>p.life>0);for(const p of particles){p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy=(p.vy||0)+220*dt;p.life-=dt}
  }
  function loop(t){if(!started||!modal.classList.contains('open'))return;const dt=Math.min((t-last)/1000||0,.04);last=t;update(dt);draw();if(started)raf=requestAnimationFrame(loop)}
  document.querySelectorAll('[data-2d-game]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();open(a.dataset['2dGame'])}));
  document.getElementById('twoDClose').addEventListener('click',close);document.getElementById('twoDRestart').addEventListener('click',()=>start(true));document.getElementById('twoDStart').addEventListener('click',()=>{if(over||!started)start(true)});
- document.querySelectorAll('[data-2d-key]').forEach(b=>{const k=b.dataset['2dKey'];b.addEventListener('pointerdown',e=>{e.preventDefault();if(mode==='pong'){input(k);return}input(k)})});
- window.addEventListener('keydown',e=>{if(!modal.classList.contains('open'))return;const allowed=['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Space','KeyW','KeyA','KeyS','KeyD'];if(allowed.includes(e.code)){e.preventDefault();keys[e.code]=true;if(mode!=='pong')input(e.code)}});
+ document.querySelectorAll('[data-2d-key]').forEach(b=>{const k=b.dataset['2dKey'];b.addEventListener('pointerdown',e=>{e.preventDefault();if(!started)return;keys[k]=true;input(k);try{b.setPointerCapture(e.pointerId)}catch(err){}});['pointerup','pointercancel','lostpointercapture'].forEach(ev=>b.addEventListener(ev,()=>keys[k]=false))});
+ window.addEventListener('keydown',e=>{if(!modal.classList.contains('open'))return;const allowed=['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Space','KeyW','KeyA','KeyS','KeyD'];if(allowed.includes(e.code)){e.preventDefault();keys[e.code]=true;if(!e.repeat)input(e.code)}});
  window.addEventListener('keyup',e=>{keys[e.code]=false});window.addEventListener('blur',()=>keys={});modal.addEventListener('click',e=>{if(e.target===modal)close()});
 })();
 
